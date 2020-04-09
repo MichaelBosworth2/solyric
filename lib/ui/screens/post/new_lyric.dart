@@ -1,13 +1,9 @@
-import 'package:extended_text_field/extended_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:solyric_app/ui/shared/Resources.dart';
 import 'package:solyric_app/ui/shared/ui_helper.dart';
 import 'package:solyric_app/ui/viewmodel/lyric_viewmodel.dart';
 import 'package:solyric_app/ui/widget/base_widget.dart';
-import 'package:solyric_app/ui/widget/post/lyric/chord_builder.dart';
 import 'package:solyric_app/ui/widget/post/lyric/chord_list.dart';
+import 'package:solyric_app/ui/widget/post/lyric/chord_title.dart';
 
 class NewLyric extends StatefulWidget {
   @override
@@ -15,15 +11,14 @@ class NewLyric extends StatefulWidget {
 }
 
 class _NewLyricState extends State<NewLyric> {
-  TextEditingController _lyricController = TextEditingController();
-  TextEditingController _titleController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
     return BaseWidget<LyricViewModel>(
-      model: LyricViewModel(),
-      child: _formChild(),
+      model:
+          LyricViewModel(onRefreshState: (focusNode) => setState(() => null)),
+      onModelReady: (model) => model.initialize(context),
+      child: ChordTitle(),
       builder: (context, model, child) => Scaffold(
         appBar: UIHelper.solyricAppBar(context),
         body: Container(
@@ -45,64 +40,18 @@ class _NewLyricState extends State<NewLyric> {
                                     const EdgeInsets.only(left: 20, right: 20),
                                 child: Column(
                                   children: [
-                                    _formChild(),
-                                    ExtendedTextField(
-                                      style: TextStyle(fontSize: 16),
-                                      controller: _lyricController,
-                                      specialTextSpanBuilder: ChordBuilder(
-                                          MediaQuery.of(context).size.width),
-                                      keyboardType: TextInputType.multiline,
-                                      maxLines: null,
-                                    )
+                                    child,
+                                    ...model.chordLines(),
                                   ],
                                 ),
                               ),
                             ),
                           )))),
-              ChordList(
-                  onDragCallback: () =>
-                      model.handleSpecialDrag(_lyricController))
+              ChordList()
             ],
           ),
         ),
       ),
     );
-  }
-
-  _formChild() => Column(
-        children: <Widget>[
-          UIHelper.verticalSpaceSmall,
-          Row(
-            children: [
-              Expanded(
-                child: TextField(
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  maxLength: 30,
-                  controller: _titleController,
-                  decoration: InputDecoration(
-                      labelText: Resources.lyricTitle,
-                      labelStyle: TextStyle(color: Colors.grey)),
-                ),
-              ),
-              SvgPicture.asset(
-                Resources.icAudio,
-                height: 40,
-                width: 40,
-              )
-            ],
-          ),
-          UIHelper.verticalSpaceSmall,
-          Divider(
-            color: Colors.grey,
-            height: 2,
-          ),
-        ],
-      );
-
-  @override
-  void dispose() {
-    _titleController.dispose();
-    _lyricController.dispose();
-    super.dispose();
   }
 }

@@ -29,7 +29,7 @@ class ChordText extends SpecialText {
         if (char == "\n") {
           return SizedBox(width: width);
         } else {
-          return ChordTarget(char);
+          return ChordTarget();
         }
       }).toList()
       ],

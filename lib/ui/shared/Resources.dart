@@ -89,4 +89,5 @@ class Resources {
   static const String icAudio = "assets/ic_audio.svg";
   static const String lyricHint = "Content";
   static const String lyricTitle = "Title";
+  static const String delete = "Delete";
 }

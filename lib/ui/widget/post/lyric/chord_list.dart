@@ -22,102 +22,30 @@ class ChordList extends StatelessWidget {
                   width: 40,
                 ),
               ),
-              ChordBox(
-                chordName: "C#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "D#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "F#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "G#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "H#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "I#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "C#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "D#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "F#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "G#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "H#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "I#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "C#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "D#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "F#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "G#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "H#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "I#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "C#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "D#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "F#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "G#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "H#",
-                onDragCallback: onDragCallback,
-              ),
-              ChordBox(
-                chordName: "I#",
-                onDragCallback: onDragCallback,
-              )
+              ChordBox("C#"),
+              ChordBox("D#"),
+              ChordBox("F#"),
+              ChordBox("G#"),
+              ChordBox("H#"),
+              ChordBox("I#"),
+              ChordBox("C#"),
+              ChordBox("D#"),
+              ChordBox("F#"),
+              ChordBox("G#"),
+              ChordBox("H#"),
+              ChordBox("I#"),
+              ChordBox("C#"),
+              ChordBox("D#"),
+              ChordBox("F#"),
+              ChordBox("G#"),
+              ChordBox("H#"),
+              ChordBox("I#"),
+              ChordBox("C#"),
+              ChordBox("D#"),
+              ChordBox("F#"),
+              ChordBox("G#"),
+              ChordBox("H#"),
+              ChordBox("I#")
             ],
           ),
         ),
