@@ -3,10 +3,12 @@ import 'package:provider/provider.dart';
 import 'package:solyric_app/app/ui/base/BaseWidget.dart';
 import 'package:solyric_app/app/ui/credentials/login/widget/RaisedGradientButton.dart';
 import 'package:solyric_app/app/ui/credentials/signup/viewmodel/SignUpViewModel.dart';
+import 'package:solyric_app/app/utils/Validations.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/RouteNames.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
 import 'package:solyric_app/domain/model/User.dart';
+
 
 class SignUpAuthCard extends StatefulWidget {
   @override
@@ -53,7 +55,7 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
                     labelText: Resources.FORGOT_EMAIL_LABEL,
                     labelStyle: const TextStyle(color: Colors.white70)),
                 keyboardType: TextInputType.emailAddress,
-                validator: (value) => null,
+                validator: (value) => Validations.emailValidation(value),
               ),
               UIHelper.verticalSpaceLarge,
               TextFormField(
@@ -70,7 +72,7 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
                     labelText: Resources.PASSWORD_LOGIN,
                     labelStyle: const TextStyle(color: Colors.white70)),
                 keyboardType: TextInputType.emailAddress,
-                validator: (value) => null,
+                validator: (value) => Validations.passwordValidation(value)
               ),
               UIHelper.verticalSpaceLarge,
               TextFormField(
@@ -87,7 +89,7 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
                     labelText: Resources.CONFIRM_PASSWORD,
                     labelStyle: const TextStyle(color: Colors.white70)),
                 keyboardType: TextInputType.emailAddress,
-                validator: (value) => null,
+                validator: (value) => Validations.passwordValidation(value)
               ),
               UIHelper.verticalSpaceLarge,
               Row(
