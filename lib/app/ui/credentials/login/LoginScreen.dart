@@ -6,6 +6,11 @@ import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/RouteNames.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
 
+// TODO(wilfredonoyola): I am going to add file GoogleService-Info.plist to ours iOS Project for runs successfully
+// Firebase Services as (Authentication, Push Notification).
+// See on Trello: https://trello.com/c/v8Ij4cZt
+
+
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
