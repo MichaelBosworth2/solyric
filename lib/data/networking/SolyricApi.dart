@@ -4,9 +4,9 @@ import 'package:solyric_app/domain/model/User.dart';
 
 class SolyricApi {
 
-  static const _apiKey = "?key=AIzaSyDSZGMRqEqvOaidVa5IOmIFVqTww8slQWA";
+  static const _apiKey = "?key=AIzaSyArNCJvvTGzAW09A4fdh-Snk3WJmeG9JDY";
   static const _authBase = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/";
-  static const _baseUrl = "https://sorliric-alpha.firebaseio.com/";
+  static const _baseUrl = "https://solyric-96ad6.firebaseio.com/";
   static const _reset = "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode";
 
   Future<http.Response> resetPassword(String email) =>
