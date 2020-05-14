@@ -33,6 +33,7 @@ dev_dependencies:
   flutter_svg: ^0.17.4
   extended_text_field: ^0.4.7
   vibrate: ^0.0.4
+  firebase_auth: ^0.16.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -48,6 +49,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/login_background.png
+    - assets/auth-background-gradient.png
     - assets/tutorial1.png
     - assets/tutorial2.png
     - assets/tutorial3.png
@@ -73,6 +75,11 @@ flutter:
     - assets/ic_settings.svg
     - assets/ic_time.svg
     - assets/ic_audio.svg
+    - assets/ic_user.svg
+    - assets/ic_lock.svg
+    - assets/ic_google_plus.svg
+    - assets/ic_twitter.svg
+    - assets/ic_facebook.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
