@@ -12,8 +12,8 @@ class LoginViewModel extends BaseViewModel {
 
   Future<bool> login(User user) async { 
     setLoading(true);
-    bool isLoading = await _useCase.login(user);
+    bool isLoginSuccessfully = await _useCase.login(user);
     setLoading(false);
-    return isLoading;
+    return isLoginSuccessfully;
   }
 }
