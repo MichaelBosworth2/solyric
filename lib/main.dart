@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-//import 'package:solyric_app/app/ui/post/NewLyricScreen.dart';
 import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
-//import 'package:solyric_app/app/ui/wall/WallScreen.dart';
 
 import 'app/di/ProviderSetUp.dart';
 import 'app/utils/Resources.dart';
