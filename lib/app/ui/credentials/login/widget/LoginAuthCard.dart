@@ -23,15 +23,15 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
   final _passwordController = TextEditingController();
   final _emailController = TextEditingController();
   final _focusOutlineInputBorder = OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Colors.white),
                       borderRadius:  BorderRadius.circular(40)
                     );
   final _normalOutlineInputBorder = OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white24),
+                      borderSide: const BorderSide(color: Colors.white24),
                       borderRadius:  BorderRadius.circular(40)
                     );
   final _errorOutlineInputBorder = OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.red),
+                    borderSide: const BorderSide(color: Colors.red),
                     borderRadius:  BorderRadius.circular(40)
                   );
 
