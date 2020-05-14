@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 
 class SocialLogin extends StatelessWidget {
   @override
@@ -17,28 +19,30 @@ class SocialLogin extends StatelessWidget {
           children: [
             Text(
               Resources.SOCIAL_LOGIN,
-              style: TextStyle(color: Colors.white70, fontSize: 18),
+              style: TextStyle(color: Colors.white, fontSize: 18),
             ),
             UIHelper.verticalSpaceLarge,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.cake,
-                  color: Colors.white70,
-                ),
-                UIHelper.horizontalSpaceLarge,
-                Icon(
-                  Icons.email,
-                  color: Colors.white70,
-                ),
-                UIHelper.horizontalSpaceLarge,
-                Icon(
-                  Icons.print,
-                  color: Colors.white70,
-                )
-              ],
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: 
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                   SvgPicture.asset(
+                      Resources.IC_FACEBOOK,
+                      color: Colors.white,
+                    ),
+                   SvgPicture.asset(
+                      Resources.IC_TWITTER,
+                      color: Colors.white,
+                    ),
+                  SvgPicture.asset(
+                      Resources.IC_GOOGLE_PLUS,
+                      color: Colors.white
+                    )
+                ],
+              )
             )
           ],
         ),

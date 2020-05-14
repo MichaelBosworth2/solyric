@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "637173490341",
+    "firebase_url": "https://solyric-96ad6.firebaseio.com",
+    "project_id": "solyric-96ad6",
+    "storage_bucket": "solyric-96ad6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637173490341:android:cb0057a21a8230d445e34c",
+        "android_client_info": {
+          "package_name": "com.hurtado.solyric_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637173490341-81893mocmgbhi0gdeab894snpc460m0b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArNCJvvTGzAW09A4fdh-Snk3WJmeG9JDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637173490341-81893mocmgbhi0gdeab894snpc460m0b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

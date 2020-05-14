@@ -8,6 +8,8 @@ import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/RouteNames.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
 import 'package:solyric_app/domain/model/User.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 
 import 'RaisedGradientButton.dart';
 
@@ -20,6 +22,18 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
   final GlobalKey<FormState> _formKey = GlobalKey();
   final _passwordController = TextEditingController();
   final _emailController = TextEditingController();
+  final _focusOutlineInputBorder = OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.white),
+                      borderRadius:  BorderRadius.circular(40)
+                    );
+  final _normalOutlineInputBorder = OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.white24),
+                      borderRadius:  BorderRadius.circular(40)
+                    );
+  final _errorOutlineInputBorder = OutlineInputBorder(
+                    borderSide: const BorderSide(color: Colors.red),
+                    borderRadius:  BorderRadius.circular(40)
+                  );
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +42,13 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
         onTap: () => Navigator.pushNamed(context, RouteNames.FORGOT_PASSWORD),
         child: const Text(
           Resources.FORGOT_LOGIN,
-          style: TextStyle(color: Colors.white70, fontSize: 18),
+          style: TextStyle(color: Colors.white70, fontSize: 14),
         ),
       ),
       builder: (context, model, child) => Form(
         key: _formKey,
         child: Padding(
-          padding: const EdgeInsets.only(left: 45, right: 45),
+          padding: const EdgeInsets.only(left: 60, right: 60),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -42,39 +56,61 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
               TextFormField(
                 style: const TextStyle(color: Colors.white70),
                 controller: _emailController,
-                decoration: const InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white70)),
-                    prefixIcon: const Icon(
-                      Icons.supervised_user_circle,
-                      color: Colors.white70,
+
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(vertical: 5),
+                    filled: true,
+                    fillColor: Colors.black54,
+                    border: _normalOutlineInputBorder ,
+                    focusedBorder: _focusOutlineInputBorder,
+                    enabledBorder: _normalOutlineInputBorder,
+                    errorBorder: _errorOutlineInputBorder,
+                    prefixIcon: Padding(
+                      padding: EdgeInsets.all(16),
+                      child: SvgPicture.asset(
+                        Resources.IC_USER,        
+                        height: 12,
+                        color: Colors.white60
+                      )
                     ),
                     labelText: Resources.FORGOT_EMAIL_LABEL,
-                    labelStyle: const TextStyle(color: Colors.white70)),
+                    labelStyle: const TextStyle(color: Colors.white)),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) => Validations.emailValidation(value),
                 onSaved: (value) => null,
               ),
-              UIHelper.verticalSpaceLarge,
+              UIHelper.verticalSpace(15),
               TextFormField(
                 obscureText: true,
                 style: TextStyle(color: Colors.white70),
                 controller: _passwordController,
                 decoration: InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white70)),
-                    prefixIcon: Icon(Icons.lock_outline, color: Colors.white70),
+                    contentPadding: EdgeInsets.symmetric(vertical: 5),
+                    filled: true,
+                    fillColor: Colors.black54,
+                    border: _normalOutlineInputBorder ,
+                    focusedBorder: _focusOutlineInputBorder,
+                    enabledBorder: _normalOutlineInputBorder,    
+                    errorBorder: _errorOutlineInputBorder,
+                    prefixIcon: Padding(
+                      padding: EdgeInsets.all(16),
+                      child: SvgPicture.asset(
+                        Resources.IC_LOCK,        
+                        height: 12,
+                        color: Colors.white70
+                      )
+                    ),
                     labelText: Resources.PASSWORD_LOGIN,
                     labelStyle: TextStyle(
-                        color: Colors.white70, fontStyle: FontStyle.italic)),
+                        color: Colors.white)),
                 keyboardType: TextInputType.visiblePassword,
                 validator: (value) => Validations.passwordValidation(value),
                 onSaved: (value) => null,
               ),
-              UIHelper.verticalSpaceLarge,
+              UIHelper.verticalSpace(15),
               child,
               Padding(
-                padding: const EdgeInsets.only(left: 45, right: 45, top: 20),
+                padding: const EdgeInsets.only(top: 20, left: 5, right: 5),
                 child: model.isLoading
                     ? CircularProgressIndicator()
                     : RaisedGradientButton(
@@ -86,11 +122,12 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
                                   email: _emailController.text,
                                   password: _passwordController.text))
                               ? Navigator.pushNamed(context, RouteNames.WALL)
-                              : UIHelper.errorMessage(context);
+                              : UIHelper.showMessage(context, Resources.EMAIL_PASSWORD_IS_INCORRECT_LOGIN);
                         },
+                        height: 44,
                         child: Text(
                           Resources.SIGN_IN,
-                          style: TextStyle(color: Colors.white70),
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         gradient: LinearGradient(
                           colors: <Color>[
