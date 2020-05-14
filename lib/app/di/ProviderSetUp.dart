@@ -4,6 +4,9 @@ import 'package:solyric_app/app/ui/credentials/login/viewmodel/LoginViewModel.da
 import 'package:solyric_app/app/ui/credentials/signup/viewmodel/SignUpViewModel.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/NewLyricViewModel.dart';
 import 'package:solyric_app/app/ui/tutorial/viewmodel/TutorialViewModel.dart';
+import 'package:solyric_app/domain/interaction/GetTutorialDataUseCase.dart';
+import 'package:solyric_app/app/ui/wall/viewmodel/WallViewModel.dart';
+import 'package:solyric_app/domain/interaction/GetFeedUseCase.dart';
 import 'package:solyric_app/data/networking/SolyricApi.dart';
 import 'package:solyric_app/data/repository/AuthRepositoryImpl.dart';
 import 'package:solyric_app/data/repository/LyricRepositoryImpl.dart';
@@ -51,6 +54,12 @@ class ProviderSetUp {
     ),
     ProxyProvider<LyricRepository, GetChordItemUseCase>(
       update: (context, repo, authService) => GetChordItemUseCase(repo: repo),
+    ),
+    ProxyProvider<AuthRepository, GetFeedUseCase>(
+      update: (context, repo, authService) => GetFeedUseCase(repo: repo),
+    ),
+    ProxyProvider<AuthRepository, GetTutorialDataUseCase>(
+      update: (context, repo, authService) => GetTutorialDataUseCase(repo: repo),
     )
   ];
 
@@ -68,8 +77,12 @@ class ProviderSetUp {
       update: (context, chordUseCase, lineUseCase, authService) =>
           NewLyricViewModel(chordUseCase: chordUseCase, lineUseCase: lineUseCase),
     ),
-    ProxyProvider<SignUpUseCase, TutorialViewModel>(
-      update: (context, useCase, authService) => TutorialViewModel(),
-    )
+    ProxyProvider<GetFeedUseCase, WallViewModel>(
+      update: (context, useCase, authService) => WallViewModel(useCase: useCase),
+    ),
+    ProxyProvider<GetTutorialDataUseCase, TutorialViewModel>(
+      update: (context, useCase, authService) => TutorialViewModel(useCase: useCase),
+    ),
+    
   ];
 }
