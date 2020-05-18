@@ -1,60 +1,68 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:solyric_app/app/ui/base/BaseWidget.dart';
+import 'package:solyric_app/app/ui/post/viewmodel/ChordListViewModel.dart';
+import 'package:solyric_app/app/ui/post/viewmodel/NewLyricViewModel.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
-import 'package:solyric_app/domain/model/ChordBox.dart';
+import 'package:solyric_app/data/repository/LyricRepositoryImpl.dart';
 
 import 'ChordBoxWidget.dart';
 
-class ChordList extends StatefulWidget {
-  const ChordList({this.onDragCallback, @required this.lyricChords});
-
-  final List<ChordBox> lyricChords;
-  final Function onDragCallback;
-
+/// Builds a list of lyrics based on [NewLyricViewModel]'s lyric Chords
+/// @see [LyricRepositoryImpl] for details on this widget source
+class ChordListWidget extends StatefulWidget {
   @override
-  _ChordListState createState() => _ChordListState();
+  _ChordListWidgetState createState() => _ChordListWidgetState();
 }
 
-class _ChordListState extends State<ChordList> {
-  final subChords = List<String>();
-
+class _ChordListWidgetState extends State<ChordListWidget> {
   @override
-  Widget build(BuildContext context) => SingleChildScrollView(
-        child: Container(
-            color: Colors.black12,
-            child: Row(
-              children: <Widget>[
-                if (subChords.isNotEmpty)
-                  Column(
-                    children: <Widget>[
-                      ...subChords
-                          .map((chord) => ChordBoxWidget(chordName: chord))
-                    ],
+  Widget build(BuildContext context) =>
+      BaseWidget<ChordListViewModel>(onModelReady: (controller, model) async {
+        if (model.chords.isEmpty) {
+          model.getLyricChords(3);
+        }
+      }, builder: (context, model, child) {
+        return model.isLoading
+            ? Center(child: CircularProgressIndicator())
+            : Container(
+                height: double.infinity,
+                color: Colors.black12,
+                child: SingleChildScrollView(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [_buildChordList(model)],
                   ),
-                Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 16, 10, 16),
-                      child: SvgPicture.asset(
-                        Resources.IC_TIME,
-                        height: 35,
-                        width: 35,
-                      ),
-                    ),
-                    ...widget.lyricChords.map((model) {
-                      return ChordBoxWidget(
-                        chordName: model.chordName,
-                        subChords: model.subChords,
-                        longClick: _onChordBoxLongClick,
-                      );
-                    })
-                  ],
-                )
-              ],
-            )),
-      );
-
-  void _onChordBoxLongClick(subChords) => setState(() {
-        this.subChords.addAll(subChords);
+                ),
+              );
       });
+
+  /// Builds Main Chord list based on widget's lyric chords
+  /// Maps lyric chords into [ChordBoxWidget] for drag and drop functionality
+  _buildChordList(ChordListViewModel model) => Container(
+    width: 60,
+    child: Column(
+          children: <Widget>[
+            _buildChordTimeAsset(model),
+            ...model.chords.map((model) {
+              return ChordBoxWidget(
+                chordName: model.chordName,
+                subChords: model.subChords,
+              );
+            })
+          ],
+        ),
+  );
+
+  /// Builds Main chord list time icon @see [SvgPicture]
+  Widget _buildChordTimeAsset(ChordListViewModel model) => FlatButton(
+      onPressed: () => model.getChordHistory(4),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 0, 4, 0),
+        child: SvgPicture.asset(
+          Resources.IC_TIME,
+          height: 35,
+          width: 35,
+        ),
+      ));
 }

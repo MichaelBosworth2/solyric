@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:solyric_app/app/ui/base/BaseWidget.dart';
-import 'package:solyric_app/app/ui/wall/widget/CenterBottomTab.dart';
-import 'package:solyric_app/app/ui/wall/widget/WallCard.dart';
 import 'package:solyric_app/app/ui/wall/viewmodel/WallViewModel.dart';
 import 'package:solyric_app/app/ui/wall/widget/BottomTab.dart';
+import 'package:solyric_app/app/ui/wall/widget/CenterBottomTab.dart';
+import 'package:solyric_app/app/ui/wall/widget/WallCard.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/RouteNames.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
@@ -13,11 +13,12 @@ class WallScreen extends StatefulWidget {
   _WallScreenState createState() => _WallScreenState();
 }
 
-class _WallScreenState extends State<WallScreen> with SingleTickerProviderStateMixin {
+class _WallScreenState extends State<WallScreen>
+    with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return BaseWidget<WallViewModel>(
-      child: UIHelper.commonAppBar(context),
+      child: UIHelper.commonAppBar(context, backStack: false),
       builder: (context, model, child) => Scaffold(
           appBar: child,
           body: ListView.builder(
@@ -28,27 +29,31 @@ class _WallScreenState extends State<WallScreen> with SingleTickerProviderStateM
                   )),
           bottomNavigationBar: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              BottomTab(
-                  title: Resources.EXPLORE,
-                  asset: Resources.IC_EXPLORE,
-                  onClick: null),
-              BottomTab(
-                  title: Resources.SEARCH,
-                  asset: Resources.IC_SEARCH,
-                  onClick: null),
-              CenterBottomTab(onClick: null),
-              BottomTab(
-                  title: Resources.CHORDS,
-                  asset: Resources.IC_CHORDS,
-                  onClick: () => null),
-              BottomTab(
-                  title: Resources.ACCOUNT,
-                  asset: Resources.IC_ACCOUNT,
-                  onClick: () =>
-                      Navigator.pushNamed(context, RouteNames.PROFILE)),
-            ],
+            children: _buildBottomTabActions(context),
           )),
     );
   }
+
+  /// Build bottom navigation actions
+  /// @see [BottomTab] and [CenterBottomTab]
+  List<Widget> _buildBottomTabActions(BuildContext context) => [
+        BottomTab(
+            title: Resources.EXPLORE,
+            asset: Resources.IC_EXPLORE,
+            onClick: () => Navigator.pushNamed(context, RouteNames.PROFILE)),
+        BottomTab(
+            title: Resources.SEARCH,
+            asset: Resources.IC_SEARCH,
+            onClick: () => Navigator.pushNamed(context, RouteNames.PROFILE)),
+        CenterBottomTab(
+            onClick: () => Navigator.pushNamed(context, RouteNames.PROFILE)),
+        BottomTab(
+            title: Resources.CHORDS,
+            asset: Resources.IC_CHORDS,
+            onClick: () => Navigator.pushNamed(context, RouteNames.PROFILE)),
+        BottomTab(
+            title: Resources.ACCOUNT,
+            asset: Resources.IC_ACCOUNT,
+            onClick: () => Navigator.pushNamed(context, RouteNames.PROFILE))
+      ];
 }

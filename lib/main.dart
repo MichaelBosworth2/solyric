@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
 
-import 'app/di/ProviderSetUp.dart';
+import 'app/di/ProviderModule.dart';
 import 'app/utils/Resources.dart';
 import 'app/utils/Router.dart';
 
@@ -16,7 +16,7 @@ class SolyricApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: ProviderSetUp.providers,
+      providers: ProviderModule.providers,
       child: MaterialApp(
         title: Resources.APP_TITLE,
         theme: ThemeData(
