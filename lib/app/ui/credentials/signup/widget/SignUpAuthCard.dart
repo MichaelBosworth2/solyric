@@ -53,9 +53,6 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
                         borderSide: BorderSide(color: Colors.white70)),
                     labelText: Resources.USERNAME.toUpperCase(),
                     labelStyle: const TextStyle(color: Colors.white),
-                   /* errorStyle: TextStyle(
-                      color: isAvailableUsername? Colors.green : Colors.red
-                    ),*/
                   ),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) => Validations.usernameValidation(value, isAvailableUsername),
