@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:solyric_app/app/ui/base/BaseWidget.dart';
 import 'package:solyric_app/app/ui/wall/widget/CenterBottomTab.dart';
 import 'package:solyric_app/app/ui/wall/widget/WallCard.dart';
+import 'package:solyric_app/app/ui/wall/viewmodel/WallViewModel.dart';
 import 'package:solyric_app/app/ui/wall/widget/BottomTab.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/RouteNames.dart';
@@ -15,7 +16,7 @@ class WallScreen extends StatefulWidget {
 class _WallScreenState extends State<WallScreen> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return BaseWidget(
+    return BaseWidget<WallViewModel>(
       child: UIHelper.commonAppBar(context),
       builder: (context, model, child) => Scaffold(
           appBar: child,

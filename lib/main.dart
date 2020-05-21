@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:solyric_app/app/ui/post/NewLyricScreen.dart';
+import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
 
 import 'app/di/ProviderSetUp.dart';
 import 'app/utils/Resources.dart';
@@ -23,7 +23,7 @@ class SolyricApp extends StatelessWidget {
           primaryColor: Color(0xFF353535),
           accentColor: Colors.purpleAccent,
         ),
-        home: NewLyricScreen(),
+        home: LoginScreen(),
         onGenerateRoute: Router.routes,
       ),
     );

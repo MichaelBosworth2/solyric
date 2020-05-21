@@ -55,4 +55,7 @@ class UIHelper {
   static void errorMessage(BuildContext context) =>
       Scaffold.of(context).showSnackBar(SnackBar(
           content: Text('Something went wrong please try again later')));
+          
+  static void showMessage(BuildContext context, String message) =>
+      Scaffold.of(context).showSnackBar(SnackBar(content: Text(message)));
 }
