@@ -9,5 +9,10 @@ class SignUpViewModel extends BaseViewModel {
 
   final SignUpUseCase _useCase;
 
-  Future<bool> signUp(User user) => _useCase.signUp(user);
+  Future<bool> signUp(User user) async{
+   setLoading(true);
+    bool isSignUpSuccessfully = await _useCase.signUp(user);
+    setLoading(false);
+    return isSignUpSuccessfully;
+  }
 }

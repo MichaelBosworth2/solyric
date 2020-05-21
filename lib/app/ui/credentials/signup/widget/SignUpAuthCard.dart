@@ -19,6 +19,7 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
   final _passwordConfirmationController = TextEditingController();
   final _passwordController = TextEditingController();
   final _emailController = TextEditingController();
+  final _usernameController = TextEditingController();
 
   final GlobalKey<FormState> _formKey = GlobalKey();
 
@@ -29,9 +30,9 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
         child: GestureDetector(
           onTap: () => Navigator.pushNamed(context, RouteNames.LOGIN),
           child: Center(
-              child: Text(
-            Resources.MEMBER,
-            style: TextStyle(color: Colors.white70),
+            child: Text(
+              Resources.MEMBER,
+              style: TextStyle(color: Colors.white),
           )),
         ),
       ),
@@ -43,38 +44,54 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
             children: [
               UIHelper.verticalSpace(40),
               TextFormField(
-                style: const TextStyle(color: Colors.white70),
-                controller: _emailController,
-                decoration: const InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
+                style: const TextStyle(color: Colors.white),
+                controller: _usernameController,
+                decoration:  InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white70)),
-                    prefixIcon: const Icon(
+                    /*prefixIcon: const Icon(
                       Icons.supervised_user_circle,
                       color: Colors.white70,
-                    ),
-                    labelText: Resources.FORGOT_EMAIL_LABEL,
-                    labelStyle: const TextStyle(color: Colors.white70)),
+                    ),*/
+                    labelText: Resources.USERNAME.toUpperCase(),
+                    labelStyle: const TextStyle(color: Colors.white, )),
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) => Validations.usernameValidation(value),
+              ),
+              UIHelper.verticalSpace(40),
+              TextFormField(
+                style: const TextStyle(color: Colors.white),
+                controller: _emailController,
+                decoration:  InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.white70)),
+                    /*prefixIcon: const Icon(
+                      Icons.supervised_user_circle,
+                      color: Colors.white70,
+                    ),*/
+                    labelText: Resources.FORGOT_EMAIL_LABEL.toUpperCase(),
+                    labelStyle: const TextStyle(color: Colors.white)),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) => Validations.emailValidation(value),
               ),
               UIHelper.verticalSpaceLarge,
               TextFormField(
                 obscureText: true,
-                style: const TextStyle(color: Colors.white70),
+                style: const TextStyle(color: Colors.white),
                 controller: _passwordController,
-                decoration: const InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white70)),
-                    prefixIcon: const Icon(
+                decoration:  InputDecoration(
+                    enabledBorder: const UnderlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.white70)),
+                    /*prefixIcon: const Icon(
                       Icons.lock_open,
                       color: Colors.white70,
-                    ),
-                    labelText: Resources.PASSWORD_LOGIN,
-                    labelStyle: const TextStyle(color: Colors.white70)),
+                    ),*/
+                    labelText: Resources.PASSWORD_LOGIN.toUpperCase(),
+                    labelStyle: const TextStyle(color: Colors.white)),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) => Validations.passwordValidation(value)
               ),
-              UIHelper.verticalSpaceLarge,
+              /*UIHelper.verticalSpaceLarge,
               TextFormField(
                 obscureText: true,
                 style: const TextStyle(color: Colors.white70),
@@ -90,7 +107,7 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
                     labelStyle: const TextStyle(color: Colors.white70)),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) => Validations.passwordValidation(value)
-              ),
+              ),*/
               UIHelper.verticalSpaceLarge,
               Row(
                 children: <Widget>[
@@ -108,9 +125,10 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
                                   : UIHelper.errorMessage(context);
                             },
                             child: Text(
-                              Resources.SIGN_IN,
-                              style: TextStyle(color: Colors.white70),
+                              Resources.SIGN_UP.toUpperCase(),
+                              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                             ),
+                            height: 44,
                             gradient: LinearGradient(
                               colors: <Color>[
                                 Colors.blueAccent,

@@ -41,11 +41,14 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final response = await _api.signUp(user);
       final responseData = json.decode(response.body);
+      print('responseData');
+      print(responseData);
       if (responseData['error'] != null)
         throw Exception(responseData['error']['message']);
       // TODO do something with auth user
       return true;
     } catch (error) {
+      print('ERROR signUp');
       print(error);
       return false;
     }

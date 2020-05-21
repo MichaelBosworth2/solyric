@@ -1,0 +1,104 @@
+[33mcommit c5b061fec996410e84bb0a0530dfc632878c4c64[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/AUTH-FIREBASE[m[33m)[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 21:13:59 2020 -0600
+
+    Self-generated files.
+
+[33mcommit 32bca1b20d0e27ed440d88045b67a583acbe714c[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 21:13:09 2020 -0600
+
+    Added firebase_auth package and added files assets.
+
+[33mcommit 5800c73d73a1b747ddf86c831e1b8442f57be58f[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 21:12:01 2020 -0600
+
+    Added some changes to the UI (Missing to complete and check from Design)
+
+[33mcommit 5409fc1d778bd53e66cb7dab5ed53538b5cd6a42[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 21:10:59 2020 -0600
+
+    Delete unnecessary imports
+
+[33mcommit 71e342eca99b24c8210a3031f2206345860d4026[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 21:09:48 2020 -0600
+
+    Added showMessage to displays messages with SnackBar.
+
+[33mcommit 4146c1575be6ec37bc2d61907633a47c62853fd5[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 21:08:54 2020 -0600
+
+    Complete UI matches design and Implemented with Firebase API.
+
+[33mcommit 369a3d62518ad7cf22def8f51ac8692e693c2afa[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 21:06:25 2020 -0600
+
+    Added background gradient to Login Screen.
+
+[33mcommit 82fd3e3ff72abef9a5660159c6bb472faac55a6c[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 21:05:56 2020 -0600
+
+    Added new icons.
+
+[33mcommit 6b9827af0dc83bdb586ed52c36bff3a3d9abc3bd[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 21:04:24 2020 -0600
+
+    Integrated the provider services to Feed and Tutorial Features.
+
+[33mcommit 7ce311947fba2065c231cbe1d40a4b88ae89e659[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 20:59:21 2020 -0600
+
+    Added new API Google to connect with Firebase.
+
+[33mcommit ca4fb7b0353a0ab46b855c45f1109ef6976d649c[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 20:57:30 2020 -0600
+
+    Added file to setup firebase project.
+
+[33mcommit 8728fdb799f9164e606492f86170cf2e0a8b4adc[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Wed May 13 20:55:22 2020 -0600
+
+    Change to Login screen as home screen.
+
+[33mcommit 9d4c5f83394da2f3e351efb158279c2cf78e8db9[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m
+Merge: db662a6 7b2604d
+Author: Jose Wilfredo <wilfredon163@gmail.com>
+Date:   Sun May 10 09:02:16 2020 -0600
+
+    Merge pull request #1 from juan1402/feature/UPGRADE-FLUTTER
+    
+    Update files for flutter 1.17.0 compatibility
+
+[33mcommit 7b2604d8eb4b4895489837376ca545b0ec994d77[m[33m ([m[1;31morigin/feature/UPGRADE-FLUTTER[m[33m, [m[1;32mfeature/UPGRADE-FLUTTER[m[33m)[m
+Author: wilfredonoyola <wilfredon163@gmail.com>
+Date:   Sat May 9 16:31:53 2020 -0600
+
+    Update files for flutter 1.17.0 compatibility
+
+[33mcommit db662a68aa5a474d5b2c857452cbe57335c4b896[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Juan Hurtado <juan@yayamed.com>
+Date:   Wed May 6 17:37:31 2020 -0600
+
+    clean arquitecture refactor
+
+[33mcommit e270a5faff2daa49529e77358f2c1b2ce5de139c[m
+Author: jhurtado <jhurtado@applaudostudios.com>
+Date:   Thu Apr 9 17:48:46 2020 -0600
+
+    new lyric refactor
+
+[33mcommit 32c38d96fd2a8b525f41da4ee4760fe4dabda9b7[m
+Author: Juan Hurtado <jhurtado@applaudostudios.com>
+Date:   Tue Feb 11 16:57:33 2020 -0600
+
+    initial commit
