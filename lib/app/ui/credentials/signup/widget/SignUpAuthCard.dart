@@ -8,6 +8,7 @@ import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/RouteNames.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
 import 'package:solyric_app/domain/model/User.dart';
+import 'package:solyric_app/app/utils/AuthStatus.dart';
 
 
 class SignUpAuthCard extends StatefulWidget {
@@ -20,7 +21,7 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
   final _passwordController = TextEditingController();
   final _emailController = TextEditingController();
   final _usernameController = TextEditingController();
-
+   bool isAvailableUsername = false;
   final GlobalKey<FormState> _formKey = GlobalKey();
 
   @override
@@ -46,17 +47,18 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
               TextFormField(
                 style: const TextStyle(color: Colors.white),
                 controller: _usernameController,
+                onChanged: (value) => usernameAvailableState(value, model),
                 decoration:  InputDecoration(
-                    enabledBorder: const UnderlineInputBorder(
+                    enabledBorder: const UnderlineInputBorder(            
                         borderSide: BorderSide(color: Colors.white70)),
-                    /*prefixIcon: const Icon(
-                      Icons.supervised_user_circle,
-                      color: Colors.white70,
-                    ),*/
                     labelText: Resources.USERNAME.toUpperCase(),
-                    labelStyle: const TextStyle(color: Colors.white, )),
+                    labelStyle: const TextStyle(color: Colors.white),
+                   /* errorStyle: TextStyle(
+                      color: isAvailableUsername? Colors.green : Colors.red
+                    ),*/
+                  ),
                 keyboardType: TextInputType.emailAddress,
-                validator: (value) => Validations.usernameValidation(value),
+                validator: (value) => Validations.usernameValidation(value, isAvailableUsername),
               ),
               UIHelper.verticalSpace(40),
               TextFormField(
@@ -64,11 +66,7 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
                 controller: _emailController,
                 decoration:  InputDecoration(
                     enabledBorder: const UnderlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.white70)),
-                    /*prefixIcon: const Icon(
-                      Icons.supervised_user_circle,
-                      color: Colors.white70,
-                    ),*/
+                      borderSide: const BorderSide(color: Colors.white70)),
                     labelText: Resources.FORGOT_EMAIL_LABEL.toUpperCase(),
                     labelStyle: const TextStyle(color: Colors.white)),
                 keyboardType: TextInputType.emailAddress,
@@ -81,33 +79,12 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
                 controller: _passwordController,
                 decoration:  InputDecoration(
                     enabledBorder: const UnderlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.white70)),
-                    /*prefixIcon: const Icon(
-                      Icons.lock_open,
-                      color: Colors.white70,
-                    ),*/
+                      borderSide: const BorderSide(color: Colors.white70)),
                     labelText: Resources.PASSWORD_LOGIN.toUpperCase(),
                     labelStyle: const TextStyle(color: Colors.white)),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) => Validations.passwordValidation(value)
               ),
-              /*UIHelper.verticalSpaceLarge,
-              TextFormField(
-                obscureText: true,
-                style: const TextStyle(color: Colors.white70),
-                controller: _passwordConfirmationController,
-                decoration: const InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white70)),
-                    prefixIcon: const Icon(
-                      Icons.lock_outline,
-                      color: Colors.white70,
-                    ),
-                    labelText: Resources.CONFIRM_PASSWORD,
-                    labelStyle: const TextStyle(color: Colors.white70)),
-                keyboardType: TextInputType.emailAddress,
-                validator: (value) => Validations.passwordValidation(value)
-              ),*/
               UIHelper.verticalSpaceLarge,
               Row(
                 children: <Widget>[
@@ -118,11 +95,25 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
                             onPressed: () async {
                               if (!_formKey.currentState.validate()) return;
                               _formKey.currentState.save();
-                              await model.signUp(User(
+                              AuthStatus _authStatus = await model.signUp(User(
                                       email: _emailController.text,
-                                      password: _passwordController.text))
-                                  ? Navigator.pushNamed(context, RouteNames.LOGIN)
-                                  : UIHelper.errorMessage(context);
+                                      password: _passwordController.text,
+                                      username: _usernameController.text));
+
+                              switch(_authStatus){
+                                case AuthStatus.SIGNUP_SUCCESSFULLY:
+                                  Navigator.pushNamed(context, RouteNames.WALL);
+                                break;
+                                case AuthStatus.EMAIL_EXIST:
+                                  UIHelper.showMessage(context, Resources.EMAIL_EXIST);
+                                break;
+                                case AuthStatus.UNDEFINED_ERROR:
+                                  UIHelper.showMessage(context, Resources.SIGN_UP_UNDEFINED);
+                                break;
+                                default:
+                                  UIHelper.showMessage(context, Resources.SIGN_UP_UNDEFINED);
+                                break;
+                              }
                             },
                             child: Text(
                               Resources.SIGN_UP.toUpperCase(),
@@ -155,5 +146,20 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
     _passwordController.dispose();
     _emailController.dispose();
     super.dispose();
+  }
+
+  void usernameAvailableState(String username, SignUpViewModel model) async{
+    print(username);
+    if(username != null && username.length >= 3){
+        AuthStatus _authStatus = await model.isExistUsername(username);
+        print(' existe username $_authStatus ');
+        setState(() {
+            if (_authStatus == AuthStatus.USERNAME_AVAILABLE){
+              isAvailableUsername = true;
+            } else {
+              isAvailableUsername = false;
+            }
+        });
+    }
   }
 }

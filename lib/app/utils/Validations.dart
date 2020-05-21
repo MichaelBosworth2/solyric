@@ -1,11 +1,11 @@
 class Validations {
-   static String usernameValidation(String username) => RegExp(
+   static String usernameValidation(String username, bool isAvailableUsername) => RegExp(
         r'^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$',
         /*caseSensitive: false,
         multiLine: false,*/
-      ).hasMatch(username)
+      ).hasMatch(username) && isAvailableUsername
           ? null
-          : "Invalid Username";
+          :  !isAvailableUsername ? 'Username already taken' :"Invalid Username";
 
   static String emailValidation(String email) => RegExp(
         "\\b[A-Z0-9._%-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b",

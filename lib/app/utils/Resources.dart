@@ -49,6 +49,8 @@ class Resources {
   static const String SIGN_UP = "Sign Up";
   static const String MEMBER = "Already a member?";
   static const String CONFIRM_PASSWORD = 'Confirm Password';
+  static const String EMAIL_EXIST = 'This email already exists';
+  static const String SIGN_UP_UNDEFINED = 'An error occurred while registering';
 
   // tutorial
 
