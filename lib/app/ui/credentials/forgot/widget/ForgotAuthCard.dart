@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:solyric_app/app/ui/base/BaseWidget.dart';
 import 'package:solyric_app/app/ui/credentials/forgot/viewmodel/ForgotPasswordViewModel.dart';
 import 'package:solyric_app/app/utils/Validations.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
-import 'package:solyric_app/app/utils/RouteNames.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
 
 import '../../login/widget/RaisedGradientButton.dart';
@@ -53,7 +51,7 @@ class _ForgotAuthCardState extends State<ForgotAuthCard> {
                     _formKey.currentState.save();
 
                     await model.forgotPassword(_emailController.text)
-                        ? UIHelper.showMessage(context, Resources.EMAIL_SENT)
+                        ? submitFormSuccess()
                         : UIHelper.showMessage(context, Resources.NO_USER_FOUND);
                   },
                   child: const Text(
@@ -77,5 +75,10 @@ class _ForgotAuthCardState extends State<ForgotAuthCard> {
   void dispose() {
     _emailController.dispose();
     super.dispose();
+  }
+
+  void submitFormSuccess(){
+    UIHelper.showMessage(context, Resources.EMAIL_SENT);
+    _emailController.clear();
   }
 }
