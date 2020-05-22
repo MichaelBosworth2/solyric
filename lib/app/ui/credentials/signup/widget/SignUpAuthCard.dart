@@ -99,7 +99,7 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
 
                               switch(_authStatus){
                                 case AuthStatus.SIGNUP_SUCCESSFULLY:
-                                  Navigator.pushNamed(context, RouteNames.WALL);
+                                  Navigator.pushNamed(context, RouteNames.TUTORIAL);
                                 break;
                                 case AuthStatus.EMAIL_EXIST:
                                   UIHelper.showMessage(context, Resources.EMAIL_EXIST);
