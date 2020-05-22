@@ -3,6 +3,7 @@ import 'package:solyric_app/app/ui/credentials/forgot/viewmodel/ForgotPasswordVi
 import 'package:solyric_app/app/ui/credentials/login/viewmodel/LoginViewModel.dart';
 import 'package:solyric_app/app/ui/credentials/signup/viewmodel/SignUpViewModel.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/ChordListViewModel.dart';
+import 'package:solyric_app/app/ui/post/viewmodel/EditLyricViewModel.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/NewLyricViewModel.dart';
 import 'package:solyric_app/app/ui/tutorial/viewmodel/TutorialViewModel.dart';
 import 'package:solyric_app/app/ui/wall/viewmodel/WallViewModel.dart';
@@ -83,9 +84,12 @@ class ProviderModule {
     ProxyProvider<SignUpUseCase, SignUpViewModel>(
       update: (context, useCase, _) => SignUpViewModel(useCase: useCase),
     ),
+    ProxyProvider<GetChordItemUseCase, EditLyricViewModel>(
+      update: (context, useCase, _) => EditLyricViewModel(),
+    ),
     ProxyProvider2<GetChordItemUseCase, NewLyricUseCase, NewLyricViewModel>(
       update: (context, lineUseCase, createUseCase, _) => NewLyricViewModel(
-          lineUseCase: lineUseCase, createUseCase: createUseCase),
+          createUseCase: createUseCase, lineUseCase: lineUseCase),
     ),
     ProxyProvider2<GetChordsUseCase, GetChordHistoryUseCase,
         ChordListViewModel>(

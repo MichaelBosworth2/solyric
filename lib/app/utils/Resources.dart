@@ -74,7 +74,7 @@ class Resources {
   static const String IC_ACCOUNT = "assets/ic_account.svg";
   static const String ACCOUNT = "Account";
 
-  // wall card
+  // Wall card
 
   static const String IC_NAV = "assets/ic_send.svg";
   static const String IC_MESSAGE = "assets/ic_message.svg";
@@ -98,4 +98,9 @@ class Resources {
   static const String DELETE = "Delete";
   static const String DIALOG_CONTENT = "Do you want to save this as a draft on your device?";
   static const String LYRIC_TITLE = "Title";
+
+  // Posts
+
+  static const String GUITAR_TITLE = "GUITAR";
+  static const String PIANO_TITLE = "PIANO";
 }

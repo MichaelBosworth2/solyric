@@ -49,7 +49,7 @@ class ChordLineWidgetState extends State<ChordLineWidget> {
           TextField(
               autofocus: false,
               maxLength: 30,
-              style: const TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18, color: Colors.grey.shade700),
               decoration: _buildLineDecoration(),
               focusNode: _lineFocusNode,
               controller: _lineController,

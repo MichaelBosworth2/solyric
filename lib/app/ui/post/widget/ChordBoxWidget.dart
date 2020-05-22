@@ -55,13 +55,15 @@ class _ChordBoxWidgetState extends State<ChordBoxWidget> {
   /// Builds widget's draggable child using App's Theme data
   /// @see [Draggable.child]
   _buildDraggableChild(ThemeData theme) => Container(
+
         alignment: AlignmentDirectional.center,
         width: double.infinity,
         child: Theme(
           data: Theme.of(context).copyWith(
-            canvasColor: Colors.blue.shade800,
+            canvasColor: Color.fromRGBO(69, 70, 240, 1.0),
           ),
           child: DropdownButton(
+            elevation: 0,
             iconSize: 0,
             hint: _buildDraggableText(
                 selectedValue, theme.accentColor, 20, FontWeight.bold),

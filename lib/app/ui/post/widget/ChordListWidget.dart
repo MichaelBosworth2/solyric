@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:solyric_app/app/ui/base/BaseWidget.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/ChordListViewModel.dart';
-import 'package:solyric_app/app/ui/post/viewmodel/NewLyricViewModel.dart';
+import 'package:solyric_app/app/ui/post/viewmodel/EditLyricViewModel.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/data/repository/LyricRepositoryImpl.dart';
 
 import 'ChordBoxWidget.dart';
 
-/// Builds a list of lyrics based on [NewLyricViewModel]'s lyric Chords
+/// Builds a list of lyrics based on [EditLyricViewModel]'s lyric Chords
 /// @see [LyricRepositoryImpl] for details on this widget source
 class ChordListWidget extends StatefulWidget {
   @override
@@ -27,7 +27,7 @@ class _ChordListWidgetState extends State<ChordListWidget> {
             ? Center(child: CircularProgressIndicator())
             : Container(
                 height: double.infinity,
-                color: Colors.black12,
+                color: Colors.grey.shade200,
                 child: SingleChildScrollView(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -40,8 +40,8 @@ class _ChordListWidgetState extends State<ChordListWidget> {
   /// Builds Main Chord list based on widget's lyric chords
   /// Maps lyric chords into [ChordBoxWidget] for drag and drop functionality
   _buildChordList(ChordListViewModel model) => Container(
-    width: 60,
-    child: Column(
+        width: 60,
+        child: Column(
           children: <Widget>[
             _buildChordTimeAsset(model),
             ...model.chords.map((model) {
@@ -52,17 +52,13 @@ class _ChordListWidgetState extends State<ChordListWidget> {
             })
           ],
         ),
-  );
+      );
 
   /// Builds Main chord list time icon @see [SvgPicture]
   Widget _buildChordTimeAsset(ChordListViewModel model) => FlatButton(
       onPressed: () => model.getChordHistory(4),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 0, 4, 0),
-        child: SvgPicture.asset(
-          Resources.IC_TIME,
-          height: 35,
-          width: 35,
-        ),
+      child: SvgPicture.asset(
+        Resources.IC_TIME,
+        fit: BoxFit.fill,
       ));
 }

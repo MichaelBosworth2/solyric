@@ -18,7 +18,7 @@ class _WallScreenState extends State<WallScreen>
   @override
   Widget build(BuildContext context) {
     return BaseWidget<WallViewModel>(
-      child: UIHelper.commonAppBar(context, backStack: false),
+      child: UIHelper.commonAppBar(context, backButton: false),
       builder: (context, model, child) => Scaffold(
           appBar: child,
           body: ListView.builder(

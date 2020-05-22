@@ -48,13 +48,12 @@ class _ChordTitleWidgetState extends State<ChordTitleWidget> {
   /// Builds title text area using [_titleController]
   Widget _buildTitleTextArea() => Expanded(
         child: TextField(
-          style: TextStyle(fontSize: 18),
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           maxLength: 30,
           controller: _titleController,
           decoration: InputDecoration(
               counterStyle: TextStyle(fontSize: 0),
               border: InputBorder.none,
-              labelText: Resources.LYRIC_TITLE,
               labelStyle: TextStyle(color: Colors.grey)),
         ),
       );

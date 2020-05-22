@@ -11,14 +11,15 @@ class UIHelper {
   /// @param [BuildContext] host build context
   /// @param [allowBackStack] whether you want to have a default back button
   static AppBar commonAppBar(BuildContext context,
-          {bool backStack = true, String logo = Resources.IC_LOGO}) =>
+          {bool backButton = true, String logo = Resources.IC_LOGO}) =>
       AppBar(
-          automaticallyImplyLeading: backStack,
-          title: _actionBarLogo(logo),
-          actions: _actionBarActions(context));
+          automaticallyImplyLeading: backButton,
+          centerTitle: true,
+          title: actionBarLogo(logo),
+          actions: actionBarActions(context));
 
   /// Builds common action bar logo image
-  static Widget _actionBarLogo(String logo) => Container(
+  static Widget actionBarLogo(String logo) => Container(
         padding: EdgeInsets.only(bottom: 6, top: 6),
         height: 50,
         child: Image.asset(logo),
@@ -26,7 +27,7 @@ class UIHelper {
 
   /// Builds common action bar default actions
   /// @see [NewLyricScreen] [TBD LYRIC SCREEN] [TBD CHAT SCREEN]
-  static List<Widget> _actionBarActions(BuildContext context) => [
+  static List<Widget> actionBarActions(BuildContext context) => [
         IconButton(
           icon: SvgPicture.asset(Resources.IC_EDIT),
           onPressed: () => Navigator.pushNamed(context, RouteNames.NEW_LYRIC,
