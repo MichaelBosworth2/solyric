@@ -18,6 +18,7 @@ class SolyricApp extends StatelessWidget {
     return MultiProvider(
       providers: ProviderModule.providers,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: Resources.APP_TITLE,
         theme: ThemeData(
           primaryColor: Color(0xFF353535),

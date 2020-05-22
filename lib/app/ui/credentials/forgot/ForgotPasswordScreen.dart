@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:solyric_app/app/ui/credentials/forgot/widget/ForgotAuthCard.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   @override
@@ -13,8 +14,7 @@ class ForgotPasswordScreen extends StatelessWidget {
         width: deviceSize.size.width,
         decoration: const BoxDecoration(
             image: const DecorationImage(
-                image: AssetImage(Resources.BACKGROUND),
-                colorFilter: ColorFilter.mode(Colors.black38, BlendMode.darken),
+                image: AssetImage(Resources.BACKGROUND_GRADIENT),
                 fit: BoxFit.cover)),
         child: SingleChildScrollView(
           child: Column(
@@ -23,14 +23,16 @@ class ForgotPasswordScreen extends StatelessWidget {
             children: [
               AppBar(
                 backgroundColor: Colors.transparent,
-              ),
-              UIHelper.verticalSpace(90),
+                elevation: 100,
+              ), 
+              UIHelper.verticalSpace(130),
               Text(
                 Resources.TITLE_FORGOT,
-                style: TextStyle(
-                    fontSize: 50,
-                    color: Colors.white70,
-                    fontFamily: Resources.GREAT_VIBES),
+                style: GoogleFonts.lato(
+                  color: Colors.white, 
+                  fontSize: 40, 
+                  fontWeight: FontWeight.w300
+                ),
               ),
               UIHelper.verticalSpaceLarge,
               Padding(

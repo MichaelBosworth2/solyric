@@ -20,15 +20,19 @@ class Resources {
   static const String IC_TWITTER = "assets/ic_twitter.svg";
   static const String GREAT_VIBES = "GreatVibes";
   static const String APP_TITLE = "Solyric";
+  static const String USERNAME = "Username";
 
   // Forgot password
 
   static const String SEND = "SEND";
   static const String TITLE_FORGOT = "Forgot Password";
   static const String INSTRUCTIONS_FORGOT =
-      "Enter your email address, we will send instructions on how to change your password";
+      "Enter your email address, we will send instructions on how to change your password.";
   static const String FORGOT_EMAIL_LABEL = "Email Address";
   static const String SIGN_IN = "SIGN IN";
+  static const String EMAIL_SENT = 'Thanks! Please check your inbox for a link to reset your password';
+  static const String NO_USER_FOUND = 'No users found';
+
 
   // login
 
@@ -38,11 +42,14 @@ class Resources {
   static const String PASSWORD_LOGIN = "Password";
   static const String SOCIAL_LOGIN = "Login With Social Account";
   static const String EMAIL_PASSWORD_IS_INCORRECT_LOGIN = 'The email address or password is incorrect. Please try again.';
+  
   // sign up
 
   static const String SIGN_UP = "Sign Up";
   static const String MEMBER = "Already a member?";
   static const String CONFIRM_PASSWORD = 'Confirm Password';
+  static const String EMAIL_EXIST = 'This email already exists';
+  static const String SIGN_UP_UNDEFINED = 'An error occurred while registering';
 
   // tutorial
 

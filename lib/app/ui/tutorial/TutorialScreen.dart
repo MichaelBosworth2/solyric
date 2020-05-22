@@ -3,6 +3,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:solyric_app/app/ui/base/BaseWidget.dart';
 import 'package:solyric_app/app/ui/tutorial/viewmodel/TutorialViewModel.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
+import 'package:solyric_app/app/utils/RouteNames.dart';
 
 class TutorialScreen extends StatefulWidget {
   @override
@@ -33,7 +34,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                   Padding(
                     padding: const EdgeInsets.only(top: 8, right: 8),
                     child: GestureDetector(
-                      onTap: () => model.next(),
+                      onTap: () => Navigator.pushNamed(context, RouteNames.WALL),
                       child: Text(Resources.SKIP),
                     ),
                   )
