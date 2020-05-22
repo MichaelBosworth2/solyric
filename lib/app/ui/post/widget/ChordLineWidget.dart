@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:solyric_app/app/ui/post/controller/ChordTargetController.dart';
 import 'package:solyric_app/domain/model/ChordLine.dart';
 
-import 'ChordLineController.dart';
+import '../controller/ChordLineController.dart';
 import 'ChordTargetWidget.dart';
 
 class ChordLineWidget extends StatefulWidget {
@@ -24,63 +25,70 @@ class ChordLineWidget extends StatefulWidget {
 
 class ChordLineWidgetState extends State<ChordLineWidget> {
   final _lineController = TextEditingController();
-  FocusNode _lineFocusNode = FocusNode();
+  final FocusNode _lineFocusNode = FocusNode();
   final _targets = List<ChordTargetWidget>();
-  ChordLineController _controller;
+  ChordLineController _widgetController;
 
-  void requestFocus() => _lineFocusNode.requestFocus();
+  void _requestLine() => widget.controller.chordLine = ChordLine(
+      text: _lineController.text,
+      chords: _targets.map((chord) {
+        chord.controller.requestChord();
+        return chord.controller.chordName;
+      }).toList());
 
   @override
   void initState() {
-    _lineController.text = widget.chordLine.text;
-    widget.chordLine.chords
-        .forEach((chord) => _targets.add(ChordTargetWidget(chord: chord)));
-    _controller = widget.controller;
-    _controller.addListener(() => _lineFocusNode.requestFocus());
+    _chordLineInitialization();
     super.initState();
   }
 
   @override
-  Widget build(BuildContext context) {
-    executeAfterBuild();
-    return Column(
-      children: <Widget>[
-        Row(children: [..._targets]),
-        TextField(
-          maxLength: 35,
-          style: TextStyle(fontSize: 18),
-          decoration: InputDecoration(
-              counterStyle: TextStyle(fontSize: 0),
-              focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey, width: 0.2),
-              ),
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey, width: 0.2),
-              )),
-          autofocus: true,
-          focusNode: _lineFocusNode,
-          controller: _lineController,
-          onSubmitted: (data) => widget.onNextLine(widget.position),
-          onChanged: (data) {
-            if (_lineController.text.isEmpty) {
-              widget.onDelete(widget.position);
-            }
-          },
-          keyboardType: TextInputType.text,
-          maxLines: 1,
-        )
-      ],
-    );
-  }
-
-  Future<void> executeAfterBuild() async {
-    _lineFocusNode.requestFocus();
-  }
+  Widget build(BuildContext context) => Column(
+        children: <Widget>[
+          Wrap(children: [..._targets]),
+          TextField(
+              autofocus: false,
+              maxLength: 30,
+              style: TextStyle(fontSize: 18, color: Colors.grey.shade700),
+              decoration: _buildLineDecoration(),
+              focusNode: _lineFocusNode,
+              controller: _lineController,
+              onSubmitted: (data) => widget.onNextLine(widget.position),
+              onChanged: (data) {
+                if (_lineController.text.isEmpty) {
+                  widget.onDelete(widget.position);
+                }
+              },
+              keyboardType: TextInputType.text,
+              maxLines: 1)
+        ],
+      );
 
   @override
   void dispose() {
     _lineFocusNode.dispose();
     _lineController.dispose();
     super.dispose();
+  }
+
+  /// Build Chord Line decoration
+  InputDecoration _buildLineDecoration() => InputDecoration(
+      counterStyle: const TextStyle(fontSize: 0),
+      focusedBorder: const UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.grey, width: 0.2),
+      ),
+      enabledBorder: const UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.grey, width: 0.2),
+      ));
+
+  /// Necessary chord line widget set up
+  _chordLineInitialization() {
+    _lineController.text = widget.chordLine.text;
+    if (_targets.isEmpty)
+      widget.chordLine.chords.forEach((chord) => _targets.add(ChordTargetWidget(
+          chord: chord, controller: ChordTargetController())));
+    _widgetController = widget.controller;
+    _widgetController.addListener(() => _lineFocusNode.requestFocus());
+    _widgetController.addListener(() => _requestLine());
   }
 }

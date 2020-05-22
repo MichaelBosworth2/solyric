@@ -1,52 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:solyric_app/app/ui/base/BaseWidget.dart';
+import 'package:solyric_app/app/ui/post/EditLyricScreen.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/NewLyricViewModel.dart';
-import 'package:solyric_app/app/ui/post/widget/ChordListWidget.dart';
-import 'package:solyric_app/app/ui/post/widget/ChordTitleWidget.dart';
+import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
+import 'package:solyric_app/domain/model/Chord.dart';
 
-class NewLyricScreen extends StatelessWidget {
+class NewLyricScreen extends StatefulWidget {
+  NewLyricScreen({@required bool editMode}) : editMode = editMode;
+  final bool editMode;
+
+  @override
+  _NewLyricScreenState createState() => _NewLyricScreenState();
+}
+
+class _NewLyricScreenState extends State<NewLyricScreen> {
+  Lyric _lyric;
+
   @override
   Widget build(BuildContext context) {
-    final deviceSize = MediaQuery.of(context).size;
     return BaseWidget<NewLyricViewModel>(
-      onModelReady: (controller, model) {
-        model.redraw = () => controller.refreshState();
+      onModelReady: (controller, model) async {
+        _lyric = await model.getLyric(3, widget.editMode);
       },
-      builder: (context, model, child) => Scaffold(
-        appBar: UIHelper.commonAppBar(context),
-        body: model.isLoading
-            ? Center(child: CircularProgressIndicator())
-            : Container(
-                height: deviceSize.height,
-                width: deviceSize.width,
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                        child: SingleChildScrollView(
-                            child: ConstrainedBox(
-                                constraints: BoxConstraints(
-                                    minHeight: deviceSize.height),
-                                child: Container(
-                                  color: Colors.black12,
-                                  child: Card(
-                                    margin: const EdgeInsets.fromLTRB(8, 8, 0, 8),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 20, right: 20),
-                                      child: Column(
-                                        children: [
-                                          ChordTitleWidget(model.title),
-                                          ...model.lyricLines,
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                )))),
-                    ChordList(lyricChords: model.lyricChords)
-                  ],
-                ),
-              ),
+      builder: (context, model, child) => DefaultTabController(
+        length: 2,
+        child: Scaffold(
+            appBar: AppBar(
+                automaticallyImplyLeading: true,
+                centerTitle: true,
+                title: UIHelper.actionBarLogo(Resources.IC_LOGO),
+                actions: UIHelper.actionBarActions(context),
+                bottom: TabBar(indicatorColor: Colors.white, tabs: [
+                  Tab(text: Resources.GUITAR_TITLE),
+                  Tab(text: Resources.PIANO_TITLE)
+                ])),
+            body: model.isLoading
+                ? Center(child: CircularProgressIndicator())
+                : TabBarView(children: [
+                    EditLyricScreen(lyric: _lyric),
+                    EditLyricScreen(lyric: _lyric)
+                  ])),
       ),
     );
   }

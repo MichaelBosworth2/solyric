@@ -5,5 +5,5 @@ class GetChordItemUseCase {
   GetChordItemUseCase({LyricRepository repo}) : _repo = repo;
   final LyricRepository _repo;
 
-  Future<Chord> getChordItem(int id) async => _repo.getChordItem(id);
+  Future<Lyric> getChordItem(int id) async => _repo.getChordItem(id);
 }

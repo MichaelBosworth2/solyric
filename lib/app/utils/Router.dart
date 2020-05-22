@@ -3,15 +3,21 @@ import 'package:solyric_app/app/ui/credentials/forgot/ForgotPasswordScreen.dart'
 import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
 import 'package:solyric_app/app/ui/credentials/signup/SignUpScreen.dart';
 import 'package:solyric_app/app/ui/post/NewLyricScreen.dart';
+import 'package:solyric_app/app/ui/post/util/LyricArguments.dart';
 import 'package:solyric_app/app/ui/profile/ProfileScreen.dart';
 import 'package:solyric_app/app/ui/tutorial/TutorialScreen.dart';
 import 'package:solyric_app/app/ui/wall/WallScreen.dart';
 import 'package:solyric_app/app/utils/RouteNames.dart';
+
 class Router {
   static Route<dynamic> routes(RouteSettings settings) {
     switch (settings.name) {
       case RouteNames.NEW_LYRIC:
-        return MaterialPageRoute(builder: (_) => NewLyricScreen());
+        {
+          final LyricArguments args = settings.arguments;
+          return MaterialPageRoute(
+              builder: (_) => NewLyricScreen(editMode: args.editMode));
+        }
       case RouteNames.LOGIN:
         return MaterialPageRoute(builder: (_) => LoginScreen());
       case RouteNames.WALL:
