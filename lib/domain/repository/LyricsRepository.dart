@@ -6,7 +6,15 @@ class LyricRepository {
     throw Exception("Unimplemented exception");
   }
 
-  Future<Chord> getChordItem(int lyricId) {
+  Future<List<ChordBox>> getChordHistory() {
+    throw Exception("Unimplemented exception");
+  }
+
+  Future<Lyric> getChordItem(int lyricId) {
+    throw Exception("Unimplemented exception");
+  }
+
+  Future<Lyric> createNewLyric() {
     throw Exception("Unimplemented exception");
   }
 }
