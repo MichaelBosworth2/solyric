@@ -42,7 +42,7 @@ class _ChordTargetWidgetState extends State<ChordTargetWidget> {
               itemBuilder: (BuildContext context) =>
               [PopupMenuItem(child: _deletePopUpButton(theme))],
               child: Container(
-                height: 25,
+                height: 15,
                 width: 20,
                 child: FittedBox(
                   fit: BoxFit.fitWidth,
