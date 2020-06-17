@@ -35,8 +35,8 @@ class UIHelper {
         ),
         IconButton(
           icon: SvgPicture.asset(Resources.IC_MIC),
-          onPressed: () {},
-        ),
+          onPressed: () => Navigator.pushNamed(context, RouteNames.NEW_RECORD))
+        ,
         IconButton(
           icon: SvgPicture.asset(Resources.IC_BELL),
           onPressed: () {},

@@ -7,6 +7,7 @@ import 'package:solyric_app/app/ui/post/util/LyricArguments.dart';
 import 'package:solyric_app/app/ui/profile/ProfileScreen.dart';
 import 'package:solyric_app/app/ui/tutorial/TutorialScreen.dart';
 import 'package:solyric_app/app/ui/wall/WallScreen.dart';
+import 'package:solyric_app/app/ui/record/RecordScreen.dart';
 import 'package:solyric_app/app/utils/RouteNames.dart';
 
 class Router {
@@ -30,6 +31,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => TutorialScreen());
       case RouteNames.FORGOT_PASSWORD:
         return MaterialPageRoute(builder: (_) => ForgotPasswordScreen());
+       case RouteNames.NEW_RECORD:
+        return MaterialPageRoute(builder: (_) => RecordScreen());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

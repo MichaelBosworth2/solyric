@@ -6,4 +6,5 @@ class RouteNames {
   static const WALL = "/wall";
   static const PROFILE = "/profile";
   static const NEW_LYRIC = "/new-lyric";
+   static const NEW_RECORD = "/new-record";
 }
