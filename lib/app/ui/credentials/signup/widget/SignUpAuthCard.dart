@@ -65,7 +65,8 @@ class _SignUpAuthCardState extends State<SignUpAuthCard> {
                     enabledBorder: const UnderlineInputBorder(
                       borderSide: const BorderSide(color: Colors.white70)),
                     labelText: Resources.FORGOT_EMAIL_LABEL.toUpperCase(),
-                    labelStyle: const TextStyle(color: Colors.white)),
+                    labelStyle: const TextStyle(color: Colors.white)
+                  ),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) => Validations.emailValidation(value),
               ),

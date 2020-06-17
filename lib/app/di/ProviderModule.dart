@@ -7,9 +7,11 @@ import 'package:solyric_app/app/ui/post/viewmodel/EditLyricViewModel.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/NewLyricViewModel.dart';
 import 'package:solyric_app/app/ui/tutorial/viewmodel/TutorialViewModel.dart';
 import 'package:solyric_app/app/ui/wall/viewmodel/WallViewModel.dart';
+import 'package:solyric_app/app/ui/record/viewmodel/RecordAudioViewModel.dart';
 import 'package:solyric_app/data/networking/SolyricApi.dart';
 import 'package:solyric_app/data/repository/AuthRepositoryImpl.dart';
 import 'package:solyric_app/data/repository/LyricRepositoryImpl.dart';
+import 'package:solyric_app/data/repository/RecordAudioRepositoryImpl.dart';
 import 'package:solyric_app/domain/interaction/GetChordHistoryUseCase.dart';
 import 'package:solyric_app/domain/interaction/GetChordItemUseCase.dart';
 import 'package:solyric_app/domain/interaction/GetChordsUseCase.dart';
@@ -18,9 +20,11 @@ import 'package:solyric_app/domain/interaction/GetTutorialDataUseCase.dart';
 import 'package:solyric_app/domain/interaction/LoginUseCase.dart';
 import 'package:solyric_app/domain/interaction/NewLyricUseCase.dart';
 import 'package:solyric_app/domain/interaction/ResetPasswordUseCase.dart';
+import 'package:solyric_app/domain/interaction/RecordAudioUseCase.dart';
 import 'package:solyric_app/domain/interaction/SignUpUseCase.dart';
 import 'package:solyric_app/domain/repository/AuthRepository.dart';
 import 'package:solyric_app/domain/repository/LyricsRepository.dart';
+import 'package:solyric_app/domain/repository/RecordAudioRepository.dart';
 
 class ProviderModule {
   static final List<SingleChildCloneableWidget> providers = [
@@ -40,6 +44,9 @@ class ProviderModule {
     ),
     ProxyProvider<SolyricApi, LyricRepository>(
       update: (context, api, _) => LyricRepositoryImpl(api: api),
+    ),
+    ProxyProvider<SolyricApi, RecordAudioRepository>(
+      update: (context, api, _) => RecordAudioRepositoryImpl(api: api),
     )
   ];
 
@@ -70,7 +77,13 @@ class ProviderModule {
     ),
     ProxyProvider<LyricRepository, GetChordHistoryUseCase>(
       update: (context, repo, _) => GetChordHistoryUseCase(repo: repo),
-    )
+    ),
+    ProxyProvider<AuthRepository, LoginUseCase>(
+      update: (context, repo, _) => LoginUseCase(repo: repo),
+    ),
+    ProxyProvider<RecordAudioRepository, RecordAudioUseCase>(
+      update: (context, repo, _) => RecordAudioUseCase(repo: repo),
+    ),
   ];
 
   static List<SingleChildCloneableWidget> viewModel = [
@@ -101,6 +114,9 @@ class ProviderModule {
     ),
     ProxyProvider<GetTutorialDataUseCase, TutorialViewModel>(
       update: (context, useCase, _) => TutorialViewModel(useCase: useCase),
+    ),
+    ProxyProvider<RecordAudioUseCase, RecordAudioViewModel>(
+      update: (context, useCase, _) => RecordAudioViewModel(useCase: useCase),
     ),
   ];
 }

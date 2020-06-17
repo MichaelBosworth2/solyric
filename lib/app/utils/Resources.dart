@@ -11,13 +11,16 @@ class Resources {
   // shared
 
   static const String BACKGROUND = "assets/login_background.png";
-  static const String BACKGROUND_GRADIENT = "assets/auth-background-gradient.png";
+  static const String BACKGROUND_GRADIENT = "assets/auth_background_gradient.png";
   static const String IC_LOGO = "assets/solyric_logo.png";
   static const String IC_USER = "assets/ic_user.svg";
   static const String IC_LOCK = "assets/ic_lock.svg";
   static const String IC_GOOGLE_PLUS = "assets/ic_google_plus.svg";  
   static const String IC_FACEBOOK = "assets/ic_facebook.svg";
   static const String IC_TWITTER = "assets/ic_twitter.svg";
+  static const String IC_PIANO = "assets/ic_piano.svg";
+  static const String IC_GUITAR = "assets/ic_guitar.svg";
+  static const String IC_TRASH = "assets/ic_trash.svg";
   static const String GREAT_VIBES = "GreatVibes";
   static const String APP_TITLE = "Solyric";
   static const String USERNAME = "Username";
@@ -110,4 +113,26 @@ class Resources {
 
   static const String GUITAR_TITLE = "GUITAR";
   static const String PIANO_TITLE = "PIANO";
+
+  // Record Audio
+
+  static const String RECORD_TITLE = "RECORDS";
+  static const String RECORD_TITLE_LYRICS = "LYRICS";
+  static const String TAP_TO_RECORD = "TAP TO RECORD";
+  static const String RECORDING = "RECORDING";
+  static const String BACKGROUND_RECORD = 'assets/background_record.png';
+  static const String IC_PLAY = "assets/ic_play.svg";
+  static const String IC_NEXT = "assets/ic_next.svg";
+  static const String IC_PREVIOUS = "assets/ic_previous.svg";
+  static const String RECORDING_DETAIL = "Recording details";
+  static const String ENTER_RECORDING_NAME = "Enter recording name";
+  static const String RECORDING_TYPE = "Recording type";
+  static const String RECORDING_SAVE = "Save";
+  static const String RECORDING_CANCEL = "Cancel";
+  static const String RECORDING_DELETE = "Delete";
+  static const String LATEST_RECORD = "Latest Record";
+  static const String SAVED_RECORD = "Saved"; 
+  static const String YOU_NOT_SAVED_RECORD = "You haven't saved any audio.";
+  static const String CONFIRM_DELETE_RECORD = "Are you sure you want to permanently delete this audio?";
+  static const String RECORDING_PREFIX_NO_NAME = "Recording ";  
 }
