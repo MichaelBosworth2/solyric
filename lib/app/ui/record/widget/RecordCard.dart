@@ -158,7 +158,7 @@ class RecordCardState extends  State<RecordCard> {
               ? Resources.RECORDING_PREFIX_NO_NAME + DateFormat.yMMMd().format(new DateTime.now()) 
               : _controllerInputNameRecording.text, 
             uri: recordFilePath,
-            typeRecording: _typeRecording,
+            typeRecording: _typeRecording == TypeRecording.guitar ? 'guitar'  : 'piano',
             createdAt: DateTime.now() 
           )
         );        

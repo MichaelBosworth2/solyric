@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:solyric_app/app/ui/record/util/TypeRecordingEmum.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
 import 'package:solyric_app/app/ui/record/viewmodel/RecordAudioViewModel.dart';
@@ -124,7 +123,7 @@ class ListRecord extends StatelessWidget {
                     flex: 3,
                     child:                             
                     Row(children: <Widget>[
-                        recording.typeRecording == TypeRecording.guitar 
+                        recording.typeRecording == 'guitar' 
                         ? SvgPicture.asset(Resources.IC_GUITAR, color: Colors.black54)
                         : SvgPicture.asset(Resources.IC_PIANO, color: Colors.black54),
                         UIHelper.horizontalSpace(15),

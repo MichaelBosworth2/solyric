@@ -9,6 +9,7 @@ import 'package:solyric_app/app/ui/tutorial/viewmodel/TutorialViewModel.dart';
 import 'package:solyric_app/app/ui/wall/viewmodel/WallViewModel.dart';
 import 'package:solyric_app/app/ui/record/viewmodel/RecordAudioViewModel.dart';
 import 'package:solyric_app/data/networking/SolyricApi.dart';
+import 'package:solyric_app/data/networking/SolyricDatabaseLocal.dart';
 import 'package:solyric_app/data/repository/AuthRepositoryImpl.dart';
 import 'package:solyric_app/data/repository/LyricRepositoryImpl.dart';
 import 'package:solyric_app/data/repository/RecordAudioRepositoryImpl.dart';
@@ -35,6 +36,7 @@ class ProviderModule {
   ];
 
   static List<SingleChildCloneableWidget> independentServices = [
+    Provider.value(value: SolyricDatabaseLocal()),
     Provider.value(value: SolyricApi())
   ];
 
@@ -45,8 +47,8 @@ class ProviderModule {
     ProxyProvider<SolyricApi, LyricRepository>(
       update: (context, api, _) => LyricRepositoryImpl(api: api),
     ),
-    ProxyProvider<SolyricApi, RecordAudioRepository>(
-      update: (context, api, _) => RecordAudioRepositoryImpl(api: api),
+    ProxyProvider<SolyricDatabaseLocal, RecordAudioRepository>(
+      update: (context, database, _) => RecordAudioRepositoryImpl(database: database),
     )
   ];
 

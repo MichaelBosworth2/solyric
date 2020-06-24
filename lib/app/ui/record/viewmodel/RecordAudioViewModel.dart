@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solyric_app/app/ui/base/BaseViewModel.dart';
+import 'package:solyric_app/app/ui/record/util/HelperModel.dart';
 import 'package:solyric_app/domain/interaction/RecordAudioUseCase.dart';
 import 'package:solyric_app/domain/model/RecordAudio.dart';
 
@@ -12,7 +13,7 @@ class RecordAudioViewModel extends BaseViewModel {
   bool _isRecording = false;
   RecordAudio currentAudio;
 
-  final List<RecordAudio> _audios = [];
+  List<RecordAudio> _audios = [];
 
   List<RecordAudio> get audios => _audios;
 
@@ -47,21 +48,31 @@ class RecordAudioViewModel extends BaseViewModel {
   }
 
   Future<bool> addAudio(RecordAudio audio) async { 
-    setLoading(true);
-    _audios.add(audio);
-    bool isSavedSuccessfully = await _useCase.addAudio(audio);
+    setLoading(true);    
+    int idRecording = await _useCase.addAudio(audio);
+
+    RecordAudio _audio = converterToRecordAudio(audio, idRecording); 
+    _audios.add(_audio);
     setLoading(false);
     notifyListeners();
-    return isSavedSuccessfully;
+    return idRecording > 0 ? true : false; 
   }
 
   Future<bool> removeAudio(RecordAudio audio) async { 
     setLoading(true);
-    //_audios.removeWhere((item) => item == id);
-    _audios.remove(audio);
-    //bool isSavedSuccessfully = await _useCase.addAudio(audio);
+    bool isDeleted = await _useCase.removeAudio(audio);
+    if(isDeleted){
+      _audios.remove(audio);
+    }    
     setLoading(false);
     notifyListeners();
-    return true;
+    return isDeleted;
+  }
+
+  Future initializeAudios() async { 
+    setLoading(true);
+    _audios = await _useCase.getAllRecordingFromLocal();
+    setLoading(false);
+    notifyListeners();    
   }
 }
