@@ -130,6 +130,7 @@ class ListRecord extends StatelessWidget {
                           InkWell(
                             child: SvgPicture.asset(Resources.IC_TRASH, color: Colors.black54),
                             onTap: () {
+                                recordAudioModel.stopPlayer();
                                 showModalBottomSheet(
                                   context: context,
                                   backgroundColor: Colors.transparent,
