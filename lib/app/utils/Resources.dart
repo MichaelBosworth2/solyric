@@ -135,4 +135,5 @@ class Resources {
   static const String YOU_NOT_SAVED_RECORD = "You haven't saved any audio.";
   static const String CONFIRM_DELETE_RECORD = "Are you sure you want to permanently delete this audio?";
   static const String RECORDING_PREFIX_NO_NAME = "Recording ";  
+  static const String RECORDING_DRAFT = "Recordings are only visible to you. Uninstalling Solyric will delete all recordings.";  
 }

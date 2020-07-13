@@ -5,5 +5,11 @@ class RecordAudioUseCase {
   RecordAudioUseCase({RecordAudioRepository repo}) : _repo = repo;
   final RecordAudioRepository _repo;
 
-  Future<bool> addAudio(RecordAudio audio) async => _repo.addAudio(audio);
+  Future<int> addAudio(RecordAudio audio) async => _repo.addAudio(audio);
+
+  Future<bool> removeAudio(RecordAudio audio) async => _repo.removeAudio(audio);
+
+  Future<List<RecordAudio>> getAllRecordingFromLocal() async => _repo.getAllRecordingFromLocal();
+
+  
 }

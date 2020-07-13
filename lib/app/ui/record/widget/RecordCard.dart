@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
@@ -11,7 +12,6 @@ import 'package:solyric_app/domain/model/RecordAudio.dart';
 import 'package:solyric_app/app/utils/Duration.dart';
 import 'package:solyric_app/app/ui/record/util/TypeRecordingEmum.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:record_mp3/record_mp3.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:intl/intl.dart';
@@ -22,9 +22,8 @@ class RecordCard extends StatefulWidget{
 }
 
 class RecordCardState extends  State<RecordCard> {
-  AudioPlayer audioPlayer = AudioPlayer();
+  RecordAudioViewModel audioModel;
   bool isComplete = false;
-  bool isPlayingRecording = false;
   String recordFilePath;
   String statusText = "";
   // Change this when it will integrate with API and We generate an UID per each audio
@@ -47,13 +46,13 @@ class RecordCardState extends  State<RecordCard> {
       _typeRecording = TypeRecording.guitar;
     });
     super.initState();
-    listenerAudioPlayer();
+
   }
 
   // When the audio finishes playing
   void listenerAudioPlayer(){
-    audioPlayer.onPlayerCompletion.listen((event) {
-      stopPlayer();
+    audioModel.audioPlayer.onPlayerCompletion.listen((event) {
+      audioModel.stopPlayer();
     });
   }  
 
@@ -98,8 +97,8 @@ class RecordCardState extends  State<RecordCard> {
     bool hasPermission = await checkPermission();
     if (hasPermission) {
       // Stop play when start a new recording
-      if(isPlayingRecording){
-        stopPlayer();
+      if(audioModel.isPlaying){
+        audioModel.stopPlayer();
       }
 
       // Changed state to recording to IN-PROGRESS
@@ -158,7 +157,7 @@ class RecordCardState extends  State<RecordCard> {
               ? Resources.RECORDING_PREFIX_NO_NAME + DateFormat.yMMMd().format(new DateTime.now()) 
               : _controllerInputNameRecording.text, 
             uri: recordFilePath,
-            typeRecording: _typeRecording,
+            typeRecording: _typeRecording == TypeRecording.guitar ? 'guitar'  : 'piano',
             createdAt: DateTime.now() 
           )
         );        
@@ -181,23 +180,6 @@ class RecordCardState extends  State<RecordCard> {
       setState(() {});
     }
   }*/
-
-  void play(RecordAudioViewModel model) {
-    var currentAudioSelect = model.currentAudio;
-    if (currentAudioSelect.uri != null && File(currentAudioSelect.uri).existsSync()) {
-      audioPlayer.play(currentAudioSelect.uri, isLocal: true);
-      setState(() {
-        isPlayingRecording = true;
-      });
-    }
-  }
-
-  void stopPlayer(){
-    audioPlayer.stop();
-    setState(() {
-      isPlayingRecording = false;
-    });
-  }
 
   Future<String> getFilePath() async {
     Directory storageDirectory = await getApplicationDocumentsDirectory();
@@ -336,6 +318,12 @@ class RecordCardState extends  State<RecordCard> {
 
   @override
   Widget build(BuildContext context) {
+    
+    setState(() {
+      audioModel = Provider.of<RecordAudioViewModel>(context);
+      listenerAudioPlayer();
+    });
+
     return BaseWidget<RecordAudioViewModel>(
       builder: (context, model, child) => Container(
         height: 250,
@@ -426,9 +414,9 @@ class RecordCardState extends  State<RecordCard> {
                           ),
                           onTap: () {
                             if(!model.isRecording){
-                              stopPlayer();
+                              model.stopPlayer();
                               model.previousSelectAudioForListen();
-                              play(model);
+                              model.play();
                             }
                           },
                         ),
@@ -437,7 +425,7 @@ class RecordCardState extends  State<RecordCard> {
                           child: Container(
                             height: 65.0,
                             width: 65.0,
-                            padding: !isPlayingRecording ? EdgeInsets.all(18) : null,
+                            padding: !audioModel.isPlaying ? EdgeInsets.all(18) : null,
                             decoration: BoxDecoration(
                                 color: Theme.of(context).primaryColor,
                                 border: Border.all(
@@ -447,16 +435,16 @@ class RecordCardState extends  State<RecordCard> {
                                 borderRadius: BorderRadius.all(
                                     Radius.circular(80.0)), // set rounded corner radius
                               ),
-                            child: !model.isRecording && isPlayingRecording
+                            child: !model.isRecording && audioModel.isPlaying
                                 ? Icon(Icons.stop, size: 40, color: Colors.white)
                                 : SvgPicture.asset(Resources.IC_PLAY, color: Colors.white),
                           ),
                           onTap: () {
                             if(!model.isRecording){
-                              if(isPlayingRecording){
-                                stopPlayer();
+                              if(audioModel.isPlaying){
+                                audioModel.stopPlayer();
                               }else{
-                                play(model);
+                                audioModel.play();
                               }
                             }
                           },
@@ -480,9 +468,9 @@ class RecordCardState extends  State<RecordCard> {
                           ),
                           onTap: () {
                             if(!model.isRecording){
-                              stopPlayer();
+                              model.stopPlayer();
                               model.nextSelectAudioForListen();
-                              play(model);
+                              model.play();
                             }                            
                           },
                         )
