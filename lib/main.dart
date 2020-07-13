@@ -4,7 +4,7 @@ import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
 
 import 'app/di/ProviderModule.dart';
 import 'app/utils/Resources.dart';
-import 'app/utils/Router.dart';
+import 'app/utils/SolyricRouter.dart';
 
 void main() {
   Provider.debugCheckInvalidValueType = null;
@@ -12,7 +12,6 @@ void main() {
 }
 
 class SolyricApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -25,7 +24,8 @@ class SolyricApp extends StatelessWidget {
           accentColor: Colors.purpleAccent,
         ),
         home: LoginScreen(),
-        onGenerateRoute: Router.routes,
+        onGenerateRoute: (settings) =>
+            SolyricRouter.routes(settings),
       ),
     );
   }

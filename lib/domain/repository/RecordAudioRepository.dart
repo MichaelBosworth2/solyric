@@ -2,9 +2,18 @@ import 'package:solyric_app/domain/model/RecordAudio.dart';
 
 class RecordAudioRepository {
   
-  Future<bool> addAudio(RecordAudio audio) {
+  Future<int> addAudio(RecordAudio audio) {
     throw Exception("Unimplemented exception");
   }
+
+  Future<bool> removeAudio(RecordAudio audio) {
+    throw Exception("Unimplemented exception");
+  }
+    
+  Future<List<RecordAudio>> getAllRecordingFromLocal() {
+    throw Exception("Unimplemented exception");
+  }
+  
 
   /*Future<bool> login(RecordAudio audio) {
     throw Exception("Unimplemented exception");

@@ -10,7 +10,7 @@ import 'package:solyric_app/app/ui/wall/WallScreen.dart';
 import 'package:solyric_app/app/ui/record/RecordScreen.dart';
 import 'package:solyric_app/app/utils/RouteNames.dart';
 
-class Router {
+class SolyricRouter {
   static Route<dynamic> routes(RouteSettings settings) {
     switch (settings.name) {
       case RouteNames.NEW_LYRIC:
