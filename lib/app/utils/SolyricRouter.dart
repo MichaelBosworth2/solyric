@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:solyric_app/app/ui/ChordInfo/ChordInformationScreen.dart';
 import 'package:solyric_app/app/ui/credentials/forgot/ForgotPasswordScreen.dart';
 import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
 import 'package:solyric_app/app/ui/credentials/signup/SignUpScreen.dart';
@@ -33,6 +34,8 @@ class SolyricRouter {
         return MaterialPageRoute(builder: (_) => ForgotPasswordScreen());
        case RouteNames.NEW_RECORD:
         return MaterialPageRoute(builder: (_) => RecordScreen());
+      case RouteNames.CHORDS:
+        return MaterialPageRoute(builder: (_) => ChordInformationScreen());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

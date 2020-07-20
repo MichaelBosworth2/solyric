@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
-
 import 'app/di/ProviderModule.dart';
 import 'app/utils/Resources.dart';
 import 'app/utils/SolyricRouter.dart';

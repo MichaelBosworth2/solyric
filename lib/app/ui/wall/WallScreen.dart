@@ -50,7 +50,7 @@ class _WallScreenState extends State<WallScreen>
         BottomTab(
             title: Resources.CHORDS,
             asset: Resources.IC_CHORDS,
-            onClick: () => Navigator.pushNamed(context, RouteNames.PROFILE)),
+            onClick: () => Navigator.pushNamed(context, RouteNames.CHORDS)),
         BottomTab(
             title: Resources.ACCOUNT,
             asset: Resources.IC_ACCOUNT,

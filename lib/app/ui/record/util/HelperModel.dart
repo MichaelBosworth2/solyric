@@ -1,4 +1,4 @@
-import 'package:solyric_app/database/database.dart';
+import 'package:solyric_app/data/database/database.dart';
 import 'package:solyric_app/domain/model/RecordAudio.dart';
 
 RecordAudio converterToRecordAudio(RecordAudio audio, int idRecording){

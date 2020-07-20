@@ -1,0 +1,321 @@
+{
+  "chords": [
+    {
+      "name": "A",
+      "variations": [
+        {
+          "name": "A-9",
+          "positions": [
+            "assets/a-91.png",
+            "assets/a-92.png",
+            "assets/a-93.png",
+            "assets/a-94.png",
+            "assets/a-95.png",
+            "assets/a-96.png"
+          ]
+        },
+        {
+          "name": "A2",
+          "positions": [
+            "assets/a21.png",
+            "assets/a22.png",
+            "assets/a23.png",
+            "assets/a24.png",
+            "assets/a25.png",
+            "assets/a26.png",
+            "assets/a27.png",
+            "assets/a28.png"
+          ]
+        },
+        {
+          "name": "A5",
+          "positions": [
+            "assets/a51.png"
+          ]
+        },
+        {
+          "name": "A6",
+          "positions": [
+            "assets/a61.png",
+            "assets/a62.png",
+            "assets/a63.png",
+            "assets/a64.png",
+            "assets/a65.png",
+            "assets/a66.png"
+          ]
+        },
+        {
+          "name": "A7",
+          "positions": [
+            "assets/a71.png",
+            "assets/a72.png",
+            "assets/a73.png",
+            "assets/a74.png",
+            "assets/a75.png",
+            "assets/a76.png",
+            "assets/a77.png"
+          ]
+        },
+        {
+          "name": "A7+5",
+          "positions": [
+            "assets/a751.png",
+            "assets/a752.png",
+            "assets/a753.png",
+            "assets/a754.png",
+            "assets/a755.png",
+            "assets/a756.png"
+          ]
+        },
+        {
+          "name": "A7sus2",
+          "positions": [
+            "assets/A7sus2-1.png",
+            "assets/A7sus2-2.png",
+            "assets/A7sus2-3.png",
+            "assets/A7sus2-4.png",
+            "assets/A7sus2-5.png",
+            "assets/A7sus2-6.png"
+          ]
+        },
+        {
+          "name": "A7sus4",
+          "positions": [
+            "assets/A7sus4-1.png",
+            "assets/A7sus4-2.png",
+            "assets/A7sus4-3.png",
+            "assets/A7sus4-4.png",
+            "assets/A7sus4-5.png",
+            "assets/A7sus4-6.png",
+            "assets/A7sus4-7.png",
+            "assets/A7sus4-8.png",
+            "assets/A7sus4-9.png"
+          ]
+        },
+        {
+          "name": "A9",
+          "positions": [
+            "assets/A9-1.png",
+            "assets/A9-2.png",
+            "assets/A9-3.png",
+            "assets/A9-4.png",
+            "assets/A9-5.png",
+            "assets/A9-6.png",
+            "assets/A9-7.png",
+            "assets/A9-8.png",
+            "assets/A9-9.png",
+            "assets/A9-10.png",
+            "assets/A9-11.png",
+            "assets/A9-12.png",
+            "assets/A9-13.png",
+            "assets/A9-14.png",
+            "assets/A9-15.png",
+            "assets/A9-16.png"
+          ]
+        },
+        {
+          "name": "A",
+          "positions": [
+            "assets/A-1-01.png",
+            "assets/A-2-01.png",
+            "assets/A-3-01.png",
+            "assets/A-4-01.png",
+            "assets/A-5-01.png",
+            "assets/A-6-01.png"
+          ]
+        },
+        {
+          "name": "Aadd9",
+          "positions": [
+            "assets/Aadd9-1.png",
+            "assets/Aadd9-2.png",
+            "assets/Aadd9-3.png",
+            "assets/Aadd9-4.png",
+            "assets/Aadd9-5.png",
+            "assets/Aadd9-6.png",
+            "assets/Aadd9-7.png",
+            "assets/Aadd9-8.png"
+          ]
+        },
+        {
+          "name": "Aaug",
+          "positions": [
+            "assets/Aaug-1.png",
+            "assets/Aaug-2.png",
+            "assets/Aaug-3.png",
+            "assets/Aaug-4.png",
+            "assets/Aaug-5.png"
+          ]
+        },
+        {
+          "name": "Adim",
+          "positions": [
+            "assets/Adim-1.png",
+            "assets/Adim-2.png"
+          ]
+        },
+        {
+          "name": "Adim7",
+          "positions": [
+            "assets/Adim7-1.png",
+            "assets/Adim7-2.png",
+            "assets/Adim7-3.png",
+            "assets/Adim7-4.png"
+          ]
+        },
+        {
+          "name": "Am",
+          "positions": [
+            "assets/Am-1.png",
+            "assets/Am-2.png",
+            "assets/Am-3.png",
+            "assets/Am-4.png",
+            "assets/Am-5.png",
+            "assets/Am-6.png"
+          ]
+        },
+        {
+          "name": "Am6",
+          "positions": [
+            "assets/Am6-1.png",
+            "assets/Am6-2.png",
+            "assets/Am6-3.png",
+            "assets/Am6-4.png",
+            "assets/Am6-5.png",
+            "assets/Am6-6.png",
+            "assets/Am6-7.png",
+            "assets/Am6-8.png"
+          ]
+        },
+        {
+          "name": "Am7",
+          "positions": [
+            "assets/Am7-1.png",
+            "assets/Am7-2.png",
+            "assets/Am7-3.png",
+            "assets/Am7-4.png",
+            "assets/Am7-5.png",
+            "assets/Am7-6.png",
+            "assets/Am7-7.png",
+            "assets/Am7-8.png",
+            "assets/Am7-9.png",
+            "assets/Am7-10.png",
+            "assets/Am7-11.png",
+            "assets/Am7-12.png"
+          ]
+        },
+        {
+          "name": "Am7",
+          "positions": [
+            "assets/Am7-1.png",
+            "assets/Am7-2.png",
+            "assets/Am7-3.png",
+            "assets/Am7-4.png",
+            "assets/Am7-5.png",
+            "assets/Am7-6.png",
+            "assets/Am7-7.png",
+            "assets/Am7-8.png",
+            "assets/Am7-9.png",
+            "assets/Am7-10.png",
+            "assets/Am7-11.png",
+            "assets/Am7-12.png"
+          ]
+        },
+        {
+          "name": "Am9",
+          "positions": [
+            "assets/Am9-1.png",
+            "assets/Am9-2.png",
+            "assets/Am9-3.png",
+            "assets/Am9-4.png",
+            "assets/Am9-5.png",
+            "assets/Am9-6.png",
+            "assets/Am9-7.png"
+          ]
+        },
+        {
+          "name": "Am-9",
+          "positions": [
+            "assets/Am-9-1.png",
+            "assets/Am-9-2.png",
+            "assets/Am-9-3.png",
+            "assets/Am-9-4.png",
+            "assets/Am-9-5.png",
+            "assets/Am-9-6.png",
+            "assets/Am-9-7.png",
+            "assets/Am-9-8.png",
+            "assets/Am-9-9.png",
+            "assets/Am-9-10.png",
+            "assets/Am-9-11.png",
+            "assets/Am-9-12.png"
+          ]
+        },
+        {
+          "name": "Amaj7",
+          "positions": [
+            "assets/Amaj7-1.png",
+            "assets/Amaj7-2.png",
+            "assets/Amaj7-3.png",
+            "assets/Amaj7-4.png",
+            "assets/Amaj7-5.png",
+            "assets/Amaj7-6.png",
+            "assets/Amaj7-7.png",
+            "assets/Amaj7-8.png",
+            "assets/Amaj7-9.png"
+          ]
+        },
+        {
+          "name": "Amaj9",
+          "positions": [
+            "assets/Amaj9-1.png",
+            "assets/Amaj9-2.png",
+            "assets/Amaj9-3.png",
+            "assets/Amaj9-4.png",
+            "assets/Amaj9-5.png",
+            "assets/Amaj9-6.png",
+            "assets/Amaj9-7.png",
+            "assets/Amaj9-8.png",
+            "assets/Amaj9-9.png"
+          ]
+        },
+        {
+          "name": "Ammaj7",
+          "positions": [
+            "assets/Ammaj7-1.png",
+            "assets/Ammaj7-2.png",
+            "assets/Ammaj7-3.png",
+            "assets/Ammaj7-4.png",
+            "assets/Ammaj7-5.png",
+            "assets/Ammaj7-6.png",
+            "assets/Ammaj7-7.png",
+            "assets/Ammaj7-8.png",
+            "assets/Ammaj7-9.png"
+          ]
+        },
+        {
+          "name": "Asus2",
+          "positions": [
+            "assets/Asus2-1.png",
+            "assets/Asus2-2.png",
+            "assets/Asus2-3.png",
+            "assets/Asus2-4.png",
+            "assets/Asus2-5.png",
+            "assets/Asus2-6.png"
+          ]
+        },
+        {
+          "name": "Asus4",
+          "positions": [
+            "assets/Asus4-1.png",
+            "assets/Asus4-2.png",
+            "assets/Asus4-3.png",
+            "assets/Asus4-4.png",
+            "assets/Asus4-5.png",
+            "assets/Asus4-6.png",
+            "assets/Asus4-7.png"
+          ]
+        }
+      ]
+    }
+  ]
+}
