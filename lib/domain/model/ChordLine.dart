@@ -7,5 +7,5 @@ class ChordLine {
   String text;
 
   static ChordLine emptyLine() =>
-      ChordLine(text: "", chords: List.generate(15, (index) => null));
+      ChordLine(text: "", chords: List.generate(10, (index) => null));
 }

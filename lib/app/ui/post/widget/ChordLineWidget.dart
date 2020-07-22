@@ -45,10 +45,10 @@ class ChordLineWidgetState extends State<ChordLineWidget> {
   @override
   Widget build(BuildContext context) => Column(
         children: <Widget>[
-          Wrap(children: [..._targets]),
+          Container(child: Row(children: [..._targets]), height: 15),
           TextField(
               autofocus: false,
-              maxLength: 30,
+              maxLength: 35,
               style: TextStyle(fontSize: 18, color: Colors.grey.shade700),
               decoration: _buildLineDecoration(),
               focusNode: _lineFocusNode,
@@ -73,13 +73,10 @@ class ChordLineWidgetState extends State<ChordLineWidget> {
 
   /// Build Chord Line decoration
   InputDecoration _buildLineDecoration() => InputDecoration(
-      counterStyle: const TextStyle(fontSize: 0),
-      focusedBorder: const UnderlineInputBorder(
-        borderSide: BorderSide(color: Colors.grey, width: 0.2),
-      ),
-      enabledBorder: const UnderlineInputBorder(
-        borderSide: BorderSide(color: Colors.grey, width: 0.2),
-      ));
+      contentPadding: EdgeInsets.all(0.0),
+      isDense: true,
+      border: InputBorder.none,
+      counterStyle: const TextStyle(fontSize: 0));
 
   /// Necessary chord line widget set up
   _chordLineInitialization() {

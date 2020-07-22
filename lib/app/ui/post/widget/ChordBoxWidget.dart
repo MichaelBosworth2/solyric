@@ -35,7 +35,7 @@ class _ChordBoxWidgetState extends State<ChordBoxWidget> {
   /// Builds widget's draggable using App's Theme data
   /// @see [Draggable]
   Widget _buildDraggableWidget(ThemeData theme) => Draggable(
-        feedbackOffset: Offset(0.0, -75.0),
+        feedbackOffset: Offset(0.0, -50.0),
         dragAnchor: DragAnchor.child,
         data: selectedValue,
         child: _buildDraggableChild(theme),
