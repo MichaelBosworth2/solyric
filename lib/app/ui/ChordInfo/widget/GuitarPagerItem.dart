@@ -10,7 +10,7 @@ class GuitarPagerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Padding(
-        padding: EdgeInsets.only(bottom: 35, top: 30, left: 30, right: 30),
+        padding: EdgeInsets.only(bottom: 35, top: 30),
         child: Container(
           constraints: BoxConstraints.expand(),
           child: ClipRRect(

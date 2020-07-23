@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
+
 import 'app/di/ProviderModule.dart';
 import 'app/utils/Resources.dart';
 import 'app/utils/SolyricRouter.dart';
@@ -19,6 +20,7 @@ class SolyricApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: Resources.APP_TITLE,
         theme: ThemeData(
+          appBarTheme: AppBarTheme(elevation: 0),
           primaryColor: Color(0xFF353535),
           accentColor: Colors.purpleAccent,
         ),

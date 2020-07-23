@@ -15,13 +15,16 @@ class ChordPagerWidget extends StatefulWidget {
 class _ChordPagerWidgetState extends State<ChordPagerWidget> {
   @override
   Widget build(BuildContext context) => BaseWidget<ChordTabsViewModel>(
-        builder: (context, model, child) => Swiper(
-          itemBuilder: (context, index) => GuitarPagerItem(
-              name: model.scrollerSelection.name,
-              resource: model.scrollerSelection.positions[index]),
-          itemCount: model.scrollerSelection.positions.length,
-          pagination: SwiperPagination(),
-          controller: SwiperController(),
+        builder: (context, model, child) => Padding(
+          padding: const EdgeInsets.only(left: 25),
+          child: Swiper(
+            itemBuilder: (context, index) => GuitarPagerItem(
+                name: model.scrollerSelection.name,
+                resource: model.scrollerSelection.positions[index]),
+            itemCount: model.scrollerSelection.positions.length,
+            pagination: SwiperPagination(margin: EdgeInsets.symmetric(vertical: 10)),
+            controller: SwiperController(),
+          ),
         ),
       );
 }

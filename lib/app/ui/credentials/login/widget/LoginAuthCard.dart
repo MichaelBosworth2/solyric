@@ -121,7 +121,7 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
           await model.login(User(
                   email: _emailController.text,
                   password: _passwordController.text))
-              ? Navigator.pushNamed(context, RouteNames.WALL)
+              ? Navigator.pushNamed(context, RouteNames.HOME)
               : UIHelper.showMessage(
                   context, Resources.EMAIL_PASSWORD_IS_INCORRECT_LOGIN);
         },

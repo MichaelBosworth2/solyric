@@ -12,19 +12,26 @@ class ChordListWidget extends StatelessWidget {
                   const Divider(height: 12),
               itemCount: model.localChords.length,
               itemBuilder: (BuildContext context, int position) => Center(
-                    child: GestureDetector(
-                      onTap: () {
-                        model.listSelection = model.localChords[position];
-                        model.scrollerSelection =
-                            model.localChords[position].variations.first;
-                      },
-                      child: Text(
-                        model.localChords[position].name,
-                        style:
-                            const TextStyle(fontSize: 18, color: Colors.white),
-                      ),
-                    ),
-                  )),
-        ),
-      );
+                  child: GestureDetector(
+                onTap: () {
+                  model.listSelection = model.localChords[position];
+                  model.scrollerSelection =
+                      model.localChords[position].variations.first;
+                },
+                child: Text(
+                  model.localChords[position].name,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: _getColor(context, model, position),
+                  ),
+                ),
+              )),
+            ),
+          ));
+
+  Color _getColor(
+          BuildContext context, ChordTabsViewModel model, int position) =>
+      position == model.localChords.indexOf(model.listSelection)
+          ? Theme.of(context).accentColor
+          : Colors.white;
 }
