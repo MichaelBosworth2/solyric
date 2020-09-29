@@ -3,7 +3,7 @@ import 'package:solyric_app/app/ui/ChordInfo/viewModel/ChordTabsViewModel.dart';
 import 'package:solyric_app/app/ui/base/BaseWidget.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
 
-class HorizontalScrollerWidget extends StatelessWidget {
+class GuitarHorizontalScrollerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => BaseWidget<ChordTabsViewModel>(
         builder: (context, model, child) => Row(children: [
@@ -11,13 +11,13 @@ class HorizontalScrollerWidget extends StatelessWidget {
           Expanded(
               flex: 8,
               child: ListView.separated(
-                itemCount: model.listSelection.variations.length,
+                itemCount: model.guitarListSelection.variations.length,
                 separatorBuilder: (BuildContext context, int index) =>
                     const Divider(height: 16),
                 itemBuilder: (BuildContext context, int index) =>
                     GestureDetector(
-                        onTap: () => model.scrollerSelection =
-                            model.listSelection.variations[index],
+                        onTap: () => model.guitarScrollerSelection =
+                            model.guitarListSelection.variations[index],
                         child: _buildListItem(context, model, index)),
                 scrollDirection: Axis.horizontal,
               )),
@@ -26,7 +26,7 @@ class HorizontalScrollerWidget extends StatelessWidget {
       );
 
   Widget _buildListItem(BuildContext context, ChordTabsViewModel model, int position) {
-    final variation = model.listSelection.variations[position];
+    final variation = model.guitarListSelection.variations[position];
     return Container(
       width: 80,
       child: Padding(
@@ -35,7 +35,7 @@ class HorizontalScrollerWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
-                height: variation == model.scrollerSelection ? 1 : 0,
+                height: variation == model.guitarScrollerSelection ? 1 : 0,
                 color: Theme.of(context).accentColor),
             UIHelper.verticalSpace(20.00)
           ],
