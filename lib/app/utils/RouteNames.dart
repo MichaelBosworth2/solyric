@@ -3,8 +3,7 @@ class RouteNames {
   static const LOGIN = "/login";
   static const SIGN_UP = "/signup";
   static const TUTORIAL = "/tutorial";
-  static const WALL = "/wall";
-  static const PROFILE = "/profile";
   static const NEW_LYRIC = "/new-lyric";
-   static const NEW_RECORD = "/new-record";
+  static const NEW_RECORD = "/new-record";
+  static const HOME = "/home";
 }

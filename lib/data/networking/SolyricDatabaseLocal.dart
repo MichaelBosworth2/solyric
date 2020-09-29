@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:solyric_app/app/ui/record/util/HelperModel.dart';
-import 'package:solyric_app/database/database.dart';
+import 'package:solyric_app/data/database/database.dart';
 import 'package:solyric_app/domain/model/RecordAudio.dart';
 
 class SolyricDatabaseLocal {  

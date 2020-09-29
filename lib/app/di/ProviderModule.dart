@@ -1,13 +1,14 @@
 import 'package:provider/provider.dart';
+import 'package:solyric_app/app/ui/ChordInfo/viewModel/ChordTabsViewModel.dart';
 import 'package:solyric_app/app/ui/credentials/forgot/viewmodel/ForgotPasswordViewModel.dart';
 import 'package:solyric_app/app/ui/credentials/login/viewmodel/LoginViewModel.dart';
 import 'package:solyric_app/app/ui/credentials/signup/viewmodel/SignUpViewModel.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/ChordListViewModel.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/EditLyricViewModel.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/NewLyricViewModel.dart';
+import 'package:solyric_app/app/ui/record/viewmodel/RecordAudioViewModel.dart';
 import 'package:solyric_app/app/ui/tutorial/viewmodel/TutorialViewModel.dart';
 import 'package:solyric_app/app/ui/wall/viewmodel/WallViewModel.dart';
-import 'package:solyric_app/app/ui/record/viewmodel/RecordAudioViewModel.dart';
 import 'package:solyric_app/data/networking/SolyricApi.dart';
 import 'package:solyric_app/data/networking/SolyricDatabaseLocal.dart';
 import 'package:solyric_app/data/repository/AuthRepositoryImpl.dart';
@@ -20,8 +21,8 @@ import 'package:solyric_app/domain/interaction/GetFeedUseCase.dart';
 import 'package:solyric_app/domain/interaction/GetTutorialDataUseCase.dart';
 import 'package:solyric_app/domain/interaction/LoginUseCase.dart';
 import 'package:solyric_app/domain/interaction/NewLyricUseCase.dart';
-import 'package:solyric_app/domain/interaction/ResetPasswordUseCase.dart';
 import 'package:solyric_app/domain/interaction/RecordAudioUseCase.dart';
+import 'package:solyric_app/domain/interaction/ResetPasswordUseCase.dart';
 import 'package:solyric_app/domain/interaction/SignUpUseCase.dart';
 import 'package:solyric_app/domain/repository/AuthRepository.dart';
 import 'package:solyric_app/domain/repository/LyricsRepository.dart';
@@ -48,7 +49,8 @@ class ProviderModule {
       update: (context, api, _) => LyricRepositoryImpl(api: api),
     ),
     ProxyProvider<SolyricDatabaseLocal, RecordAudioRepository>(
-      update: (context, database, _) => RecordAudioRepositoryImpl(database: database),
+      update: (context, database, _) =>
+          RecordAudioRepositoryImpl(database: database),
     )
   ];
 
@@ -89,6 +91,7 @@ class ProviderModule {
   ];
 
   static List<SingleChildCloneableWidget> viewModel = [
+    Provider.value(value: ChordTabsViewModel()),
     ProxyProvider<ResetPasswordUseCase, ForgotPasswordViewModel>(
       update: (context, useCase, _) =>
           ForgotPasswordViewModel(useCase: useCase),
@@ -106,8 +109,7 @@ class ProviderModule {
       update: (context, lineUseCase, createUseCase, _) => NewLyricViewModel(
           createUseCase: createUseCase, lineUseCase: lineUseCase),
     ),
-    ProxyProvider2<GetChordsUseCase, GetChordHistoryUseCase,
-        ChordListViewModel>(
+    ProxyProvider2<GetChordsUseCase, GetChordHistoryUseCase, ChordListViewModel>(
       update: (context, chordUseCase, historyUseCase, _) => ChordListViewModel(
           chordUseCase: chordUseCase, historyUseCase: historyUseCase),
     ),

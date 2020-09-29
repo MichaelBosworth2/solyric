@@ -34,7 +34,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                   Padding(
                     padding: const EdgeInsets.only(top: 8, right: 8),
                     child: GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, RouteNames.WALL),
+                      onTap: () => Navigator.pushNamed(context, RouteNames.HOME),
                       child: Text(Resources.SKIP),
                     ),
                   )

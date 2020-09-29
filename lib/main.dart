@@ -20,6 +20,7 @@ class SolyricApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: Resources.APP_TITLE,
         theme: ThemeData(
+          appBarTheme: AppBarTheme(elevation: 0),
           primaryColor: Color(0xFF353535),
           accentColor: Colors.purpleAccent,
         ),
