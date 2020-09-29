@@ -5,23 +5,23 @@ import 'package:solyric_app/app/ui/base/BaseWidget.dart';
 
 import 'GuitarPagerItem.dart';
 
-class ChordPagerWidget extends StatefulWidget {
-  const ChordPagerWidget({Key key}) : super(key: key);
+class GuitarChordPagerWidget extends StatefulWidget {
+  const GuitarChordPagerWidget({Key key}) : super(key: key);
 
   @override
-  _ChordPagerWidgetState createState() => _ChordPagerWidgetState();
+  _GuitarChordPagerWidgetState createState() => _GuitarChordPagerWidgetState();
 }
 
-class _ChordPagerWidgetState extends State<ChordPagerWidget> {
+class _GuitarChordPagerWidgetState extends State<GuitarChordPagerWidget> {
   @override
   Widget build(BuildContext context) => BaseWidget<ChordTabsViewModel>(
         builder: (context, model, child) => Padding(
           padding: const EdgeInsets.only(left: 25),
           child: Swiper(
             itemBuilder: (context, index) => GuitarPagerItem(
-                name: model.scrollerSelection.name,
-                resource: model.scrollerSelection.positions[index]),
-            itemCount: model.scrollerSelection.positions.length,
+                name: model.guitarScrollerSelection.name,
+                resource: model.guitarScrollerSelection.positions[index]),
+            itemCount: model.guitarScrollerSelection.positions.length,
             pagination: SwiperPagination(margin: EdgeInsets.symmetric(vertical: 10)),
             controller: SwiperController(),
           ),

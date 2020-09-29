@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:solyric_app/app/ui/ChordInfo/viewModel/ChordTabsViewModel.dart';
 import 'package:solyric_app/app/ui/base/BaseWidget.dart';
 
-class ChordListWidget extends StatelessWidget {
+class GuitarChordListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => BaseWidget<ChordTabsViewModel>(
         builder: (context, model, child) => Padding(
@@ -10,16 +10,16 @@ class ChordListWidget extends StatelessWidget {
           child: ListView.separated(
               separatorBuilder: (BuildContext context, int index) =>
                   const Divider(height: 12),
-              itemCount: model.localChords.length,
+              itemCount: model.localGuitarChords.length,
               itemBuilder: (BuildContext context, int position) => Center(
                   child: GestureDetector(
                 onTap: () {
-                  model.listSelection = model.localChords[position];
-                  model.scrollerSelection =
-                      model.localChords[position].variations.first;
+                  model.guitarListSelection = model.localGuitarChords[position];
+                  model.guitarScrollerSelection =
+                      model.localGuitarChords[position].variations.first;
                 },
                 child: Text(
-                  model.localChords[position].name,
+                  model.localGuitarChords[position].name,
                   style: TextStyle(
                     fontSize: 18,
                     color: _getColor(context, model, position),
@@ -31,7 +31,7 @@ class ChordListWidget extends StatelessWidget {
 
   Color _getColor(
           BuildContext context, ChordTabsViewModel model, int position) =>
-      position == model.localChords.indexOf(model.listSelection)
+      position == model.localGuitarChords.indexOf(model.guitarListSelection)
           ? Theme.of(context).accentColor
           : Colors.white;
 }

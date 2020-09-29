@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:solyric_app/app/ui/ChordInfo/ChordInformation.dart';
+import 'package:solyric_app/app/ui/ChordInfo/ChordInformationScreen.dart';
 import 'package:solyric_app/app/ui/profile/ProfileScreen.dart';
 import 'package:solyric_app/app/ui/wall/WallScreen.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
