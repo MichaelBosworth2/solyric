@@ -1,0 +1,961 @@
+{
+  "chords": [
+    {
+      "name": "A",
+      "variations": [
+        {
+          "name": "A-9",
+          "positions": [
+            "assets/guitar/a-91.png",
+            "assets/guitar/a-92.png",
+            "assets/guitar/a-93.png",
+            "assets/guitar/a-94.png",
+            "assets/guitar/a-95.png",
+            "assets/guitar/a-96.png"
+          ]
+        },
+        {
+          "name": "A2",
+          "positions": [
+            "assets/guitar/a21.png",
+            "assets/guitar/a22.png",
+            "assets/guitar/a23.png",
+            "assets/guitar/a24.png",
+            "assets/guitar/a25.png",
+            "assets/guitar/a26.png",
+            "assets/guitar/a27.png",
+            "assets/guitar/a28.png"
+          ]
+        },
+        {
+          "name": "A5",
+          "positions": [
+            "assets/guitar/a51.png"
+          ]
+        },
+        {
+          "name": "A6",
+          "positions": [
+            "assets/guitar/a61.png",
+            "assets/guitar/a62.png",
+            "assets/guitar/a63.png",
+            "assets/guitar/a64.png",
+            "assets/guitar/a65.png",
+            "assets/guitar/a66.png"
+          ]
+        },
+        {
+          "name": "A7",
+          "positions": [
+            "assets/guitar/a71.png",
+            "assets/guitar/a72.png",
+            "assets/guitar/a73.png",
+            "assets/guitar/a74.png",
+            "assets/guitar/a75.png",
+            "assets/guitar/a76.png",
+            "assets/guitar/a77.png"
+          ]
+        },
+        {
+          "name": "A7+5",
+          "positions": [
+            "assets/guitar/a751.png",
+            "assets/guitar/a752.png",
+            "assets/guitar/a753.png",
+            "assets/guitar/a754.png",
+            "assets/guitar/a755.png",
+            "assets/guitar/a756.png"
+          ]
+        },
+        {
+          "name": "A7sus2",
+          "positions": [
+            "assets/guitar/A7sus2-1.png",
+            "assets/guitar/A7sus2-2.png",
+            "assets/guitar/A7sus2-3.png",
+            "assets/guitar/A7sus2-4.png",
+            "assets/guitar/A7sus2-5.png",
+            "assets/guitar/A7sus2-6.png"
+          ]
+        },
+        {
+          "name": "A7sus4",
+          "positions": [
+            "assets/guitar/A7sus4-1.png",
+            "assets/guitar/A7sus4-2.png",
+            "assets/guitar/A7sus4-3.png",
+            "assets/guitar/A7sus4-4.png",
+            "assets/guitar/A7sus4-5.png",
+            "assets/guitar/A7sus4-6.png",
+            "assets/guitar/A7sus4-7.png",
+            "assets/guitar/A7sus4-8.png",
+            "assets/guitar/A7sus4-9.png"
+          ]
+        },
+        {
+          "name": "A9",
+          "positions": [
+            "assets/guitar/A9-1.png",
+            "assets/guitar/A9-2.png",
+            "assets/guitar/A9-3.png",
+            "assets/guitar/A9-4.png",
+            "assets/guitar/A9-5.png",
+            "assets/guitar/A9-6.png",
+            "assets/guitar/A9-7.png",
+            "assets/guitar/A9-8.png",
+            "assets/guitar/A9-9.png",
+            "assets/guitar/A9-10.png",
+            "assets/guitar/A9-11.png",
+            "assets/guitar/A9-12.png",
+            "assets/guitar/A9-13.png",
+            "assets/guitar/A9-14.png",
+            "assets/guitar/A9-15.png",
+            "assets/guitar/A9-16.png"
+          ]
+        },
+        {
+          "name": "A",
+          "positions": [
+            "assets/guitar/A-1-01.png",
+            "assets/guitar/A-2-01.png",
+            "assets/guitar/A-3-01.png",
+            "assets/guitar/A-4-01.png",
+            "assets/guitar/A-5-01.png",
+            "assets/guitar/A-6-01.png"
+          ]
+        },
+        {
+          "name": "Aadd9",
+          "positions": [
+            "assets/guitar/Aadd9-1.png",
+            "assets/guitar/Aadd9-2.png",
+            "assets/guitar/Aadd9-3.png",
+            "assets/guitar/Aadd9-4.png",
+            "assets/guitar/Aadd9-5.png",
+            "assets/guitar/Aadd9-6.png",
+            "assets/guitar/Aadd9-7.png",
+            "assets/guitar/Aadd9-8.png"
+          ]
+        },
+        {
+          "name": "Aaug",
+          "positions": [
+            "assets/guitar/Aaug-1.png",
+            "assets/guitar/Aaug-2.png",
+            "assets/guitar/Aaug-3.png",
+            "assets/guitar/Aaug-4.png",
+            "assets/guitar/Aaug-5.png"
+          ]
+        },
+        {
+          "name": "Adim",
+          "positions": [
+            "assets/guitar/Adim-1.png",
+            "assets/guitar/Adim-2.png"
+          ]
+        },
+        {
+          "name": "Adim7",
+          "positions": [
+            "assets/guitar/Adim7-1.png",
+            "assets/guitar/Adim7-2.png",
+            "assets/guitar/Adim7-3.png",
+            "assets/guitar/Adim7-4.png"
+          ]
+        },
+        {
+          "name": "Am",
+          "positions": [
+            "assets/guitar/Am-1.png",
+            "assets/guitar/Am-2.png",
+            "assets/guitar/Am-3.png",
+            "assets/guitar/Am-4.png",
+            "assets/guitar/Am-5.png",
+            "assets/guitar/Am-6.png"
+          ]
+        },
+        {
+          "name": "Am6",
+          "positions": [
+            "assets/guitar/Am6-1.png",
+            "assets/guitar/Am6-2.png",
+            "assets/guitar/Am6-3.png",
+            "assets/guitar/Am6-4.png",
+            "assets/guitar/Am6-5.png",
+            "assets/guitar/Am6-6.png",
+            "assets/guitar/Am6-7.png",
+            "assets/guitar/Am6-8.png"
+          ]
+        },
+        {
+          "name": "Am7",
+          "positions": [
+            "assets/guitar/Am7-1.png",
+            "assets/guitar/Am7-2.png",
+            "assets/guitar/Am7-3.png",
+            "assets/guitar/Am7-4.png",
+            "assets/guitar/Am7-5.png",
+            "assets/guitar/Am7-6.png",
+            "assets/guitar/Am7-7.png",
+            "assets/guitar/Am7-8.png",
+            "assets/guitar/Am7-9.png",
+            "assets/guitar/Am7-10.png",
+            "assets/guitar/Am7-11.png",
+            "assets/guitar/Am7-12.png"
+          ]
+        },
+        {
+          "name": "Am7",
+          "positions": [
+            "assets/guitar/Am7-1.png",
+            "assets/guitar/Am7-2.png",
+            "assets/guitar/Am7-3.png",
+            "assets/guitar/Am7-4.png",
+            "assets/guitar/Am7-5.png",
+            "assets/guitar/Am7-6.png",
+            "assets/guitar/Am7-7.png",
+            "assets/guitar/Am7-8.png",
+            "assets/guitar/Am7-9.png",
+            "assets/guitar/Am7-10.png",
+            "assets/guitar/Am7-11.png",
+            "assets/guitar/Am7-12.png"
+          ]
+        },
+        {
+          "name": "Am9",
+          "positions": [
+            "assets/guitar/Am9-1.png",
+            "assets/guitar/Am9-2.png",
+            "assets/guitar/Am9-3.png",
+            "assets/guitar/Am9-4.png",
+            "assets/guitar/Am9-5.png",
+            "assets/guitar/Am9-6.png",
+            "assets/guitar/Am9-7.png"
+          ]
+        },
+        {
+          "name": "Am-9",
+          "positions": [
+            "assets/guitar/Am-9-1.png",
+            "assets/guitar/Am-9-2.png",
+            "assets/guitar/Am-9-3.png",
+            "assets/guitar/Am-9-4.png",
+            "assets/guitar/Am-9-5.png",
+            "assets/guitar/Am-9-6.png",
+            "assets/guitar/Am-9-7.png",
+            "assets/guitar/Am-9-8.png",
+            "assets/guitar/Am-9-9.png",
+            "assets/guitar/Am-9-10.png",
+            "assets/guitar/Am-9-11.png",
+            "assets/guitar/Am-9-12.png"
+          ]
+        },
+        {
+          "name": "Amaj7",
+          "positions": [
+            "assets/guitar/Amaj7-1.png",
+            "assets/guitar/Amaj7-2.png",
+            "assets/guitar/Amaj7-3.png",
+            "assets/guitar/Amaj7-4.png",
+            "assets/guitar/Amaj7-5.png",
+            "assets/guitar/Amaj7-6.png",
+            "assets/guitar/Amaj7-7.png",
+            "assets/guitar/Amaj7-8.png",
+            "assets/guitar/Amaj7-9.png"
+          ]
+        },
+        {
+          "name": "Amaj9",
+          "positions": [
+            "assets/guitar/Amaj9-1.png",
+            "assets/guitar/Amaj9-2.png",
+            "assets/guitar/Amaj9-3.png",
+            "assets/guitar/Amaj9-4.png",
+            "assets/guitar/Amaj9-5.png",
+            "assets/guitar/Amaj9-6.png",
+            "assets/guitar/Amaj9-7.png",
+            "assets/guitar/Amaj9-8.png",
+            "assets/guitar/Amaj9-9.png"
+          ]
+        },
+        {
+          "name": "Ammaj7",
+          "positions": [
+            "assets/guitar/Ammaj7-1.png",
+            "assets/guitar/Ammaj7-2.png",
+            "assets/guitar/Ammaj7-3.png",
+            "assets/guitar/Ammaj7-4.png",
+            "assets/guitar/Ammaj7-5.png",
+            "assets/guitar/Ammaj7-6.png",
+            "assets/guitar/Ammaj7-7.png",
+            "assets/guitar/Ammaj7-8.png",
+            "assets/guitar/Ammaj7-9.png"
+          ]
+        },
+        {
+          "name": "Asus2",
+          "positions": [
+            "assets/guitar/Asus2-1.png",
+            "assets/guitar/Asus2-2.png",
+            "assets/guitar/Asus2-3.png",
+            "assets/guitar/Asus2-4.png",
+            "assets/guitar/Asus2-5.png",
+            "assets/guitar/Asus2-6.png"
+          ]
+        },
+        {
+          "name": "Asus4",
+          "positions": [
+            "assets/guitar/Asus4-1.png",
+            "assets/guitar/Asus4-2.png",
+            "assets/guitar/Asus4-3.png",
+            "assets/guitar/Asus4-4.png",
+            "assets/guitar/Asus4-5.png",
+            "assets/guitar/Asus4-6.png",
+            "assets/guitar/Asus4-7.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A#",
+      "variations": [
+        {
+          "name": "A#2",
+          "positions": [
+            "assets/guitar/A#2-1.png",
+            "assets/guitar/A#2-2.png",
+            "assets/guitar/A#2-3.png",
+            "assets/guitar/A#2-4.png",
+            "assets/guitar/A#2-5.png",
+            "assets/guitar/A#2-6.png",
+            "assets/guitar/A#2-7.png",
+            "assets/guitar/A#2-8.png"
+          ]
+        },
+        {
+          "name": "A#5",
+          "positions": [
+            "assets/guitar/A#5-1.png"
+          ]
+        },
+        {
+          "name": "A#6",
+          "positions": [
+            "assets/guitar/A#6-1.png",
+            "assets/guitar/A#6-2.png",
+            "assets/guitar/A#6-3.png",
+            "assets/guitar/A#6-4.png",
+            "assets/guitar/A#6-5.png",
+            "assets/guitar/A#6-6.png",
+            "assets/guitar/A#6-7.png"
+          ]
+        },
+        {
+          "name": "A#7",
+          "positions": [
+            "assets/guitar/A#7-1.png",
+            "assets/guitar/A#7-2.png",
+            "assets/guitar/A#7-3.png",
+            "assets/guitar/A#7-4.png",
+            "assets/guitar/A#7-5.png",
+            "assets/guitar/A#7-6.png",
+            "assets/guitar/A#7-7.png",
+            "assets/guitar/A#7-8.png"
+          ]
+        },
+        {
+          "name": "A#7+5",
+          "positions": [
+            "assets/guitar/A#7+5-1.png",
+            "assets/guitar/A#7+5-2.png",
+            "assets/guitar/A#7+5-3.png",
+            "assets/guitar/A#7+5-4.png",
+            "assets/guitar/A#7+5-5.png",
+            "assets/guitar/A#7+5-6.png"
+          ]
+        },
+        {
+          "name": "A#7sus2",
+          "positions": [
+            "assets/guitar/A#7sus2-1.png",
+            "assets/guitar/A#7sus2-2.png",
+            "assets/guitar/A#7sus2-3.png",
+            "assets/guitar/A#7sus2-4.png",
+            "assets/guitar/A#7sus2-5.png"
+          ]
+        },
+        {
+          "name": "A#7sus4",
+          "positions": [
+            "assets/guitar/A#7sus4-1.png",
+            "assets/guitar/A#7sus4-2.png",
+            "assets/guitar/A#7sus4-3.png",
+            "assets/guitar/A#7sus4-4.png",
+            "assets/guitar/A#7sus4-5.png",
+            "assets/guitar/A#7sus4-6.png",
+            "assets/guitar/A#7sus4-7.png",
+            "assets/guitar/A#7sus4-8.png",
+            "assets/guitar/A#7sus4-9.png"
+          ]
+        },
+        {
+          "name": "A#9",
+          "positions": [
+            "assets/guitar/A#9-1.png",
+            "assets/guitar/A#9-2.png",
+            "assets/guitar/A#9-3.png",
+            "assets/guitar/A#9-4.png",
+            "assets/guitar/A#9-5.png",
+            "assets/guitar/A#9-6.png",
+            "assets/guitar/A#9-7.png",
+            "assets/guitar/A#9-8.png",
+            "assets/guitar/A#9-9.png",
+            "assets/guitar/A#9-10.png",
+            "assets/guitar/A#9-11.png",
+            "assets/guitar/A#9-12.png",
+            "assets/guitar/A#9-13.png",
+            "assets/guitar/A#9-14.png",
+            "assets/guitar/A#9-15.png",
+            "assets/guitar/A#9-16.png",
+            "assets/guitar/A#9-17.png",
+            "assets/guitar/A#9-18.png",
+            "assets/guitar/A#9-17.png"
+          ]
+        },
+        {
+          "name": "A#-9",
+          "positions": [
+            "assets/guitar/A#-9-1.png",
+            "assets/guitar/A#-9-2.png",
+            "assets/guitar/A#-9-3.png",
+            "assets/guitar/A#-9-4.png",
+            "assets/guitar/A#-9-5.png",
+            "assets/guitar/A#-9-6.png",
+            "assets/guitar/A#-9-7.png",
+            "assets/guitar/A#-9-8.png",
+            "assets/guitar/A#-9-9.png"
+          ]
+        },
+        {
+          "name": "A#",
+          "positions": [
+            "assets/guitar/A#-1-01.png",
+            "assets/guitar/A#-2-01.png",
+            "assets/guitar/A#-3-01.png",
+            "assets/guitar/A#-4-01.png",
+            "assets/guitar/A#-5-01.png",
+            "assets/guitar/A#-6-01.png",
+            "assets/guitar/A#-7-01.png"
+          ]
+        },
+        {
+          "name": "A#add9",
+          "positions": [
+            "assets/guitar/A#add9-1.png",
+            "assets/guitar/A#add9-2.png",
+            "assets/guitar/A#add9-3.png",
+            "assets/guitar/A#add9-4.png",
+            "assets/guitar/A#add9-5.png",
+            "assets/guitar/A#add9-6.png",
+            "assets/guitar/A#add9-7.png",
+            "assets/guitar/A#add9-8.png"
+          ]
+        },
+        {
+          "name": "A#aug",
+          "positions": [
+            "assets/guitar/A#aug-1.png",
+            "assets/guitar/A#aug-2.png",
+            "assets/guitar/A#aug-3.png",
+            "assets/guitar/A#aug-4.png",
+            "assets/guitar/A#aug-5.png"
+          ]
+        },
+        {
+          "name": "A#dim",
+          "positions": [
+            "assets/guitar/A#dim-1.png",
+            "assets/guitar/A#dim-2.png",
+            "assets/guitar/A#dim-3.png"
+          ]
+        },
+        {
+          "name": "A#dim7",
+          "positions": [
+            "assets/guitar/A#dim7-1.png",
+            "assets/guitar/A#dim7-2.png",
+            "assets/guitar/A#dim7-3.png",
+            "assets/guitar/A#dim7-4.png"
+          ]
+        },
+        {
+          "name": "A#m",
+          "positions": [
+            "assets/guitar/A#m-1.png",
+            "assets/guitar/A#m-2.png",
+            "assets/guitar/A#m-3.png",
+            "assets/guitar/A#m-4.png",
+            "assets/guitar/A#m-5.png",
+            "assets/guitar/A#m-6.png"
+          ]
+        },
+        {
+          "name": "A#m6",
+          "positions": [
+            "assets/guitar/A#m6-1.png",
+            "assets/guitar/A#m6-2.png",
+            "assets/guitar/A#m6-3.png",
+            "assets/guitar/A#m6-4.png",
+            "assets/guitar/A#m6-5.png",
+            "assets/guitar/A#m6-6.png",
+            "assets/guitar/A#m6-7.png",
+            "assets/guitar/A#m6-8.png"
+          ]
+        },
+        {
+          "name": "A#m7",
+          "positions": [
+            "assets/guitar/A#m7-1.png",
+            "assets/guitar/A#m7-2.png",
+            "assets/guitar/A#m7-3.png",
+            "assets/guitar/A#m7-4.png",
+            "assets/guitar/A#m7-5.png",
+            "assets/guitar/A#m7-6.png",
+            "assets/guitar/A#m7-7.png",
+            "assets/guitar/A#m7-8.png",
+            "assets/guitar/A#m7-9.png",
+            "assets/guitar/A#m7-10.png",
+            "assets/guitar/A#m7-11.png"
+          ]
+        },
+        {
+          "name": "A#m9",
+          "positions": [
+            "assets/guitar/A#m9-1.png",
+            "assets/guitar/A#m9-2.png",
+            "assets/guitar/A#m9-3.png",
+            "assets/guitar/A#m9-4.png",
+            "assets/guitar/A#m9-5.png",
+            "assets/guitar/A#m9-6.png"
+          ]
+        },
+        {
+          "name": "A#m-9",
+          "positions": [
+            "assets/guitar/A#m-9-1.png",
+            "assets/guitar/A#m-9-2.png",
+            "assets/guitar/A#m-9-3.png",
+            "assets/guitar/A#m-9-4.png",
+            "assets/guitar/A#m-9-5.png",
+            "assets/guitar/A#m-9-6.png",
+            "assets/guitar/A#m-9-7.png",
+            "assets/guitar/A#m-9-8.png",
+            "assets/guitar/A#m-9-9.png",
+            "assets/guitar/A#m-9-10.png",
+            "assets/guitar/A#m-9-11.png"
+          ]
+        },
+        {
+          "name": "A#maj7",
+          "positions": [
+            "assets/guitar/A#maj7-1.png",
+            "assets/guitar/A#maj7-2.png",
+            "assets/guitar/A#maj7-3.png",
+            "assets/guitar/A#maj7-4.png",
+            "assets/guitar/A#maj7-5.png",
+            "assets/guitar/A#maj7-6.png",
+            "assets/guitar/A#maj7-7.png",
+            "assets/guitar/A#maj7-8.png"
+          ]
+        },
+        {
+          "name": "A#maj9",
+          "positions": [
+            "assets/guitar/A#maj9-1.png",
+            "assets/guitar/A#maj9-2.png",
+            "assets/guitar/A#maj9-3.png",
+            "assets/guitar/A#maj9-4.png",
+            "assets/guitar/A#maj9-5.png",
+            "assets/guitar/A#maj9-6.png",
+            "assets/guitar/A#maj9-7.png",
+            "assets/guitar/A#maj9-8.png",
+            "assets/guitar/A#maj9-9.png",
+            "assets/guitar/A#maj9-10.png",
+            "assets/guitar/A#maj9-11.png"
+          ]
+        },
+        {
+          "name": "A#mmaj7",
+          "positions": [
+            "assets/guitar/A#mmaj7-1.png",
+            "assets/guitar/A#mmaj7-2.png",
+            "assets/guitar/A#mmaj7-3.png",
+            "assets/guitar/A#mmaj7-4.png",
+            "assets/guitar/A#mmaj7-5.png",
+            "assets/guitar/A#mmaj7-6.png",
+            "assets/guitar/A#mmaj7-7.png"
+          ]
+        },
+        {
+          "name": "A#sus2",
+          "positions": [
+            "assets/guitar/A#sus2-1.png",
+            "assets/guitar/A#sus2-2.png",
+            "assets/guitar/A#sus2-3.png",
+            "assets/guitar/A#sus2-4.png",
+            "assets/guitar/A#sus2-5.png"
+          ]
+        },
+        {
+          "name": "A#sus4",
+          "positions": [
+            "assets/guitar/A#sus2-1.png",
+            "assets/guitar/A#sus2-2.png",
+            "assets/guitar/A#sus2-3.png",
+            "assets/guitar/A#sus2-4.png",
+            "assets/guitar/A#sus2-5.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B",
+      "variations": [
+        {
+          "name": "B2",
+          "positions": [
+            "assets/guitar/B2-1.png",
+            "assets/guitar/B2-2.png",
+            "assets/guitar/B2-3.png",
+            "assets/guitar/B2-4.png",
+            "assets/guitar/B2-5.png",
+            "assets/guitar/B2-6.png",
+            "assets/guitar/B2-7.png"
+          ]
+        },
+        {
+          "name": "B5",
+          "positions": [
+            "assets/guitar/B5-1.png",
+            "assets/guitar/B5-2.png"
+          ]
+        },
+        {
+          "name": "B6",
+          "positions": [
+            "assets/guitar/B6-1.png",
+            "assets/guitar/B6-2.png",
+            "assets/guitar/B6-3.png",
+            "assets/guitar/B6-4.png",
+            "assets/guitar/B6-5.png",
+            "assets/guitar/B6-6.png"
+          ]
+        },
+        {
+          "name": "B7",
+          "positions": [
+            "assets/guitar/B7-1.png",
+            "assets/guitar/B7-2.png",
+            "assets/guitar/B7-3.png",
+            "assets/guitar/B7-4.png",
+            "assets/guitar/B7-5.png",
+            "assets/guitar/B7-6.png",
+            "assets/guitar/B7-7.png",
+            "assets/guitar/B7-8.png"
+          ]
+        },
+        {
+          "name": "B7+5",
+          "positions": [
+            "assets/guitar/B7+5-1.png",
+            "assets/guitar/B7+5-2.png",
+            "assets/guitar/B7+5-3.png",
+            "assets/guitar/B7+5-4.png",
+            "assets/guitar/B7+5-5.png",
+            "assets/guitar/B7+5-6.png"
+          ]
+        },
+        {
+          "name": "B7sus2",
+          "positions": [
+            "assets/guitar/B7sus2-1.png",
+            "assets/guitar/B7sus2-2.png",
+            "assets/guitar/B7sus2-3.png",
+            "assets/guitar/B7sus2-4.png",
+            "assets/guitar/B7sus2-5.png"
+          ]
+        },
+        {
+          "name": "B7sus4",
+          "positions": [
+            "assets/guitar/B7sus4-1.png",
+            "assets/guitar/B7sus4-2.png",
+            "assets/guitar/B7sus4-3.png",
+            "assets/guitar/B7sus4-4.png",
+            "assets/guitar/B7sus4-5.png",
+            "assets/guitar/B7sus4-6.png",
+            "assets/guitar/B7sus4-7.png",
+            "assets/guitar/B7sus4-8.png",
+            "assets/guitar/B7sus4-9.png",
+            "assets/guitar/B7sus4-10.png"
+          ]
+        },
+        {
+          "name": "B9",
+          "positions": [
+            "assets/guitar/B9-1.png",
+            "assets/guitar/B9-2.png",
+            "assets/guitar/B9-3.png",
+            "assets/guitar/B9-4.png",
+            "assets/guitar/B9-5.png",
+            "assets/guitar/B9-6.png",
+            "assets/guitar/B9-7.png",
+            "assets/guitar/B9-8.png",
+            "assets/guitar/B9-9.png",
+            "assets/guitar/B9-10.png",
+            "assets/guitar/B9-11.png",
+            "assets/guitar/B9-12.png",
+            "assets/guitar/B9-13.png",
+            "assets/guitar/B9-14.png",
+            "assets/guitar/B9-15.png"
+          ]
+        },
+        {
+          "name": "B-9",
+          "positions": [
+            "assets/guitar/B-9-1.png",
+            "assets/guitar/B-9-2.png",
+            "assets/guitar/B-9-3.png",
+            "assets/guitar/B-9-4.png",
+            "assets/guitar/B-9-5.png"
+          ]
+        },
+        {
+          "name": "Badd9",
+          "positions": [
+            "assets/guitar/Badd9-1.png",
+            "assets/guitar/Badd9-2.png",
+            "assets/guitar/Badd9-3.png",
+            "assets/guitar/Badd9-4.png",
+            "assets/guitar/Badd9-5.png"
+          ]
+        },
+        {
+          "name": "Baug",
+          "positions": [
+            "assets/guitar/Baug-1.png",
+            "assets/guitar/Baug-2.png",
+            "assets/guitar/Baug-3.png",
+            "assets/guitar/Baug-4.png"
+          ]
+        },
+        {
+          "name": "B",
+          "positions": [
+            "assets/guitar/B-1-01.png",
+            "assets/guitar/B-2-01.png",
+            "assets/guitar/B-3-01.png",
+            "assets/guitar/B-4-01.png",
+            "assets/guitar/B-5-01.png",
+            "assets/guitar/B-6-01.png"
+          ]
+        },
+        {
+          "name": "Bdim",
+          "positions": [
+            "assets/guitar/Bdim-1.png",
+            "assets/guitar/Bdim-2.png"
+          ]
+        },
+        {
+          "name": "Bdim7",
+          "positions": [
+            "assets/guitar/Bdim7-1.png",
+            "assets/guitar/Bdim7-2.png",
+            "assets/guitar/Bdim7-3.png",
+            "assets/guitar/Bdim7-4.png"
+          ]
+        },
+        {
+          "name": "Bm",
+          "positions": [
+            "assets/guitar/Bm-1.png",
+            "assets/guitar/Bm-2.png",
+            "assets/guitar/Bm-3.png",
+            "assets/guitar/Bm-4.png",
+            "assets/guitar/Bm-5.png",
+            "assets/guitar/Bm-6.png"
+          ]
+        },
+        {
+          "name": "Bm6",
+          "positions": [
+            "assets/guitar/Bm6-1.png",
+            "assets/guitar/Bm6-2.png",
+            "assets/guitar/Bm6-3.png",
+            "assets/guitar/Bm6-4.png",
+            "assets/guitar/Bm6-5.png",
+            "assets/guitar/Bm6-6.png",
+            "assets/guitar/Bm6-7.png"
+          ]
+        },
+        {
+          "name": "Bm7",
+          "positions": [
+            "assets/guitar/Bm7-1.png",
+            "assets/guitar/Bm7-2.png",
+            "assets/guitar/Bm7-3.png",
+            "assets/guitar/Bm7-4.png",
+            "assets/guitar/Bm7-5.png",
+            "assets/guitar/Bm7-6.png",
+            "assets/guitar/Bm7-7.png",
+            "assets/guitar/Bm7-8.png",
+            "assets/guitar/Bm7-9.png",
+            "assets/guitar/Bm7-10.png",
+            "assets/guitar/Bm7-11.png",
+            "assets/guitar/Bm7-12.png"
+          ]
+        },
+        {
+          "name": "Bm9",
+          "positions": [
+            "assets/guitar/Bm9-1.png",
+            "assets/guitar/Bm9-2.png",
+            "assets/guitar/Bm9-3.png",
+            "assets/guitar/Bm9-4.png",
+            "assets/guitar/Bm9-5.png",
+            "assets/guitar/Bm9-6.png"
+          ]
+        },
+        {
+          "name": "Bm-9",
+          "positions": [
+            "assets/guitar/Bm-9-1.png",
+            "assets/guitar/Bm-9-2.png",
+            "assets/guitar/Bm-9-3.png",
+            "assets/guitar/Bm-9-4.png",
+            "assets/guitar/Bm-9-5.png",
+            "assets/guitar/Bm-9-6.png",
+            "assets/guitar/Bm-9-7.png",
+            "assets/guitar/Bm-9-8.png",
+            "assets/guitar/Bm-9-9.png",
+            "assets/guitar/Bm-9-10.png",
+            "assets/guitar/Bm-9-11.png",
+            "assets/guitar/Bm-9-12.png"
+          ]
+        },
+        {
+          "name": "Bmaj7",
+          "positions": [
+            "assets/guitar/Bmaj7-1.png",
+            "assets/guitar/Bmaj7-2.png",
+            "assets/guitar/Bmaj7-3.png",
+            "assets/guitar/Bmaj7-4.png",
+            "assets/guitar/Bmaj7-5.png",
+            "assets/guitar/Bmaj7-6.png",
+            "assets/guitar/Bmaj7-7.png",
+            "assets/guitar/Bmaj7-8.png"
+          ]
+        },
+        {
+          "name": "Bmaj9",
+          "positions": [
+            "assets/guitar/Bmaj9-1.png",
+            "assets/guitar/Bmaj9-2.png",
+            "assets/guitar/Bmaj9-3.png",
+            "assets/guitar/Bmaj9-4.png",
+            "assets/guitar/Bmaj9-5.png",
+            "assets/guitar/Bmaj9-6.png",
+            "assets/guitar/Bmaj9-7.png",
+            "assets/guitar/Bmaj9-8.png",
+            "assets/guitar/Bmaj9-9.png",
+            "assets/guitar/Bmaj9-10.png"
+          ]
+        },
+        {
+          "name": "Bmmaj7",
+          "positions": [
+            "assets/guitar/Bmmaj7-1.png",
+            "assets/guitar/Bmmaj7-2.png",
+            "assets/guitar/Bmmaj7-3.png",
+            "assets/guitar/Bmmaj7-4.png",
+            "assets/guitar/Bmmaj7-5.png",
+            "assets/guitar/Bmmaj7-6.png",
+            "assets/guitar/Bmmaj7-7.png",
+            "assets/guitar/Bmmaj7-8.png"
+          ]
+        },
+        {
+          "name": "Bsus2",
+          "positions": [
+            "assets/guitar/Bsus2-1.png",
+            "assets/guitar/Bsus2-2.png",
+            "assets/guitar/Bsus2-3.png",
+            "assets/guitar/Bsus2-4.png",
+            "assets/guitar/Bsus2-5.png"
+          ]
+        },
+        {
+          "name": "Bsus4",
+          "positions": [
+            "assets/guitar/Bsus4-1.png",
+            "assets/guitar/Bsus4-2.png",
+            "assets/guitar/Bsus4-3.png",
+            "assets/guitar/Bsus4-4.png",
+            "assets/guitar/Bsus4-5.png",
+            "assets/guitar/Bsus4-6.png",
+            "assets/guitar/Bsus4-7.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "C",
+      "variations": [
+        {
+          "name": "C-01",
+          "positions": [
+            "assets/guitar/C-01.png",
+            "assets/guitar/C-02-01.png",
+            "assets/guitar/C-03-01.png",
+            "assets/guitar/C-04-01.png",
+            "assets/guitar/C-05-01.png",
+            "assets/guitar/C-06-01.png",
+            "assets/guitar/C-7-01.png"
+          ]
+        },
+        {
+          "name": "C-9",
+          "positions": [
+            "assets/guitar/C-9-1-01.png",
+            "assets/guitar/C-9-2-01.png",
+            "assets/guitar/C-9-3-01.png",
+            "assets/guitar/C-9-4-01.png",
+            "assets/guitar/C-9-5-01.png",
+            "assets/guitar/C-9-6-01.png"
+          ]
+        },
+        {
+          "name": "C2",
+          "positions": [
+            "assets/guitar/C2-1-01.png",
+            "assets/guitar/C2-2-01.png",
+            "assets/guitar/C2-3-01.png",
+            "assets/guitar/C2-4-01.png",
+            "assets/guitar/C2-5-01.png",
+            "assets/guitar/C2-6-01.png",
+            "assets/guitar/C2-7-01.png",
+            "assets/guitar/C2-8-01.png"
+          ]
+        },
+        {
+          "name": "C5",
+          "positions": [
+            "assets/guitar/C5-1-01.png"
+          ]
+        }
+      ]
+    }
+  ]
+}

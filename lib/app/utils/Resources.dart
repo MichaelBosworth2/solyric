@@ -10,7 +10,7 @@ class Resources {
 
   // shared
 
-  static const String GUITAR_CHORDS = "assets/guitar_chords.json";
+  static const String GUITAR_CHORDS = "assets/guitar/guitar_chords.json";
   static const String BACKGROUND = "assets/login_background.png";
   static const String BACKGROUND_GRADIENT = "assets/auth_background_gradient.png";
   static const String IC_LOGO = "assets/solyric_logo.png";
