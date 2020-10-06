@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:solyric_app/app/ui/ChordInfo/GuitarChordInformation.dart';
-import 'package:solyric_app/app/ui/ChordInfo/PianoChordInformation.dart';
+import 'package:solyric_app/app/ui/ChordInfo/guitar/GuitarChordInformation.dart';
+import 'package:solyric_app/app/ui/ChordInfo/piano/PianoChordInformation.dart';
 import 'package:solyric_app/app/ui/ChordInfo/viewModel/ChordTabsViewModel.dart';
 import 'package:solyric_app/app/ui/ChordInfo/widget/ChordColoredTabBar.dart';
 import 'package:solyric_app/app/ui/base/BaseWidget.dart';

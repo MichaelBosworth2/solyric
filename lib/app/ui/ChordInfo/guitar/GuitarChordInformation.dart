@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:solyric_app/app/ui/ChordInfo/widget/GuitarChordListWidget.dart';
-import 'package:solyric_app/app/ui/ChordInfo/widget/GuitarChordPagerWidget.dart';
-import 'package:solyric_app/app/ui/ChordInfo/widget/GuitarHorizontalScrollerWidget.dart';
+import 'package:solyric_app/app/ui/ChordInfo/guitar/widget/GuitarChordListWidget.dart';
+import 'package:solyric_app/app/ui/ChordInfo/guitar/widget/GuitarChordPagerWidget.dart';
+import 'package:solyric_app/app/ui/ChordInfo/guitar/widget/GuitarHorizontalScrollerWidget.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
 
 class GuitarChordInformation extends StatelessWidget {

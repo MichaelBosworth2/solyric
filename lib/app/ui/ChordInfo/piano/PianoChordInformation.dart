@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:solyric_app/app/ui/ChordInfo/piano/widget/PianoChordListWidget.dart';
+import 'package:solyric_app/app/ui/ChordInfo/piano/widget/PianoChordPagerWidget.dart';
+import 'package:solyric_app/app/ui/ChordInfo/piano/widget/PianoHorizontalScrollerWidget.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
-import 'package:solyric_app/app/ui/ChordInfo/widget/GuitarChordListWidget.dart';
-import 'package:solyric_app/app/ui/ChordInfo/widget/GuitarChordPagerWidget.dart';
-import 'package:solyric_app/app/ui/ChordInfo/widget/GuitarHorizontalScrollerWidget.dart';
 
 class PianoChordInformation extends StatelessWidget {
   @override
@@ -16,14 +16,14 @@ class PianoChordInformation extends StatelessWidget {
         children: [
           Expanded(
             flex: 7,
-            child: Row(
+            child: Column(
               children: [
-                Expanded(flex: 8, child: GuitarChordPagerWidget(key: UniqueKey())),
-                Expanded(flex: 2, child: GuitarChordListWidget())
+                Expanded(flex: 8, child: PianoChordPagerWidget(key: UniqueKey())),
+                Expanded(flex: 2, child: PianoChordListWidget())
               ],
             ),
           ),
-          Expanded(flex: 3, child: GuitarHorizontalScrollerWidget())
+          Expanded(flex: 3, child: PianoHorizontalScrollerWidget())
         ],
       ),
     );

@@ -66,9 +66,8 @@ class ChordTabsViewModel extends BaseViewModel {
     _localGuitarChords.clear();
     await _loadGuitarChords();
 
-    /// Don't load piano chords yet since they don't exists yet
-    // _localPianoChords.clear();
-    // await _loadPianoChords();
+    _localPianoChords.clear();
+    await _loadPianoChords();
     setLoading(false);
   }
 
@@ -81,7 +80,8 @@ class ChordTabsViewModel extends BaseViewModel {
   }
 
   Future<bool> _loadPianoChords() async {
-    final chords = await _loadChordsJsonFile(Resources.PIANO_CHORDS);
+    /// Change source for piano chrods
+    final chords = await _loadChordsJsonFile(Resources.GUITAR_CHORDS);
     chords.forEach((e) => _localPianoChords.add(LocalChord.fromJson(e)));
     _pianoScrollerSelection = _localGuitarChords.first.variations.first;
     _pianoListSelection = _localGuitarChords.first;
