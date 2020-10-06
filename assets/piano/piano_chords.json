@@ -1,0 +1,1935 @@
+{
+  "chords": [
+    {
+      "name": "A",
+      "variations": [
+        {
+          "name": "A-5",
+          "positions": [
+            "assets/piano/A-5-1.png",
+            "assets/piano/A-5-2.png",
+            "assets/piano/A-5-3.png"
+          ]
+        },
+        {
+          "name": "A-9",
+          "positions": [
+            "assets/piano/A-9-1.png",
+            "assets/piano/A-9-2.png",
+            "assets/piano/A-9-3.png",
+            "assets/piano/A-9-4.png"
+          ]
+        },
+        {
+          "name": "A+9",
+          "positions": [
+            "assets/piano/A-9-1.png",
+            "assets/piano/A-9-2.png",
+            "assets/piano/A-9-3.png",
+            "assets/piano/A-9-4.png"
+          ]
+        },
+        {
+          "name": "A6",
+          "positions": [
+            "assets/piano/A6-1.png",
+            "assets/piano/A6-2.png",
+            "assets/piano/A6-3.png",
+            "assets/piano/A6-4.png"
+          ]
+        },
+        {
+          "name": "A7",
+          "positions": [
+            "assets/piano/A7-1.png",
+            "assets/piano/A7-2.png",
+            "assets/piano/A7-3.png",
+            "assets/piano/A7-4.png"
+          ]
+        },
+        {
+          "name": "A7-5",
+          "positions": [
+            "assets/piano/A7-5-1.png",
+            "assets/piano/A7-5-2.png",
+            "assets/piano/A7-5-3.png",
+            "assets/piano/A7-5-4.png"
+          ]
+        },
+        {
+          "name": "A7sus4",
+          "positions": [
+            "assets/piano/A7sus4-1.png",
+            "assets/piano/A7sus4-2.png",
+            "assets/piano/A7sus4-3.png",
+            "assets/piano/A7sus4-4.png"
+          ]
+        },
+        {
+          "name": "A9",
+          "positions": [
+            "assets/piano/A9-1.png",
+            "assets/piano/A9-2.png",
+            "assets/piano/A9-3.png",
+            "assets/piano/A9-4.png"
+          ]
+        },
+        {
+          "name": "A11",
+          "positions": [
+            "assets/piano/A11-1.png",
+            "assets/piano/A11-2.png",
+            "assets/piano/A11-3.png",
+            "assets/piano/A11-4.png"
+          ]
+        },
+        {
+          "name": "A",
+          "positions": [
+            "assets/piano/A-1.png",
+            "assets/piano/A-2.png",
+            "assets/piano/A-3.png"
+          ]
+        },
+        {
+          "name": "Add9",
+          "positions": [
+            "assets/piano/Add9-1.png",
+            "assets/piano/Add9-2.png",
+            "assets/piano/Add9-3.png",
+            "assets/piano/Add9-4.png",
+            "assets/piano/Add9-5.png"
+          ]
+        },
+        {
+          "name": "AM7",
+          "positions": [
+            "assets/piano/AM7-1.png",
+            "assets/piano/AM7-2.png",
+            "assets/piano/AM7-3.png",
+            "assets/piano/AM7-4.png"
+          ]
+        },
+        {
+          "name": "Aaug",
+          "positions": [
+            "assets/piano/Aaug-1.png",
+            "assets/piano/Aaug-2.png",
+            "assets/piano/Aaug-3.png"
+          ]
+        },
+        {
+          "name": "Aaug7",
+          "positions": [
+            "assets/piano/Aaug7-1.png",
+            "assets/piano/Aaug7-2.png",
+            "assets/piano/Aaug7-3.png",
+            "assets/piano/Aaug7-4.png"
+          ]
+        },
+        {
+          "name": "AaugM7",
+          "positions": [
+            "assets/piano/AaugM7-1.png",
+            "assets/piano/AaugM7-2.png",
+            "assets/piano/AaugM7-3.png",
+            "assets/piano/AaugM7-4.png"
+          ]
+        },
+        {
+          "name": "Adim7",
+          "positions": [
+            "assets/piano/Adim7-1.png",
+            "assets/piano/Adim7-2.png",
+            "assets/piano/Adim7-3.png",
+            "assets/piano/Adim7-4.png"
+          ]
+        },
+        {
+          "name": "Am",
+          "positions": [
+            "assets/piano/Am-1.png",
+            "assets/piano/Am-2.png",
+            "assets/piano/Am-3.png"
+          ]
+        },
+        {
+          "name": "Am6",
+          "positions": [
+            "assets/piano/Am6-1.png",
+            "assets/piano/Am6-2.png",
+            "assets/piano/Am6-3.png",
+            "assets/piano/Am6-4.png"
+          ]
+        },
+        {
+          "name": "Am7",
+          "positions": [
+            "assets/piano/Am7-1.png",
+            "assets/piano/Am7-2.png",
+            "assets/piano/Am7-3.png",
+            "assets/piano/Am7-4.png"
+          ]
+        },
+        {
+          "name": "Am7-5",
+          "positions": [
+            "assets/piano/Am7-5-1.png",
+            "assets/piano/Am7-5-2.png",
+            "assets/piano/Am7-5-3.png",
+            "assets/piano/Am7-5-4.png"
+          ]
+        },
+        {
+          "name": "AmM7",
+          "positions": [
+            "assets/piano/AmM7-5-1.png",
+            "assets/piano/AmM7-5-2.png",
+            "assets/piano/AmM7-5-3.png",
+            "assets/piano/AmM7-5-4.png"
+          ]
+        },
+        {
+          "name": "Asus4",
+          "positions": [
+            "assets/piano/Asus4-5-1.png",
+            "assets/piano/Asus4-5-2.png",
+            "assets/piano/Asus4-5-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A#",
+      "variations": [
+        {
+          "name": "A#6",
+          "positions": [
+            "assets/piano/A#6-1.png",
+            "assets/piano/A#6-2.png",
+            "assets/piano/A#6-3.png",
+            "assets/piano/A#6-4.png"
+          ]
+        },
+        {
+          "name": "A#7",
+          "positions": [
+            "assets/piano/A#7-1.png",
+            "assets/piano/A#7-2.png",
+            "assets/piano/A#7-3.png",
+            "assets/piano/A#7-4.png"
+          ]
+        },
+        {
+          "name": "A#7-5",
+          "positions": [
+            "assets/piano/A#7-5-1.png",
+            "assets/piano/A#7-5-2.png",
+            "assets/piano/A#7-5-3.png",
+            "assets/piano/A#7-5-4.png"
+          ]
+        },
+        {
+          "name": "A#7sus4-5",
+          "positions": [
+            "assets/piano/A#7sus4-5-1.png",
+            "assets/piano/A#7sus4-5-2.png",
+            "assets/piano/A#7sus4-5-3.png",
+            "assets/piano/A#7sus4-5-4.png"
+          ]
+        },
+        {
+          "name": "A#9",
+          "positions": [
+            "assets/piano/A#9-1.png",
+            "assets/piano/A#9-2.png",
+            "assets/piano/A#9-3.png",
+            "assets/piano/A#9-4.png"
+          ]
+        },
+        {
+          "name": "A#11",
+          "positions": [
+            "assets/piano/A#11-1.png",
+            "assets/piano/A#11-2.png",
+            "assets/piano/A#11-3.png",
+            "assets/piano/A#11-4.png"
+          ]
+        },
+        {
+          "name": "A#",
+          "positions": [
+            "assets/piano/A#-1.png",
+            "assets/piano/A#-2.png",
+            "assets/piano/A#-3.png"
+          ]
+        },
+        {
+          "name": "A#M7",
+          "positions": [
+            "assets/piano/A#M7-1.png",
+            "assets/piano/A#M7-2.png",
+            "assets/piano/A#M7-3.png",
+            "assets/piano/A#M7-4.png"
+          ]
+        },
+        {
+          "name": "A#add9",
+          "positions": [
+            "assets/piano/A#add9-1.png",
+            "assets/piano/A#add9-2.png",
+            "assets/piano/A#add9-3.png",
+            "assets/piano/A#add9-4.png"
+          ]
+        },
+        {
+          "name": "A#aug",
+          "positions": [
+            "assets/piano/A#aug-1.png",
+            "assets/piano/A#aug-2.png",
+            "assets/piano/A#aug-3.png"
+          ]
+        },
+        {
+          "name": "A#aug7",
+          "positions": [
+            "assets/piano/A#aug7-1.png",
+            "assets/piano/A#aug7-2.png",
+            "assets/piano/A#aug7-3.png",
+            "assets/piano/A#aug7-4.png"
+          ]
+        },
+        {
+          "name": "A#augM7",
+          "positions": [
+            "assets/piano/A#augM7-1.png",
+            "assets/piano/A#augM7-2.png",
+            "assets/piano/A#augM7-3.png",
+            "assets/piano/A#augM7-4.png"
+          ]
+        },
+        {
+          "name": "A#dim7",
+          "positions": [
+            "assets/piano/A#dim7-1.png",
+            "assets/piano/A#dim7-2.png",
+            "assets/piano/A#dim7-3.png",
+            "assets/piano/A#dim7-4.png"
+          ]
+        },
+        {
+          "name": "A#m",
+          "positions": [
+            "assets/piano/A#m-1.png",
+            "assets/piano/A#m-2.png",
+            "assets/piano/A#m-3.png"
+          ]
+        },
+        {
+          "name": "A#m6",
+          "positions": [
+            "assets/piano/A#m6-1.png",
+            "assets/piano/A#m6-2.png",
+            "assets/piano/A#m6-3.png",
+            "assets/piano/A#m6-4.png"
+          ]
+        },
+        {
+          "name": "A#m7",
+          "positions": [
+            "assets/piano/A#m7-1.png",
+            "assets/piano/A#m7-2.png",
+            "assets/piano/A#m7-3.png",
+            "assets/piano/A#m7-4.png"
+          ]
+        },
+        {
+          "name": "A#m7-5",
+          "positions": [
+            "assets/piano/A#m7-5-1.png",
+            "assets/piano/A#m7-5-2.png",
+            "assets/piano/A#m7-5-3.png",
+            "assets/piano/A#m7-5-4.png"
+          ]
+        },
+        {
+          "name": "A#mM7",
+          "positions": [
+            "assets/piano/A#mM7-1.png",
+            "assets/piano/A#mM7-2.png",
+            "assets/piano/A#mM7-3.png",
+            "assets/piano/A#mM7-4.png"
+          ]
+        },
+        {
+          "name": "A#sus4",
+          "positions": [
+            "assets/piano/A#sus4-1.png",
+            "assets/piano/A#sus4-2.png",
+            "assets/piano/A#sus4-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B",
+      "variations": [
+        {
+          "name": "B-5",
+          "positions": [
+            "assets/piano/B-5-1.png",
+            "assets/piano/B-5-2.png",
+            "assets/piano/B-5-3.png"
+          ]
+        },
+        {
+          "name": "B-9",
+          "positions": [
+            "assets/piano/B-9-1.png",
+            "assets/piano/B-9-2.png",
+            "assets/piano/B-9-3.png",
+            "assets/piano/B-9-4.png"
+          ]
+        },
+        {
+          "name": "B+9",
+          "positions": [
+            "assets/piano/B+9-1.png",
+            "assets/piano/B+9-2.png",
+            "assets/piano/B+9-3.png",
+            "assets/piano/B+9-4.png"
+          ]
+        },
+        {
+          "name": "B6",
+          "positions": [
+            "assets/piano/B6-1.png",
+            "assets/piano/B6-2.png",
+            "assets/piano/B6-3.png",
+            "assets/piano/B6-4.png"
+          ]
+        },
+        {
+          "name": "B7",
+          "positions": [
+            "assets/piano/B7-1.png",
+            "assets/piano/B7-2.png",
+            "assets/piano/B7-3.png",
+            "assets/piano/B7-4.png"
+          ]
+        },
+        {
+          "name": "B7-5",
+          "positions": [
+            "assets/piano/B7-5-1.png",
+            "assets/piano/B7-5-2.png",
+            "assets/piano/B7-5-3.png",
+            "assets/piano/B7-5-4.png"
+          ]
+        },
+        {
+          "name": "B7sus4",
+          "positions": [
+            "assets/piano/B7sus4-1.png",
+            "assets/piano/B7sus4-2.png",
+            "assets/piano/B7sus4-3.png",
+            "assets/piano/B7sus4-4.png"
+          ]
+        },
+        {
+          "name": "B9",
+          "positions": [
+            "assets/piano/B9-1.png",
+            "assets/piano/B9-2.png",
+            "assets/piano/B9-3.png",
+            "assets/piano/B9-4.png"
+          ]
+        },
+        {
+          "name": "B11",
+          "positions": [
+            "assets/piano/B11-1.png",
+            "assets/piano/B11-2.png",
+            "assets/piano/B11-3.png",
+            "assets/piano/B11-4.png"
+          ]
+        },
+        {
+          "name": "Badd9",
+          "positions": [
+            "assets/piano/Badd9-1.png",
+            "assets/piano/Badd9-2.png",
+            "assets/piano/Badd9-3.png",
+            "assets/piano/Badd9-4.png"
+          ]
+        },
+        {
+          "name": "Baug",
+          "positions": [
+            "assets/piano/Baug-1.png",
+            "assets/piano/Baug-2.png",
+            "assets/piano/Baug-3.png"
+          ]
+        },
+        {
+          "name": "Baug7",
+          "positions": [
+            "assets/piano/Baug7-1.png",
+            "assets/piano/Baug7-2.png",
+            "assets/piano/Baug7-3.png",
+            "assets/piano/Baug7-4.png"
+          ]
+        },
+        {
+          "name": "BaugM7",
+          "positions": [
+            "assets/piano/BaugM7-1.png",
+            "assets/piano/BaugM7-2.png",
+            "assets/piano/BaugM7-3.png",
+            "assets/piano/BaugM7-4.png"
+          ]
+        },
+        {
+          "name": "B",
+          "positions": [
+            "assets/piano/B-1.png",
+            "assets/piano/B-2.png",
+            "assets/piano/B-3.png"
+          ]
+        },
+        {
+          "name": "BM7",
+          "positions": [
+            "assets/piano/BM7-1.png",
+            "assets/piano/BM7-2.png",
+            "assets/piano/BM7-3.png",
+            "assets/piano/BM7-4.png"
+          ]
+        },
+        {
+          "name": "Bdim7",
+          "positions": [
+            "assets/piano/Bdim7-1.png",
+            "assets/piano/Bdim7-2.png",
+            "assets/piano/Bdim7-3.png",
+            "assets/piano/Bdim7-4.png"
+          ]
+        },
+        {
+          "name": "Bm",
+          "positions": [
+            "assets/piano/Bm-1.png",
+            "assets/piano/Bm-2.png",
+            "assets/piano/Bm-3.png"
+          ]
+        },
+        {
+          "name": "Bm6",
+          "positions": [
+            "assets/piano/Bm6-1.png",
+            "assets/piano/Bm6-2.png",
+            "assets/piano/Bm6-3.png",
+            "assets/piano/Bm6-4.png"
+          ]
+        },
+        {
+          "name": "Bm7",
+          "positions": [
+            "assets/piano/Bm7-1.png",
+            "assets/piano/Bm7-2.png",
+            "assets/piano/Bm7-3.png",
+            "assets/piano/Bm7-4.png"
+          ]
+        },
+        {
+          "name": "Bm7-5",
+          "positions": [
+            "assets/piano/Bm7-5-1.png",
+            "assets/piano/Bm7-5-2.png",
+            "assets/piano/Bm7-5-3.png",
+            "assets/piano/Bm7-5-4.png"
+          ]
+        },
+        {
+          "name": "BmM7",
+          "positions": [
+            "assets/piano/BmM7-1.png",
+            "assets/piano/BmM7-2.png",
+            "assets/piano/BmM7-3.png",
+            "assets/piano/BmM7-4.png"
+          ]
+        },
+        {
+          "name": "Bsus4",
+          "positions": [
+            "assets/piano/Bsus4-1.png",
+            "assets/piano/Bsus4-2.png",
+            "assets/piano/Bsus4-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "C",
+      "variations": [
+        {
+          "name": "C-5",
+          "positions": [
+            "assets/piano/C-5-1.png",
+            "assets/piano/C-5-2.png",
+            "assets/piano/C-5-3.png"
+          ]
+        },
+        {
+          "name": "C-9",
+          "positions": [
+            "assets/piano/C-9-1.png",
+            "assets/piano/C-9-2.png",
+            "assets/piano/C-9-3.png",
+            "assets/piano/C-9-4.png"
+          ]
+        },
+        {
+          "name": "C+9",
+          "positions": [
+            "assets/piano/C+9-1.png",
+            "assets/piano/C+9-2.png",
+            "assets/piano/C+9-3.png",
+            "assets/piano/C+9-4.png"
+          ]
+        },
+        {
+          "name": "Caug7",
+          "positions": [
+            "assets/piano/Caug7-1.png",
+            "assets/piano/Caug7-2.png",
+            "assets/piano/Caug7-3.png",
+            "assets/piano/Caug7-4.png"
+          ]
+        },
+        {
+          "name": "Caugm7",
+          "positions": [
+            "assets/piano/Caugm7-1.png",
+            "assets/piano/Caugm7-2.png",
+            "assets/piano/Caugm7-3.png",
+            "assets/piano/Caugm7-4.png"
+          ]
+        },
+        {
+          "name": "C",
+          "positions": [
+            "assets/piano/C-1.png",
+            "assets/piano/C-2.png",
+            "assets/piano/C-3.png"
+          ]
+        },
+        {
+          "name": "CM7",
+          "positions": [
+            "assets/piano/CM7-1.png",
+            "assets/piano/CM7-2.png",
+            "assets/piano/CM7-3.png",
+            "assets/piano/CM7-4.png"
+          ]
+        },
+        {
+          "name": "Cdim7",
+          "positions": [
+            "assets/piano/Cdim7-1.png",
+            "assets/piano/Cdim7-2.png",
+            "assets/piano/Cdim7-3.png",
+            "assets/piano/Cdim7-4.png"
+          ]
+        },
+        {
+          "name": "Cm",
+          "positions": [
+            "assets/piano/Cm-1.png",
+            "assets/piano/Cm-2.png",
+            "assets/piano/Cm-3.png"
+          ]
+        },
+        {
+          "name": "Cm6",
+          "positions": [
+            "assets/piano/Cm6-1.png",
+            "assets/piano/Cm6-2.png",
+            "assets/piano/Cm6-3.png",
+            "assets/piano/Cm6-4.png"
+          ]
+        },
+        {
+          "name": "CmM7",
+          "positions": [
+            "assets/piano/CmM7-1.png",
+            "assets/piano/CmM7-2.png",
+            "assets/piano/CmM7-3.png",
+            "assets/piano/CmM7-4.png"
+          ]
+        },
+        {
+          "name": "Csus4",
+          "positions": [
+            "assets/piano/Csus4-1.png",
+            "assets/piano/Csus4-2.png",
+            "assets/piano/Csus4-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "C#",
+      "variations": [
+        {
+          "name": "C#",
+          "positions": [
+            "assets/piano/C#-1.png",
+            "assets/piano/C#-2.png",
+            "assets/piano/C#-3.png"
+          ]
+        },
+        {
+          "name": "C#M7",
+          "positions": [
+            "assets/piano/C#M7-1.png",
+            "assets/piano/C#M7-2.png",
+            "assets/piano/C#M7-3.png",
+            "assets/piano/C#M7-4.png"
+          ]
+        },
+        {
+          "name": "C#dim7",
+          "positions": [
+            "assets/piano/C#dim7-1.png",
+            "assets/piano/C#dim7-2.png",
+            "assets/piano/C#dim7-3.png",
+            "assets/piano/C#dim7-4.png"
+          ]
+        },
+        {
+          "name": "C#m",
+          "positions": [
+            "assets/piano/C#m-1.png",
+            "assets/piano/C#m-2.png",
+            "assets/piano/C#m-3.png"
+          ]
+        },
+        {
+          "name": "C#m6",
+          "positions": [
+            "assets/piano/C#m6-1.png",
+            "assets/piano/C#m6-2.png",
+            "assets/piano/C#m6-3.png",
+            "assets/piano/C#m6-4.png"
+          ]
+        },
+        {
+          "name": "C#m7",
+          "positions": [
+            "assets/piano/C#m7-1.png",
+            "assets/piano/C#m7-2.png",
+            "assets/piano/C#m7-3.png",
+            "assets/piano/C#m7-4.png"
+          ]
+        },
+        {
+          "name": "C#m7-5",
+          "positions": [
+            "assets/piano/C#m7-5-1.png",
+            "assets/piano/C#m7-5-2.png",
+            "assets/piano/C#m7-5-3.png",
+            "assets/piano/C#m7-5-4.png"
+          ]
+        },
+        {
+          "name": "C#mM7",
+          "positions": [
+            "assets/piano/C#mM7-1.png",
+            "assets/piano/C#mM7-2.png",
+            "assets/piano/C#mM7-3.png",
+            "assets/piano/C#mM7-4.png"
+          ]
+        },
+        {
+          "name": "C#sus4",
+          "positions": [
+            "assets/piano/C#sus4-1.png",
+            "assets/piano/C#sus4-2.png",
+            "assets/piano/C#sus4-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "D",
+      "variations": [
+        {
+          "name": "D6",
+          "positions": [
+            "assets/piano/D6-1.png",
+            "assets/piano/D6-2.png",
+            "assets/piano/D6-3.png",
+            "assets/piano/D6-4.png"
+          ]
+        },
+        {
+          "name": "D7",
+          "positions": [
+            "assets/piano/D7-1.png",
+            "assets/piano/D7-2.png",
+            "assets/piano/D7-3.png",
+            "assets/piano/D7-4.png"
+          ]
+        },
+        {
+          "name": "D7-5",
+          "positions": [
+            "assets/piano/D7-5-1.png",
+            "assets/piano/D7-5-2.png",
+            "assets/piano/D7-5-3.png",
+            "assets/piano/D7-5-4.png"
+          ]
+        },
+        {
+          "name": "D7sus4",
+          "positions": [
+            "assets/piano/D7sus4-1.png",
+            "assets/piano/D7sus4-2.png",
+            "assets/piano/D7sus4-3.png",
+            "assets/piano/D7sus4-4.png"
+          ]
+        },
+        {
+          "name": "D9",
+          "positions": [
+            "assets/piano/D9-1.png",
+            "assets/piano/D9-2.png",
+            "assets/piano/D9-3.png",
+            "assets/piano/D9-4.png"
+          ]
+        },
+        {
+          "name": "D11",
+          "positions": [
+            "assets/piano/D11-1.png",
+            "assets/piano/D11-2.png",
+            "assets/piano/D11-3.png",
+            "assets/piano/D11-4.png"
+          ]
+        },
+        {
+          "name": "Dadd9",
+          "positions": [
+            "assets/piano/Dadd9-1.png",
+            "assets/piano/Dadd9-2.png",
+            "assets/piano/Dadd9-3.png",
+            "assets/piano/Dadd9-4.png"
+          ]
+        },
+        {
+          "name": "Daug",
+          "positions": [
+            "assets/piano/Daug-1.png",
+            "assets/piano/Daug-2.png",
+            "assets/piano/Daug-3.png"
+          ]
+        },
+        {
+          "name": "Daug7",
+          "positions": [
+            "assets/piano/Daug7-1.png",
+            "assets/piano/Daug7-2.png",
+            "assets/piano/Daug7-3.png",
+            "assets/piano/Daug7-4.png"
+          ]
+        },
+        {
+          "name": "Daugm7",
+          "positions": [
+            "assets/piano/Daugm7-1.png",
+            "assets/piano/Daugm7-2.png",
+            "assets/piano/Daugm7-3.png",
+            "assets/piano/Daugm7-4.png"
+          ]
+        },
+        {
+          "name": "D",
+          "positions": [
+            "assets/piano/D-1.png",
+            "assets/piano/D-2.png",
+            "assets/piano/D-3.png"
+          ]
+        },
+        {
+          "name": "Ddim7",
+          "positions": [
+            "assets/piano/Ddim7-1.png",
+            "assets/piano/Ddim7-2.png",
+            "assets/piano/Ddim7-3.png",
+            "assets/piano/Ddim7-4.png"
+          ]
+        },
+        {
+          "name": "DM7",
+          "positions": [
+            "assets/piano/DM7-1.png",
+            "assets/piano/DM7-2.png",
+            "assets/piano/DM7-3.png",
+            "assets/piano/DM7-4.png"
+          ]
+        },
+        {
+          "name": "Dm",
+          "positions": [
+            "assets/piano/Dm-1.png",
+            "assets/piano/Dm-2.png",
+            "assets/piano/Dm-3.png"
+          ]
+        },
+        {
+          "name": "Dm6",
+          "positions": [
+            "assets/piano/Dm6-1.png",
+            "assets/piano/Dm6-2.png",
+            "assets/piano/Dm6-3.png",
+            "assets/piano/Dm6-4.png"
+          ]
+        },
+        {
+          "name": "Dm7",
+          "positions": [
+            "assets/piano/Dm7-1.png",
+            "assets/piano/Dm7-2.png",
+            "assets/piano/Dm7-3.png",
+            "assets/piano/Dm7-4.png"
+          ]
+        },
+        {
+          "name": "Dm7-5",
+          "positions": [
+            "assets/piano/Dm7-5-1.png",
+            "assets/piano/Dm7-5-2.png",
+            "assets/piano/Dm7-5-3.png",
+            "assets/piano/Dm7-5-4.png"
+          ]
+        },
+        {
+          "name": "DmM7",
+          "positions": [
+            "assets/piano/DmM7-1.png",
+            "assets/piano/DmM7-2.png",
+            "assets/piano/DmM7-3.png",
+            "assets/piano/DmM7-4.png"
+          ]
+        },
+        {
+          "name": "Dsus4",
+          "positions": [
+            "assets/piano/Dsus4-1.png",
+            "assets/piano/Dsus4-2.png",
+            "assets/piano/Dsus4-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "D#",
+      "variations": [
+        {
+          "name": "D#-5",
+          "positions": [
+            "assets/piano/D#-5-1.png",
+            "assets/piano/D#-5-2.png",
+            "assets/piano/D#-5-3.png"
+          ]
+        },
+        {
+          "name": "D#-9",
+          "positions": [
+            "assets/piano/D#-9-1.png",
+            "assets/piano/D#-9-2.png",
+            "assets/piano/D#-9-3.png",
+            "assets/piano/D#-9-4.png"
+          ]
+        },
+        {
+          "name": "D#+9",
+          "positions": [
+            "assets/piano/D#+9-1.png",
+            "assets/piano/D#+9-2.png",
+            "assets/piano/D#+9-3.png",
+            "assets/piano/D#+9-4.png"
+          ]
+        },
+        {
+          "name": "D#6",
+          "positions": [
+            "assets/piano/D#6-1.png",
+            "assets/piano/D#6-2.png",
+            "assets/piano/D#6-3.png",
+            "assets/piano/D#6-4.png"
+          ]
+        },
+        {
+          "name": "D#7",
+          "positions": [
+            "assets/piano/D#7-1.png",
+            "assets/piano/D#7-2.png",
+            "assets/piano/D#7-3.png",
+            "assets/piano/D#7-4.png"
+          ]
+        },
+        {
+          "name": "D#7-5",
+          "positions": [
+            "assets/piano/D#7-5-1.png",
+            "assets/piano/D#7-5-2.png",
+            "assets/piano/D#7-5-3.png",
+            "assets/piano/D#7-5-4.png"
+          ]
+        },
+        {
+          "name": "D#7sus4",
+          "positions": [
+            "assets/piano/D#7sus4-1.png",
+            "assets/piano/D#7sus4-2.png",
+            "assets/piano/D#7sus4-3.png",
+            "assets/piano/D#7sus4-4.png"
+          ]
+        },
+        {
+          "name": "D#9",
+          "positions": [
+            "assets/piano/D#9-1.png",
+            "assets/piano/D#9-2.png",
+            "assets/piano/D#9-3.png",
+            "assets/piano/D#9-4.png"
+          ]
+        },
+        {
+          "name": "D#11",
+          "positions": [
+            "assets/piano/D#11-1.png",
+            "assets/piano/D#11-2.png",
+            "assets/piano/D#11-3.png",
+            "assets/piano/D#11-4.png"
+          ]
+        },
+        {
+          "name": "D#add9",
+          "positions": [
+            "assets/piano/D#add9-1.png",
+            "assets/piano/D#add9-2.png",
+            "assets/piano/D#add9-3.png",
+            "assets/piano/D#add9-4.png"
+          ]
+        },
+        {
+          "name": "D#aug",
+          "positions": [
+            "assets/piano/D#aug-1.png",
+            "assets/piano/D#aug-2.png",
+            "assets/piano/D#aug-3.png"
+          ]
+        },
+        {
+          "name": "D#aug7",
+          "positions": [
+            "assets/piano/D#aug7-1.png",
+            "assets/piano/D#aug7-2.png",
+            "assets/piano/D#aug7-3.png",
+            "assets/piano/D#aug7-4.png"
+          ]
+        },
+        {
+          "name": "D#augM7",
+          "positions": [
+            "assets/piano/D#augM7-1.png",
+            "assets/piano/D#augM7-2.png",
+            "assets/piano/D#augM7-3.png",
+            "assets/piano/D#augM7-4.png"
+          ]
+        },
+        {
+          "name": "D#",
+          "positions": [
+            "assets/piano/D#-1.png",
+            "assets/piano/D#-2.png",
+            "assets/piano/D#-3.png"
+          ]
+        },
+        {
+          "name": "D#M7",
+          "positions": [
+            "assets/piano/D#M7-1.png",
+            "assets/piano/D#M7-2.png",
+            "assets/piano/D#M7-3.png",
+            "assets/piano/D#M7-4.png"
+          ]
+        },
+        {
+          "name": "D#dim7",
+          "positions": [
+            "assets/piano/D#dim7-1.png",
+            "assets/piano/D#dim7-2.png",
+            "assets/piano/D#dim7-3.png",
+            "assets/piano/D#dim7-4.png"
+          ]
+        },
+        {
+          "name": "D#m",
+          "positions": [
+            "assets/piano/D#m-1.png",
+            "assets/piano/D#m-2.png",
+            "assets/piano/D#m-3.png"
+          ]
+        },
+        {
+          "name": "D#m6",
+          "positions": [
+            "assets/piano/D#m6-1.png",
+            "assets/piano/D#m6-2.png",
+            "assets/piano/D#m6-3.png",
+            "assets/piano/D#m6-4.png"
+          ]
+        },
+        {
+          "name": "D#m7",
+          "positions": [
+            "assets/piano/D#m7-1.png",
+            "assets/piano/D#m7-2.png",
+            "assets/piano/D#m7-3.png",
+            "assets/piano/D#m7-4.png"
+          ]
+        },
+        {
+          "name": "D#m7-5",
+          "positions": [
+            "assets/piano/D#m7-5-1.png",
+            "assets/piano/D#m7-5-2.png",
+            "assets/piano/D#m7-5-3.png",
+            "assets/piano/D#m7-5-4.png"
+          ]
+        },
+        {
+          "name": "D#mM7",
+          "positions": [
+            "assets/piano/D#mM7-1.png",
+            "assets/piano/D#mM7-2.png",
+            "assets/piano/D#mM7-3.png",
+            "assets/piano/D#mM7-4.png"
+          ]
+        },
+        {
+          "name": "D#sus4",
+          "positions": [
+            "assets/piano/D#sus4-1.png",
+            "assets/piano/D#sus4-2.png",
+            "assets/piano/D#sus4-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "E",
+      "variations": [
+        {
+          "name": "E6",
+          "positions": [
+            "assets/piano/E6-1.png",
+            "assets/piano/E6-2.png",
+            "assets/piano/E6-3.png",
+            "assets/piano/E6-4.png"
+          ]
+        },
+        {
+          "name": "E7",
+          "positions": [
+            "assets/piano/E7-1.png",
+            "assets/piano/E7-2.png",
+            "assets/piano/E7-3.png",
+            "assets/piano/E7-4.png"
+          ]
+        },
+        {
+          "name": "E7-5",
+          "positions": [
+            "assets/piano/E7-5-1.png",
+            "assets/piano/E7-5-2.png",
+            "assets/piano/E7-5-3.png",
+            "assets/piano/E7-5-4.png"
+          ]
+        },
+        {
+          "name": "E7sus4",
+          "positions": [
+            "assets/piano/E7sus4-1.png",
+            "assets/piano/E7sus4-2.png",
+            "assets/piano/E7sus4-3.png",
+            "assets/piano/E7sus4-4.png"
+          ]
+        },
+        {
+          "name": "E9",
+          "positions": [
+            "assets/piano/E9-1.png",
+            "assets/piano/E9-2.png",
+            "assets/piano/E9-3.png",
+            "assets/piano/E9-4.png"
+          ]
+        },
+        {
+          "name": "E11",
+          "positions": [
+            "assets/piano/E11-1.png",
+            "assets/piano/E11-2.png",
+            "assets/piano/E11-3.png",
+            "assets/piano/E11-4.png"
+          ]
+        },
+        {
+          "name": "Eadd9",
+          "positions": [
+            "assets/piano/Eadd9-1.png",
+            "assets/piano/Eadd9-2.png",
+            "assets/piano/Eadd9-3.png",
+            "assets/piano/Eadd9-4.png",
+            "assets/piano/Eadd9-5.png"
+          ]
+        },
+        {
+          "name": "Eaug",
+          "positions": [
+            "assets/piano/Eaug-1.png",
+            "assets/piano/Eaug-2.png",
+            "assets/piano/Eaug-3.png"
+          ]
+        },
+        {
+          "name": "Eaug7",
+          "positions": [
+            "assets/piano/Eaug7-1.png",
+            "assets/piano/Eaug7-2.png",
+            "assets/piano/Eaug7-3.png",
+            "assets/piano/Eaug7-4.png"
+          ]
+        },
+        {
+          "name": "Eaugm7",
+          "positions": [
+            "assets/piano/Eaugm7-1.png",
+            "assets/piano/Eaugm7-2.png",
+            "assets/piano/Eaugm7-3.png",
+            "assets/piano/Eaugm7-4.png"
+          ]
+        },
+        {
+          "name": "Edim7",
+          "positions": [
+            "assets/piano/Edim7-1.png",
+            "assets/piano/Edim7-2.png",
+            "assets/piano/Edim7-3.png",
+            "assets/piano/Edim7-4.png"
+          ]
+        },
+        {
+          "name": "E",
+          "positions": [
+            "assets/piano/E-1.png",
+            "assets/piano/E-2.png",
+            "assets/piano/E-3.png"
+          ]
+        },
+        {
+          "name": "EM7",
+          "positions": [
+            "assets/piano/EM7-1.png",
+            "assets/piano/EM7-2.png",
+            "assets/piano/EM7-3.png",
+            "assets/piano/EM7-3.png"
+          ]
+        },
+        {
+          "name": "Em",
+          "positions": [
+            "assets/piano/Em-1.png",
+            "assets/piano/Em-2.png",
+            "assets/piano/Em-3.png"
+          ]
+        },
+        {
+          "name": "Em6",
+          "positions": [
+            "assets/piano/Em6-1.png",
+            "assets/piano/Em6-2.png",
+            "assets/piano/Em6-3.png",
+            "assets/piano/Em6-4.png"
+          ]
+        },
+        {
+          "name": "Em7",
+          "positions": [
+            "assets/piano/Em7-1.png",
+            "assets/piano/Em7-2.png",
+            "assets/piano/Em7-3.png",
+            "assets/piano/Em7-4.png"
+          ]
+        },
+        {
+          "name": "Em7-5",
+          "positions": [
+            "assets/piano/Em7-5-1.png",
+            "assets/piano/Em7-5-2.png",
+            "assets/piano/Em7-5-3.png",
+            "assets/piano/Em7-5-4.png"
+          ]
+        },
+        {
+          "name": "EmM7",
+          "positions": [
+            "assets/piano/EmM7-1.png",
+            "assets/piano/EmM7-2.png",
+            "assets/piano/EmM7-3.png",
+            "assets/piano/EmM7-4.png"
+          ]
+        },
+        {
+          "name": "Esus4",
+          "positions": [
+            "assets/piano/Esus4-1.png",
+            "assets/piano/Esus4-2.png",
+            "assets/piano/Esus4-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "F",
+      "variations": [
+        {
+          "name": "F-9",
+          "positions": [
+            "assets/piano/F-9-1.png",
+            "assets/piano/F-9-2.png",
+            "assets/piano/F-9-3.png",
+            "assets/piano/F-9-4.png"
+          ]
+        },
+        {
+          "name": "F6",
+          "positions": [
+            "assets/piano/F6-1.png",
+            "assets/piano/F6-2.png",
+            "assets/piano/F6-3.png",
+            "assets/piano/F6-4.png"
+          ]
+        },
+        {
+          "name": "F9",
+          "positions": [
+            "assets/piano/F9-1.png",
+            "assets/piano/F9-2.png",
+            "assets/piano/F9-3.png",
+            "assets/piano/F9-4.png"
+          ]
+        },
+        {
+          "name": "F11",
+          "positions": [
+            "assets/piano/F11-1.png",
+            "assets/piano/F11-2.png",
+            "assets/piano/F11-3.png",
+            "assets/piano/F11-4.png"
+          ]
+        },
+        {
+          "name": "Fadd9",
+          "positions": [
+            "assets/piano/Fadd9-1.png",
+            "assets/piano/Fadd9-2.png",
+            "assets/piano/Fadd9-3.png",
+            "assets/piano/Fadd9-4.png"
+          ]
+        },
+        {
+          "name": "Faug",
+          "positions": [
+            "assets/piano/Faug-1.png",
+            "assets/piano/Faug-2.png",
+            "assets/piano/Faug-3.png"
+          ]
+        },
+        {
+          "name": "Faug7",
+          "positions": [
+            "assets/piano/Faug7-1.png",
+            "assets/piano/Faug7-2.png",
+            "assets/piano/Faug7-3.png",
+            "assets/piano/Faug7-4.png"
+          ]
+        },
+        {
+          "name": "Faugm7",
+          "positions": [
+            "assets/piano/Faugm7-1.png",
+            "assets/piano/Faugm7-2.png",
+            "assets/piano/Faugm7-3.png",
+            "assets/piano/Faugm7-4.png"
+          ]
+        },
+        {
+          "name": "Fdim7",
+          "positions": [
+            "assets/piano/Fdim7-1.png",
+            "assets/piano/Fdim7-2.png",
+            "assets/piano/Fdim7-3.png",
+            "assets/piano/Fdim7-4.png"
+          ]
+        },
+        {
+          "name": "F",
+          "positions": [
+            "assets/piano/F-1.png",
+            "assets/piano/F-2.png",
+            "assets/piano/F-3.png"
+          ]
+        },
+        {
+          "name": "FM7",
+          "positions": [
+            "assets/piano/FM7-1.png",
+            "assets/piano/FM7-2.png",
+            "assets/piano/FM7-3.png",
+            "assets/piano/FM7-4.png"
+          ]
+        },
+        {
+          "name": "Fsus4",
+          "positions": [
+            "assets/piano/Fsus4-1.png",
+            "assets/piano/Fsus4-2.png",
+            "assets/piano/Fsus4-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "F#",
+      "variations": [
+        {
+          "name": "F#-9",
+          "positions": [
+            "assets/piano/F#-9-1.png",
+            "assets/piano/F#-9-2.png",
+            "assets/piano/F#-9-3.png",
+            "assets/piano/F#-9-4.png"
+          ]
+        },
+        {
+          "name": "F#6",
+          "positions": [
+            "assets/piano/F#6-1.png",
+            "assets/piano/F#6-2.png",
+            "assets/piano/F#6-3.png",
+            "assets/piano/F#6-4.png"
+          ]
+        },
+        {
+          "name": "F#7",
+          "positions": [
+            "assets/piano/F#7-1.png",
+            "assets/piano/F#7-2.png",
+            "assets/piano/F#7-3.png",
+            "assets/piano/F#7-4.png"
+          ]
+        },
+        {
+          "name": "F#7-5",
+          "positions": [
+            "assets/piano/F#7-5-1.png",
+            "assets/piano/F#7-5-2.png",
+            "assets/piano/F#7-5-3.png",
+            "assets/piano/F#7-5-4.png"
+          ]
+        },
+        {
+          "name": "F#7-5",
+          "positions": [
+            "assets/piano/F#7-5-1.png",
+            "assets/piano/F#7-5-2.png",
+            "assets/piano/F#7-5-3.png",
+            "assets/piano/F#7-5-4.png"
+          ]
+        },
+        {
+          "name": "F#7sus4",
+          "positions": [
+            "assets/piano/F#7sus4-1.png",
+            "assets/piano/F#7sus4-2.png",
+            "assets/piano/F#7sus4-3.png",
+            "assets/piano/F#7sus4-4.png"
+          ]
+        },
+        {
+          "name": "F#9",
+          "positions": [
+            "assets/piano/F#9-1.png",
+            "assets/piano/F#9-2.png",
+            "assets/piano/F#9-3.png",
+            "assets/piano/F#9-4.png"
+          ]
+        },
+        {
+          "name": "F#11",
+          "positions": [
+            "assets/piano/F#11-1.png",
+            "assets/piano/F#11-2.png",
+            "assets/piano/F#11-3.png",
+            "assets/piano/F#11-4.png"
+          ]
+        },
+        {
+          "name": "F#add9",
+          "positions": [
+            "assets/piano/F#add9-1.png",
+            "assets/piano/F#add9-2.png",
+            "assets/piano/F#add9-3.png",
+            "assets/piano/F#add9-4.png"
+          ]
+        },
+        {
+          "name": "F#aug7",
+          "positions": [
+            "assets/piano/F#aug7-1.png",
+            "assets/piano/F#aug7-2.png",
+            "assets/piano/F#aug7-3.png",
+            "assets/piano/F#aug7-4.png"
+          ]
+        },
+        {
+          "name": "F#augM7",
+          "positions": [
+            "assets/piano/F#augM7-1.png",
+            "assets/piano/F#augM7-2.png",
+            "assets/piano/F#augM7-3.png",
+            "assets/piano/F#augM7-4.png"
+          ]
+        },
+        {
+          "name": "F#dim7",
+          "positions": [
+            "assets/piano/F#dim7-1.png",
+            "assets/piano/F#dim7-2.png",
+            "assets/piano/F#dim7-3.png",
+            "assets/piano/F#dim7-4.png"
+          ]
+        },
+        {
+          "name": "F#",
+          "positions": [
+            "assets/piano/F#-1.png",
+            "assets/piano/F#-2.png",
+            "assets/piano/F#-3.png"
+          ]
+        },
+        {
+          "name": "F#M7",
+          "positions": [
+            "assets/piano/F#M7-1.png",
+            "assets/piano/F#M7-2.png",
+            "assets/piano/F#M7-3.png",
+            "assets/piano/F#M7-4.png"
+          ]
+        },
+        {
+          "name": "F#m",
+          "positions": [
+            "assets/piano/F#m-1.png",
+            "assets/piano/F#m-2.png",
+            "assets/piano/F#m-3.png"
+          ]
+        },
+        {
+          "name": "F#m6",
+          "positions": [
+            "assets/piano/F#m6-1.png",
+            "assets/piano/F#m6-2.png",
+            "assets/piano/F#m6-3.png",
+            "assets/piano/F#m6-4.png"
+          ]
+        },
+        {
+          "name": "F#m7",
+          "positions": [
+            "assets/piano/F#m7-1.png",
+            "assets/piano/F#m7-2.png",
+            "assets/piano/F#m7-3.png",
+            "assets/piano/F#m7-4.png"
+          ]
+        },
+        {
+          "name": "F#m7-5",
+          "positions": [
+            "assets/piano/F#m7-5-1.png",
+            "assets/piano/F#m7-5-2.png",
+            "assets/piano/F#m7-5-3.png",
+            "assets/piano/F#m7-5-4.png"
+          ]
+        },
+        {
+          "name": "F#m7-5",
+          "positions": [
+            "assets/piano/F#m7-5-1.png",
+            "assets/piano/F#m7-5-2.png",
+            "assets/piano/F#m7-5-3.png",
+            "assets/piano/F#m7-5-4.png"
+          ]
+        },
+        {
+          "name": "F#m7-5",
+          "positions": [
+            "assets/piano/F#m7-5-1.png",
+            "assets/piano/F#m7-5-2.png",
+            "assets/piano/F#m7-5-3.png",
+            "assets/piano/F#m7-5-4.png"
+          ]
+        },
+        {
+          "name": "F#mM7",
+          "positions": [
+            "assets/piano/F#mM7-1.png",
+            "assets/piano/F#mM7-2.png",
+            "assets/piano/F#mM7-3.png",
+            "assets/piano/F#mM7-4.png"
+          ]
+        },
+        {
+          "name": "F#sus4",
+          "positions": [
+            "assets/piano/F#sus4-1.png",
+            "assets/piano/F#sus4-2.png",
+            "assets/piano/F#sus4-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G",
+      "variations": [
+        {
+          "name": "G-5",
+          "positions": [
+            "assets/piano/G-5-1.png",
+            "assets/piano/G-5-2.png",
+            "assets/piano/G-5-3.png"
+          ]
+        },
+        {
+          "name": "G-9",
+          "positions": [
+            "assets/piano/G-9-1.png",
+            "assets/piano/G-9-2.png",
+            "assets/piano/G-9-3.png",
+            "assets/piano/G-9-4.png"
+          ]
+        },
+        {
+          "name": "G+9",
+          "positions": [
+            "assets/piano/G+9-1.png",
+            "assets/piano/G+9-2.png",
+            "assets/piano/G+9-3.png",
+            "assets/piano/G+9-4.png"
+          ]
+        },
+        {
+          "name": "G7sus4",
+          "positions": [
+            "assets/piano/G7sus4-1.png",
+            "assets/piano/G7sus4-2.png",
+            "assets/piano/G7sus4-3.png",
+            "assets/piano/G7sus4-4.png"
+          ]
+        },
+        {
+          "name": "G9",
+          "positions": [
+            "assets/piano/G9-1.png",
+            "assets/piano/G9-2.png",
+            "assets/piano/G9-3.png",
+            "assets/piano/G9-4.png"
+          ]
+        },
+        {
+          "name": "G11",
+          "positions": [
+            "assets/piano/G11-1.png",
+            "assets/piano/G11-2.png",
+            "assets/piano/G11-3.png",
+            "assets/piano/G11-4.png"
+          ]
+        },
+        {
+          "name": "Gadd9",
+          "positions": [
+            "assets/piano/Gadd9-1.png",
+            "assets/piano/Gadd9-2.png",
+            "assets/piano/Gadd9-3.png",
+            "assets/piano/Gadd9-4.png"
+          ]
+        },
+        {
+          "name": "Gaug",
+          "positions": [
+            "assets/piano/Gaug-1.png",
+            "assets/piano/Gaug-2.png",
+            "assets/piano/Gaug-3.png"
+          ]
+        },
+        {
+          "name": "Gaug7",
+          "positions": [
+            "assets/piano/Gaug7-1.png",
+            "assets/piano/Gaug7-2.png",
+            "assets/piano/Gaug7-3.png",
+            "assets/piano/Gaug7-4.png"
+          ]
+        },
+        {
+          "name": "GaugM7",
+          "positions": [
+            "assets/piano/GaugM7-1.png",
+            "assets/piano/GaugM7-2.png",
+            "assets/piano/GaugM7-3.png",
+            "assets/piano/GaugM7-4.png"
+          ]
+        },
+        {
+          "name": "Gdim7",
+          "positions": [
+            "assets/piano/Gdim7-1.png",
+            "assets/piano/Gdim7-2.png",
+            "assets/piano/Gdim7-3.png",
+            "assets/piano/Gdim7-4.png"
+          ]
+        },
+        {
+          "name": "G",
+          "positions": [
+            "assets/piano/G-1.png",
+            "assets/piano/G-2.png",
+            "assets/piano/G-3.png"
+          ]
+        },
+        {
+          "name": "GM7",
+          "positions": [
+            "assets/piano/GM7-1.png",
+            "assets/piano/GM7-2.png",
+            "assets/piano/GM7-3.png",
+            "assets/piano/GM7-4.png"
+          ]
+        },
+        {
+          "name": "Gm",
+          "positions": [
+            "assets/piano/Gm-1.png",
+            "assets/piano/Gm-2.png",
+            "assets/piano/Gm-3.png"
+          ]
+        },
+        {
+          "name": "Gm6",
+          "positions": [
+            "assets/piano/Gm6-1.png",
+            "assets/piano/Gm6-2.png",
+            "assets/piano/Gm6-3.png",
+            "assets/piano/Gm6-4.png"
+          ]
+        },
+        {
+          "name": "Gm7",
+          "positions": [
+            "assets/piano/Gm7-1.png",
+            "assets/piano/Gm7-2.png",
+            "assets/piano/Gm7-3.png",
+            "assets/piano/Gm7-4.png"
+          ]
+        },
+        {
+          "name": "Gm7-5",
+          "positions": [
+            "assets/piano/Gm7-5-1.png",
+            "assets/piano/Gm7-5-2.png",
+            "assets/piano/Gm7-5-3.png",
+            "assets/piano/Gm7-5-4.png"
+          ]
+        },
+        {
+          "name": "GmM7",
+          "positions": [
+            "assets/piano/GmM7-1.png",
+            "assets/piano/GmM7-2.png",
+            "assets/piano/GmM7-3.png",
+            "assets/piano/GmM7-4.png"
+          ]
+        },
+        {
+          "name": "Gsus4",
+          "positions": [
+            "assets/piano/Gsus4-1.png",
+            "assets/piano/Gsus4-2.png",
+            "assets/piano/Gsus4-3.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G#",
+      "variations": [
+        {
+          "name": "G#-5",
+          "positions": [
+            "assets/piano/G#-5-1.png",
+            "assets/piano/G#-5-2.png",
+            "assets/piano/G#-5-3.png"
+          ]
+        },{
+          "name": "G#-9",
+          "positions": [
+            "assets/piano/G#-9-1.png",
+            "assets/piano/G#-9-2.png",
+            "assets/piano/G#-9-3.png",
+            "assets/piano/G#-9-4.png"
+          ]
+        },{
+          "name": "G#+9",
+          "positions": [
+            "assets/piano/G#+9-1.png",
+            "assets/piano/G#+9-2.png",
+            "assets/piano/G#+9-3.png",
+            "assets/piano/G#+9-4.png"
+          ]
+        },{
+          "name": "G#6",
+          "positions": [
+            "assets/piano/G#6-1.png",
+            "assets/piano/G#6-2.png",
+            "assets/piano/G#6-3.png",
+            "assets/piano/G#6-4.png"
+          ]
+        },{
+          "name": "G#7",
+          "positions": [
+            "assets/piano/G#7-1.png",
+            "assets/piano/G#7-2.png",
+            "assets/piano/G#7-3.png",
+            "assets/piano/G#7-4.png"
+          ]
+        },{
+          "name": "G#7-5",
+          "positions": [
+            "assets/piano/G#7-5-1.png",
+            "assets/piano/G#7-5-2.png",
+            "assets/piano/G#7-5-3.png",
+            "assets/piano/G#7-5-4.png"
+          ]
+        },{
+          "name": "G#7sus4",
+          "positions": [
+            "assets/piano/G#7sus4-1.png",
+            "assets/piano/G#7sus4-2.png",
+            "assets/piano/G#7sus4-3.png",
+            "assets/piano/G#7sus4-4.png"
+          ]
+        },{
+          "name": "G#9",
+          "positions": [
+            "assets/piano/G#9-1.png",
+            "assets/piano/G#9-2.png",
+            "assets/piano/G#9-3.png",
+            "assets/piano/G#9-4.png"
+          ]
+        },{
+          "name": "G#11",
+          "positions": [
+            "assets/piano/G#11-1.png",
+            "assets/piano/G#11-2.png",
+            "assets/piano/G#11-3.png",
+            "assets/piano/G#11-4.png"
+          ]
+        },{
+          "name": "G#add9",
+          "positions": [
+            "assets/piano/G#add9-1.png",
+            "assets/piano/G#add9-2.png",
+            "assets/piano/G#add9-3.png",
+            "assets/piano/G#add9-4.png"
+          ]
+        },{
+          "name": "G#aug",
+          "positions": [
+            "assets/piano/G#aug-1.png",
+            "assets/piano/G#aug-2.png",
+            "assets/piano/G#aug-3.png"
+          ]
+        },{
+          "name": "G#aug7",
+          "positions": [
+            "assets/piano/G#aug7-1.png",
+            "assets/piano/G#aug7-2.png",
+            "assets/piano/G#aug7-3.png",
+            "assets/piano/G#aug7-4.png"
+          ]
+        },{
+          "name": "G#augM7",
+          "positions": [
+            "assets/piano/G#augM7-1.png",
+            "assets/piano/G#augM7-2.png",
+            "assets/piano/G#augM7-3.png",
+            "assets/piano/G#augM7-4.png"
+          ]
+        },{
+          "name": "G#dim7",
+          "positions": [
+            "assets/piano/G#dim7-1.png",
+            "assets/piano/G#dim7-2.png",
+            "assets/piano/G#dim7-3.png",
+            "assets/piano/G#dim7-4.png"
+          ]
+        },{
+          "name": "G#",
+          "positions": [
+            "assets/piano/G#-1.png",
+            "assets/piano/G#-2.png",
+            "assets/piano/G#-3.png"
+          ]
+        },{
+          "name": "G#M7",
+          "positions": [
+            "assets/piano/G#M7-1.png",
+            "assets/piano/G#M7-2.png",
+            "assets/piano/G#M7-3.png",
+            "assets/piano/G#M7-4.png"
+          ]
+        },{
+          "name": "G#m",
+          "positions": [
+            "assets/piano/G#m-1.png",
+            "assets/piano/G#m-2.png",
+            "assets/piano/G#m-3.png"
+          ]
+        },{
+          "name": "G#m6",
+          "positions": [
+            "assets/piano/G#m6-1.png",
+            "assets/piano/G#m6-2.png",
+            "assets/piano/G#m6-3.png",
+            "assets/piano/G#m6-4.png"
+          ]
+        }
+      ]
+    }
+  ]
+}
