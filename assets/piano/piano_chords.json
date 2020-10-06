@@ -1928,6 +1928,37 @@
             "assets/piano/G#m6-3.png",
             "assets/piano/G#m6-4.png"
           ]
+        },{
+          "name": "G#m7",
+          "positions": [
+            "assets/piano/G#m7-1.png",
+            "assets/piano/G#m7-2.png",
+            "assets/piano/G#m7-3.png",
+            "assets/piano/G#m7-4.png"
+          ]
+        },{
+          "name": "G#m7-5",
+          "positions": [
+            "assets/piano/G#m7-5-1.png",
+            "assets/piano/G#m7-5-2.png",
+            "assets/piano/G#m7-5-3.png",
+            "assets/piano/G#m7-5-4.png"
+          ]
+        },{
+          "name": "G#mM7",
+          "positions": [
+            "assets/piano/G#mM7-1.png",
+            "assets/piano/G#mM7-2.png",
+            "assets/piano/G#mM7-3.png",
+            "assets/piano/G#mM7-4.png"
+          ]
+        },{
+          "name": "G#sus4",
+          "positions": [
+            "assets/piano/G#sus4-1.png",
+            "assets/piano/G#sus4-2.png",
+            "assets/piano/G#sus4-3.png"
+          ]
         }
       ]
     }
