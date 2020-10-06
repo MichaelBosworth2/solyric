@@ -6,38 +6,42 @@ import 'package:solyric_app/app/utils/UIHelper.dart';
 class PianoHorizontalScrollerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => BaseWidget<ChordTabsViewModel>(
-    builder: (context, model, child) => Row(children: [
-      Expanded(flex: 1, child: _buildDirectionalArrow(Icons.chevron_left)),
-      Expanded(
-          flex: 8,
-          child: ListView.separated(
-            itemCount: model.pianoListSelection.variations.length,
-            separatorBuilder: (BuildContext context, int index) =>
-            const Divider(height: 16),
-            itemBuilder: (BuildContext context, int index) =>
-                GestureDetector(
-                    onTap: () => model.pianoScrollerSelection =
-                    model.pianoListSelection.variations[index],
-                    child: _buildListItem(context, model, index)),
-            scrollDirection: Axis.horizontal,
-          )),
-      Expanded(flex: 1, child: _buildDirectionalArrow(Icons.chevron_right))
-    ]),
-  );
+        builder: (context, model, child) => Row(children: [
+          Expanded(flex: 1, child: _buildDirectionalArrow(Icons.chevron_left)),
+          Expanded(
+              flex: 8,
+              child: ListView.separated(
+                itemCount: model.pianoListSelection.variations.length,
+                separatorBuilder: (BuildContext context, int index) =>
+                    const Divider(),
+                itemBuilder: (BuildContext context, int index) =>
+                    GestureDetector(
+                        onTap: () => model.pianoScrollerSelection =
+                            model.pianoListSelection.variations[index],
+                        child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 5),
+                            child: _buildListItem(context, model, index))),
+                scrollDirection: Axis.horizontal,
+              )),
+          Expanded(flex: 1, child: _buildDirectionalArrow(Icons.chevron_right))
+        ]),
+      );
 
-  Widget _buildListItem(BuildContext context, ChordTabsViewModel model, int position) {
+  Widget _buildListItem(
+      BuildContext context, ChordTabsViewModel model, int position) {
     final variation = model.pianoListSelection.variations[position];
     return Container(
-      width: 160,
+      height: double.infinity,
+      width: 140,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
-                height: variation == model.guitarScrollerSelection ? 1 : 0,
+                height: variation == model.pianoScrollerSelection ? 1 : 0,
                 color: Theme.of(context).accentColor),
-            UIHelper.verticalSpace(20.00)
+            UIHelper.verticalSpace(20)
           ],
         ),
       ),
@@ -48,6 +52,7 @@ class PianoHorizontalScrollerWidget extends StatelessWidget {
     );
   }
 
-  Widget _buildDirectionalArrow(IconData icon) =>
-      Icon(icon, color: Colors.white, size: 40);
+  Widget _buildDirectionalArrow(IconData icon) => Padding(
+      padding: EdgeInsets.only(bottom: 10),
+      child: Icon(icon, color: Colors.white, size: 40));
 }

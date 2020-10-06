@@ -18,12 +18,15 @@ class PianoChordInformation extends StatelessWidget {
             flex: 7,
             child: Column(
               children: [
-                Expanded(flex: 8, child: PianoChordPagerWidget(key: UniqueKey())),
-                Expanded(flex: 2, child: PianoChordListWidget())
+                Expanded(flex: 9, child: PianoChordPagerWidget(key: UniqueKey())),
+                Expanded(flex: 1, child: PianoChordListWidget())
               ],
             ),
           ),
-          Expanded(flex: 3, child: PianoHorizontalScrollerWidget())
+          Expanded(flex: 3, child: Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: PianoHorizontalScrollerWidget(),
+          ))
         ],
       ),
     );

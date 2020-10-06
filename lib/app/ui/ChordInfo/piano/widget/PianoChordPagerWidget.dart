@@ -14,13 +14,16 @@ class PianoChordPagerWidget extends StatefulWidget {
 class _PianoChordPagerWidgetState extends State<PianoChordPagerWidget> {
   @override
   Widget build(BuildContext context) => BaseWidget<ChordTabsViewModel>(
-    builder: (context, model, child) => Swiper(
-      itemBuilder: (context, index) => PianoPagerItem(
-          name: model.pianoScrollerSelection.name,
-          resource: model.pianoScrollerSelection.positions[index]),
-      itemCount: model.pianoScrollerSelection.positions.length,
-      pagination: SwiperPagination(margin: EdgeInsets.symmetric(vertical: 10)),
-      controller: SwiperController(),
+    builder: (context, model, child) => Padding(
+      padding: EdgeInsets.symmetric(vertical: 20),
+      child: Swiper(
+        itemBuilder: (context, index) => PianoPagerItem(
+            name: model.pianoScrollerSelection.name,
+            resource: model.pianoScrollerSelection.positions[index]),
+        itemCount: model.pianoScrollerSelection.positions.length,
+        pagination: SwiperPagination(),
+        controller: SwiperController(),
+      ),
     )
   );
 }
