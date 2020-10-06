@@ -19,17 +19,17 @@ class ChordTabsViewModel extends BaseViewModel {
   List<LocalChord> get localPianoChords => _localPianoChords;
 
   set pianoScrollerSelection(LocalChordVariation value) {
-    _guitarScrollerSelection = value;
+    _pianoScrollerSelection = value;
     notifyListeners();
   }
 
   set localPianoChords(List<LocalChord> value) {
-    _localGuitarChords = value;
+    _localPianoChords = value;
     notifyListeners();
   }
 
   set pianoListSelection(LocalChord value) {
-    _guitarListSelection = value;
+    _pianoListSelection = value;
     notifyListeners();
   }
 
