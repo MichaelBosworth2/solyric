@@ -7,40 +7,88 @@ import 'package:solyric_app/domain/model/LocalChord.dart';
 import 'package:solyric_app/domain/model/LocalChordVariation.dart';
 
 class ChordTabsViewModel extends BaseViewModel {
-  List<LocalChord> _localChords = List();
-  LocalChordVariation _scrollerSelection;
-  LocalChord _listSelection;
+  /// Piano stuff
+  List<LocalChord> _localPianoChords = List();
+  LocalChordVariation _pianoScrollerSelection;
+  LocalChord _pianoListSelection;
 
-  LocalChordVariation get scrollerSelection => _scrollerSelection;
-  LocalChord get listSelection => _listSelection;
-  List<LocalChord> get localChords => _localChords;
+  LocalChordVariation get pianoScrollerSelection => _pianoScrollerSelection;
 
-  set scrollerSelection(LocalChordVariation value) {
-    _scrollerSelection = value;
+  LocalChord get pianoListSelection => _pianoListSelection;
+
+  List<LocalChord> get localPianoChords => _localPianoChords;
+
+  set pianoScrollerSelection(LocalChordVariation value) {
+    _pianoScrollerSelection = value;
     notifyListeners();
   }
 
-  set localChords(List<LocalChord> value) {
-    _localChords = value;
+  set localPianoChords(List<LocalChord> value) {
+    _localPianoChords = value;
     notifyListeners();
   }
 
-  set listSelection(LocalChord value) {
-    _listSelection = value;
+  set pianoListSelection(LocalChord value) {
+    _pianoListSelection = value;
     notifyListeners();
   }
+
+  /// Guitar stuff
+  List<LocalChord> _localGuitarChords = List();
+  LocalChordVariation _guitarScrollerSelection;
+  LocalChord _guitarListSelection;
+
+  LocalChordVariation get guitarScrollerSelection => _guitarScrollerSelection;
+
+  LocalChord get guitarListSelection => _guitarListSelection;
+
+  List<LocalChord> get localGuitarChords => _localGuitarChords;
+
+  set guitarScrollerSelection(LocalChordVariation value) {
+    _guitarScrollerSelection = value;
+    notifyListeners();
+  }
+
+  set localGuitarChords(List<LocalChord> value) {
+    _localGuitarChords = value;
+    notifyListeners();
+  }
+
+  set guitarListSelection(LocalChord value) {
+    _guitarListSelection = value;
+    notifyListeners();
+  }
+
+  /// Chord builder methods
 
   void buildLocalChords() async {
     setLoading(true);
-    String jsonRawString = await rootBundle.loadString(Resources.GUITAR_CHORDS);
-    final response = jsonDecode(jsonRawString);
-    _localChords.clear();
+    _localGuitarChords.clear();
+    _localPianoChords.clear();
 
-    response['chords'].forEach((e) {
-      _localChords.add(LocalChord.fromJson(e));
-    });
-    _scrollerSelection = _localChords.first.variations.first;
-    _listSelection = _localChords.first;
+    await _loadGuitarChords();
+    await _loadPianoChords();
     setLoading(false);
+  }
+
+  Future<bool> _loadGuitarChords() async {
+    final chords = await _loadChordsJsonFile(Resources.GUITAR_CHORDS);
+    chords.forEach((e) => _localGuitarChords.add(LocalChord.fromJson(e)));
+    _guitarScrollerSelection = _localGuitarChords.first.variations.first;
+    _guitarListSelection = _localGuitarChords.first;
+    return true;
+  }
+
+  Future<bool> _loadPianoChords() async {
+    final chords = await _loadChordsJsonFile(Resources.PIANO_CHORDS);
+    chords.forEach((e) => _localPianoChords.add(LocalChord.fromJson(e)));
+    _pianoScrollerSelection = _localPianoChords.first.variations.first;
+    _pianoListSelection = _localPianoChords.first;
+    return true;
+  }
+
+  dynamic _loadChordsJsonFile(String path) async {
+    String jsonRawString = await rootBundle.loadString(path);
+    return jsonDecode(jsonRawString)['chords'];
   }
 }
