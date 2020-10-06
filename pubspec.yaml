@@ -2703,7 +2703,17 @@ flutter:
     - assets/piano/G#m6-2.png
     - assets/piano/G#m6-3.png
     - assets/piano/G#m6-4.png
-
+    - assets/piano/G#m7-1.png
+    - assets/piano/G#m7-2.png
+    - assets/piano/G#m7-3.png
+    - assets/piano/G#m7-4.png
+    - assets/piano/G#mM7-1.png
+    - assets/piano/G#mM7-2.png
+    - assets/piano/G#mM7-3.png
+    - assets/piano/G#mM7-4.png
+    - assets/piano/G#sus4-1.png
+    - assets/piano/G#sus4-2.png
+    - assets/piano/G#sus4-3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
