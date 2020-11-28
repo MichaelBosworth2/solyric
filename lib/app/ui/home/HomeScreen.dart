@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:solyric_app/app/ui/ChordInfo/ChordInformationScreen.dart';
 import 'package:solyric_app/app/ui/profile/ProfileScreen.dart';
+import 'package:solyric_app/app/ui/search/SearchScreen.dart';
 import 'package:solyric_app/app/ui/wall/WallScreen.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/RouteNames.dart';
@@ -16,7 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final screenItems = [
     WallScreen(),
-    ProfileScreen(),
+    SearchScreen(),
     ChordInformationScreen(),
     ProfileScreen(),
     ProfileScreen()
