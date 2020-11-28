@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:solyric_app/app/utils/Resources.dart';
 
 class SearchScreen extends StatefulWidget {
   @override
@@ -34,66 +35,83 @@ class _SearchScreenState extends State<SearchScreen> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
         body: Container(
-      padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-      decoration: BoxDecoration(color: Colors.black),
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              focusNode: _focus,
-              // textAlign: TextAlign.center,
-              onChanged: (value) {
-                FilterSearchResults(value);
-              },
-              controller: editingController,
-              decoration: InputDecoration(
-                  isDense: true,
-                  contentPadding: EdgeInsets.all(8.0),
-                  filled: true,
-                  fillColor: Colors.white,
-                  hintText: "Search",
+      // padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+      decoration: BoxDecoration(
+          color: Colors.black87,
+          image: DecorationImage(
+              image: AssetImage(Resources.BACKGROUND),
+              colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken),
+              fit: BoxFit.cover)),
+      child: ClipRRect(
+        // make sure we apply clip it properly
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
+          child: Container(
+            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+            alignment: Alignment.center,
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    focusNode: _focus,
+                    // textAlign: TextAlign.center,
+                    onChanged: (value) {
+                      FilterSearchResults(value);
+                    },
+                    controller: editingController,
+                    decoration: InputDecoration(
+                        isDense: true,
+                        contentPadding: EdgeInsets.all(8.0),
+                        filled: true,
+                        fillColor: Colors.white,
+                        hintText: "Search",
 
-                  // hintStyle: TextStyle(fontSize: 20.0),
-                  // prefixIcon: Icon(
-                  //   Icons.search,
-                  //   size: 22,
-                  // ),
-                  prefixIcon: AnimatedContainer(
-                    width: isTyping ? 0 : width / 2.5,
-                    child: Row(
-                      mainAxisAlignment: isTyping
-                          ? MainAxisAlignment.center
-                          : MainAxisAlignment.end,
-                      children: [
-                        Icon(
-                          Icons.search,
-                        )
-                      ],
-                    ),
-                    duration: Duration(seconds: 2),
-                    curve: Curves.fastOutSlowIn,
+                        // hintStyle: TextStyle(fontSize: 20.0),
+                        // prefixIcon: Icon(
+                        //   Icons.search,
+                        //   size: 22,
+                        // ),
+                        prefixIcon: AnimatedContainer(
+                          padding: isTyping ? null : EdgeInsets.only(right: 4),
+                          width: isTyping ? 0 : width / 2.75,
+                          child: Row(
+                            mainAxisAlignment: isTyping
+                                ? MainAxisAlignment.center
+                                : MainAxisAlignment.end,
+                            children: [
+                              Icon(
+                                Icons.search,
+                              )
+                            ],
+                          ),
+                          duration: Duration(seconds: 2),
+                          curve: Curves.fastOutSlowIn,
+                        ),
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0)),
+                            borderSide: BorderSide.none)),
                   ),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      borderSide: BorderSide.none)),
+                ),
+                Expanded(
+                    child: ListView.builder(
+                  itemCount: items.length,
+                  itemBuilder: (context, index) => Container(
+                      child: ListTile(
+                        title: Text('${items[index]}',
+                            style: TextStyle(color: Colors.white)),
+                      ),
+                      decoration: new BoxDecoration(
+                          border: new Border(
+                        bottom: new BorderSide(color: Colors.white),
+                        // top: new BorderSide(color: Colors.white),
+                      ))),
+                ))
+              ],
             ),
           ),
-          Expanded(
-              child: ListView.builder(
-            itemCount: items.length,
-            itemBuilder: (context, index) => Container(
-                child: ListTile(
-                  title: Text('${items[index]}',
-                      style: TextStyle(color: Colors.white)),
-                ),
-                decoration: new BoxDecoration(
-                    border: new Border(
-                  bottom: new BorderSide(color: Colors.white),
-                  // top: new BorderSide(color: Colors.white),
-                ))),
-          ))
-        ],
+        ),
       ),
     ));
   }
