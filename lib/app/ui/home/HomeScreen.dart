@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
@@ -23,16 +25,36 @@ class _HomeScreenState extends State<HomeScreen> {
     ProfileScreen()
   ];
 
+  var currentScreen = 0;
+
   @override
   Widget build(BuildContext context) {
     final controller = SwiperController();
+
     return Scaffold(
-      appBar: UIHelper.commonAppBar(context, backButton: false),
-      body: Swiper(
-        itemBuilder: (context, index) => screenItems[index],
-        itemCount: screenItems.length,
-        controller: controller,
+      appBar: UIHelper.commonAppBar(context,
+          backButton: false,
+          backgroundTransparent: currentScreen == 1 ? true : false),
+      // body: getLayoutScreen(currentScreen, controller),
+      body: Container(
+        decoration: BoxDecoration(
+            color: Colors.black87,
+            image: DecorationImage(
+                image: AssetImage(Resources.BACKGROUND),
+                colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken),
+                fit: BoxFit.cover)),
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+          child: SafeArea(
+              child: Swiper(
+            itemBuilder: (context, index) => screenItems[index],
+            itemCount: screenItems.length,
+            controller: controller,
+          )),
+        ),
       ),
+      extendBodyBehindAppBar: true,
+      backgroundColor: Colors.transparent,
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.grey,
@@ -55,7 +77,9 @@ class _HomeScreenState extends State<HomeScreen> {
             title: Text(Resources.ACCOUNT),
           )
         ],
-        onTap: (position) => controller.move(position, animation: true),
+        onTap: (position) {
+          _onItemTapped(position, controller);
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
@@ -64,5 +88,12 @@ class _HomeScreenState extends State<HomeScreen> {
         child: SvgPicture.asset(Resources.IC_PLUS),
       ),
     );
+  }
+
+  void _onItemTapped(int index, SwiperController controller) {
+    // setState(() {
+    //   currentScreen = index;
+    // });
+    controller.move(index, animation: true);
   }
 }
