@@ -71,7 +71,7 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
   _buildEmailTextField() => TextFormField(
       style: const TextStyle(color: Colors.white70),
       autofocus: false,
-      controller: _emailController,
+      controller: _emailController..text = 'juan1402.91@gmail.com',
       decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(vertical: 5),
           filled: true,
@@ -94,7 +94,7 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
       autofocus: false,
       obscureText: true,
       style: TextStyle(color: Colors.white70),
-      controller: _passwordController,
+      controller: _passwordController..text = 'w12qr34e',
       decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(vertical: 5),
           filled: true,
