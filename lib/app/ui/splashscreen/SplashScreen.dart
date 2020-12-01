@@ -9,13 +9,25 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  Image image1;
+  Image image2;
   @override
   void initState() {
+    image1 = Image.asset(Resources.BACKGROUND);
+    image2 = Image.asset(Resources.IC_LOGO);
     Future.delayed(
-        Duration(milliseconds: 3000),
+        Duration(milliseconds: 5000),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => LoginScreen())));
     super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    precacheImage(image1.image, context);
+    precacheImage(image2.image, context);
   }
 
   @override
@@ -30,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
           decoration: BoxDecoration(
               color: Colors.black87,
               image: DecorationImage(
-                  image: AssetImage(Resources.BACKGROUND),
+                  image: image1.image,
                   colorFilter:
                       ColorFilter.mode(Colors.black54, BlendMode.darken),
                   fit: BoxFit.cover)),
@@ -42,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   child: FractionallySizedBox(
                       widthFactor: .6,
                       child: Image(
-                        image: AssetImage(Resources.IC_LOGO),
+                        image: image2.image,
                         height: 105,
                       ))),
               Spacer(),
