@@ -49,7 +49,6 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(),
               Center(
                   child: FractionallySizedBox(
                       widthFactor: .6,
@@ -57,9 +56,6 @@ class _SplashScreenState extends State<SplashScreen> {
                         image: image2.image,
                         height: 105,
                       ))),
-              Spacer(),
-              CircularProgressIndicator(),
-              Spacer()
             ],
           ),
         ),
