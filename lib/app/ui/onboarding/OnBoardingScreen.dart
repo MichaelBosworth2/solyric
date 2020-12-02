@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
 
+import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
+import 'package:solyric_app/app/ui/onboarding/widget/OnBoardingFirstStep.dart';
+import 'package:solyric_app/app/ui/onboarding/widget/OnBoardingLastStep.dart';
+import 'package:solyric_app/app/ui/onboarding/widget/OnBoardingStep.dart';
+import 'package:solyric_app/app/ui/onboarding/widget/PageIndicator.dart';
+
+import 'package:solyric_app/app/utils/Resources.dart';
+
 class OnBoadingScreen extends StatefulWidget {
   @override
   _OnBoadingScreenState createState() => _OnBoadingScreenState();
 }
 
 class _OnBoadingScreenState extends State<OnBoadingScreen> {
-  final int _totalPages = 3;
+  final int _totalPages = 8;
   final PageController _pageController = PageController(initialPage: 0);
   int _currentPage = 0;
+
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(
         child: Stack(
@@ -23,47 +34,87 @@ class _OnBoadingScreenState extends State<OnBoadingScreen> {
                 });
               },
               children: [
-                _buildFirstPageContent(
-                    image: 'assets/solyric_logo.png',
-                    color: Colors.indigoAccent,
-                    body: "lorem ipsum bla bla bla"),
-                _buildPageContent(
-                    image: 'assets/tutorial2-write-the-song.png',
-                    color: Colors.amberAccent,
-                    body: "lorem ipsum bla bla bla"),
-                _buildPageContent(
-                    image: 'assets/tutorial2-write-the-song.png',
-                    color: Colors.blueAccent,
-                    body: "lorem ipsum azul aszul"),
-                _buildPageContent(
-                    image: 'assets/tutorial2-write-the-song.png',
-                    color: Colors.greenAccent,
-                    body: "lorem ipsum verde verde"),
+                OnBoardingFirstStep(
+                    image: Resources.IMAGE_A,
+                    title: Resources.TITLE_MESSAGE_A,
+                    text: Resources.TEXT_MESSAGE_A,
+                    background: Resources.BACKGROUND_A),
+                OnBoardingStep(
+                    image: Resources.IMAGE_B,
+                    title: Resources.TITLE_MESSAGE_B,
+                    text: Resources.TEXT_MESSAGE_B,
+                    background: Resources.BACKGROUND_B,
+                    bottom: height / 4.5,
+                    left: -20,
+                    width: width / 1.2),
+                OnBoardingStep(
+                    image: Resources.IMAGE_C,
+                    title: Resources.TITLE_MESSAGE_C,
+                    text: Resources.TEXT_MESSAGE_C,
+                    background: Resources.BACKGROUND_C,
+                    bottom: height / 3.5,
+                    right: -50,
+                    width: width / 1.2),
+                OnBoardingStep(
+                    image: Resources.IMAGE_D,
+                    title: Resources.TITLE_MESSAGE_D,
+                    text: Resources.TEXT_MESSAGE_D,
+                    background: Resources.BACKGROUND_D,
+                    top: height / 7,
+                    right: -40,
+                    width: width / 1.2),
+                OnBoardingStep(
+                    image: Resources.IMAGE_E,
+                    title: Resources.TITLE_MESSAGE_E,
+                    text: Resources.TEXT_MESSAGE_E,
+                    background: Resources.BACKGROUND_E,
+                    top: height / 7,
+                    right: -40,
+                    width: width / 1.2),
+                OnBoardingStep(
+                    image: Resources.IMAGE_F,
+                    title: Resources.TITLE_MESSAGE_F,
+                    text: Resources.TEXT_MESSAGE_F,
+                    background: Resources.BACKGROUND_F,
+                    top: height / 7,
+                    right: -40,
+                    width: width / 1.2),
+                OnBoardingStep(
+                    image: Resources.IMAGE_G,
+                    title: Resources.TITLE_MESSAGE_G,
+                    text: Resources.TEXT_MESSAGE_G,
+                    background: Resources.BACKGROUND_G,
+                    top: -height / 16,
+                    left: -width / 5,
+                    width: width / 0.8
+                    // width: width / 0.4
+                    ),
+                OnBoardingLastStep(),
               ],
             ),
             Positioned(
               top: 40,
-              width: MediaQuery.of(context).size.width,
+              width: width,
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      child: Image.asset(
-                        'assets/solyric_logo.png',
-                        width: MediaQuery.of(context).size.width / 4,
-                      ),
-                    ),
+                    _showLogo(),
                     InkWell(
-                      onTap: () => print('Skippp'),
-                      child: Text(
-                        'Skip',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
-                            fontSize: 16),
-                      ),
+                      onTap: () => Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen())),
+                      child: _currentPage == 7
+                          ? Container()
+                          : Text(
+                              'Skip',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                  fontSize: 16),
+                            ),
                     )
                   ],
                 ),
@@ -71,17 +122,19 @@ class _OnBoadingScreenState extends State<OnBoadingScreen> {
             ),
             Positioned(
                 bottom: 40,
-                width: MediaQuery.of(context).size.width,
+                width: width,
                 child: Container(
                   // alignment: Alignment.center,
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        for (int i = 0; i < _totalPages; i++)
-                          i == _currentPage
-                              ? _buildPageIndicator(true)
-                              : _buildPageIndicator(false)
-                      ]),
+                  child: _currentPage == 7
+                      ? null
+                      : Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                              for (int i = 0; i < _totalPages; i++)
+                                i == _currentPage
+                                    ? PageIndicator(isCurrentPage: true)
+                                    : PageIndicator(isCurrentPage: false)
+                            ]),
                 ))
           ],
         ),
@@ -89,59 +142,14 @@ class _OnBoadingScreenState extends State<OnBoadingScreen> {
     );
   }
 
-  Widget _buildFirstPageContent({String image, Color color, String body}) {
+  Widget _showLogo() {
     return Container(
-      decoration: BoxDecoration(color: color),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Center(
-            child: Image.asset(image),
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          Text(
-            body,
-            textAlign: TextAlign.center,
-          )
-        ],
-      ),
-    );
-  }
-
-  Widget _buildPageContent({String image, Color color, String body}) {
-    return Container(
-      decoration: BoxDecoration(color: color),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Center(
-            child: Image.asset(image),
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          Text(
-            body,
-            textAlign: TextAlign.center,
-          )
-        ],
-      ),
-    );
-  }
-
-  Widget _buildPageIndicator(bool isCurrentPage) {
-    return AnimatedContainer(
-      duration: Duration(milliseconds: 300),
-      margin: EdgeInsets.symmetric(horizontal: 4.0),
-      height: isCurrentPage ? 20.0 : 8.0,
-      width: isCurrentPage ? 20.0 : 8.0,
-      decoration: BoxDecoration(
-          color: isCurrentPage ? Colors.white : Colors.white54,
-          borderRadius: BorderRadius.all(Radius.circular(12))),
+      child: (_currentPage == 0 || _currentPage == 7)
+          ? null
+          : Image.asset(
+              'assets/solyric_logo.png',
+              width: MediaQuery.of(context).size.width / 4,
+            ),
     );
   }
 }
