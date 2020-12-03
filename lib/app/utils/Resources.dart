@@ -2,9 +2,9 @@ class Resources {
   // temporal
 
   static const String BACKGROUND_PLACE_HOLDER =
-      "https://www.dawsons.co.uk/blog/wp-content/uploads/2018/08/man-playing-guitar-whilst-sitting-down.jpg";
+      "https://images.unsplash.com/photo-1606312048149-08e754ca7958?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2434&q=80";
   static const String PROFILE_PLACE_HOLDER =
-      "https://www.jakpost.travel/wimages/large/152-1524309_beautiful-redhead-russian-girl-red-hair.jpg";
+      "https://images.unsplash.com/photo-1606422343904-70c6461f3499?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1955&q=80";
   static const String PLACE_HOLDER_TEXT =
       "I very much support Senator @tedcruz's resolution in support of President @realDonaldTrump's decision to take out Iranian General Soleimani.";
 

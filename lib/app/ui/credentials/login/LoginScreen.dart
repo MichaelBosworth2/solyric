@@ -14,24 +14,24 @@ import 'package:solyric_app/app/utils/UIHelper.dart';
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
-    body: Align(
-      alignment: Alignment.center,
-      child: Stack(
-        alignment: Alignment.center,
-        children: <Widget>[
-          _loginBackgroundDecoration(),
-          Container(
-            child: SingleChildScrollView(
-                child: Column(
+        body: Align(
+          alignment: Alignment.center,
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              _loginBackgroundDecoration(),
+              Container(
+                child: SingleChildScrollView(
+                    child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: _loginContent(context),
                 )),
-          )
-        ],
-      ),
-    ),
-  );
+              )
+            ],
+          ),
+        ),
+      );
 
   /// Builds new account text widget , uses [GestureDetector]
   /// Navigates to [SignUpScreen] on click
