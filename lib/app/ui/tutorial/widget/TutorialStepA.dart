@@ -20,7 +20,7 @@ class TutorialStepA extends StatelessWidget {
             children: [
               Center(
                 child: Text(
-                  Resources.WELCOME_MESSAGE,
+                  'HGH',
                   textAlign: TextAlign.center,
                   style: UIHelper.styleCover,
                 ),
@@ -35,7 +35,7 @@ class TutorialStepA extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Text(
-                  Resources.INSTRUCTIONS,
+                  '',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),

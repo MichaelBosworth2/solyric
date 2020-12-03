@@ -60,17 +60,51 @@ class Resources {
   // tutorial
 
   static const String SKIP = "Skip";
+  // SCREEN A
   static const String BACKGROUND_A = "assets/tutorial1.png";
-  static const String WELCOME_MESSAGE = "Welcome to";
-  static const String INSTRUCTIONS =
+  static const String IMAGE_A = "assets/solyric_logo.png";
+  static const String TITLE_MESSAGE_A = "Welcome to";
+  static const String TEXT_MESSAGE_A =
       "Connect With Your Friends Online. Join the Solyric Community Free! Plan Events. Stay In Touch With Family. Follow Interesting Topics.";
+  // SCREEN B
   static const String BACKGROUND_B = "assets/tutorial2.png";
+  static const String IMAGE_B = "assets/tutorial2-write-the-song.png";
+  static const String TITLE_MESSAGE_B = "Write the song";
+  static const String TEXT_MESSAGE_B =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN C
   static const String BACKGROUND_C = "assets/tutorial3.png";
+  static const String IMAGE_C = "assets/tutorial3-drag-and-drop.png";
+  static const String TITLE_MESSAGE_C = "Drag & Drop";
+  static const String TEXT_MESSAGE_C =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN D
   static const String BACKGROUND_D = "assets/tutorial4.png";
+  static const String IMAGE_D = "assets/tutorial4-record-song.png";
+  static const String TITLE_MESSAGE_D = "Record Song";
+  static const String TEXT_MESSAGE_D =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN E
   static const String BACKGROUND_E = "assets/tutorial5.png";
+  static const String IMAGE_E = "assets/tutorial4-record-song.png";
+  static const String TITLE_MESSAGE_E = "Find Chords";
+  static const String TEXT_MESSAGE_E =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN F
   static const String BACKGROUND_F = "assets/tutorial6.png";
+  static const String IMAGE_F = "assets/tutorial4-record-song.png";
+  static const String TITLE_MESSAGE_F = "Discover and Inspire";
+  static const String TEXT_MESSAGE_F =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN G
   static const String BACKGROUND_G = "assets/tutorial7.png";
+  static const String IMAGE_G = "assets/tutorial7-share-your-song.png";
+  static const String TITLE_MESSAGE_G = "Share your song";
+  static const String TEXT_MESSAGE_G =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN H
   static const String BACKGROUND_H = "assets/tutorial8.png";
+  static const String IMAGE_H = "assets/tutorial8-get-started.png";
 
   // my wall
 
