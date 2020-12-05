@@ -2,9 +2,9 @@ class Resources {
   // temporal
 
   static const String BACKGROUND_PLACE_HOLDER =
-      "https://www.dawsons.co.uk/blog/wp-content/uploads/2018/08/man-playing-guitar-whilst-sitting-down.jpg";
+      "https://images.unsplash.com/photo-1606312048149-08e754ca7958?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2434&q=80";
   static const String PROFILE_PLACE_HOLDER =
-      "https://www.jakpost.travel/wimages/large/152-1524309_beautiful-redhead-russian-girl-red-hair.jpg";
+      "https://images.unsplash.com/photo-1606422343904-70c6461f3499?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1955&q=80";
   static const String PLACE_HOLDER_TEXT =
       "I very much support Senator @tedcruz's resolution in support of President @realDonaldTrump's decision to take out Iranian General Soleimani.";
 
@@ -12,11 +12,12 @@ class Resources {
   static const String GUITAR_CHORDS = "assets/guitar/guitar_chords.json";
   static const String PIANO_CHORDS = "assets/piano/piano_chords.json";
   static const String BACKGROUND = "assets/login_background.png";
-  static const String BACKGROUND_GRADIENT = "assets/auth_background_gradient.png";
+  static const String BACKGROUND_GRADIENT =
+      "assets/auth_background_gradient.png";
   static const String IC_LOGO = "assets/solyric_logo.png";
   static const String IC_USER = "assets/ic_user.svg";
   static const String IC_LOCK = "assets/ic_lock.svg";
-  static const String IC_GOOGLE_PLUS = "assets/ic_google_plus.svg";  
+  static const String IC_GOOGLE_PLUS = "assets/ic_google_plus.svg";
   static const String IC_FACEBOOK = "assets/ic_facebook.svg";
   static const String IC_TWITTER = "assets/ic_twitter.svg";
   static const String IC_PIANO = "assets/ic_piano.svg";
@@ -34,9 +35,9 @@ class Resources {
       "Enter your email address, we will send instructions on how to change your password.";
   static const String FORGOT_EMAIL_LABEL = "Email Address";
   static const String SIGN_IN = "SIGN IN";
-  static const String EMAIL_SENT = 'Thanks! Please check your inbox for a link to reset your password';
+  static const String EMAIL_SENT =
+      'Thanks! Please check your inbox for a link to reset your password';
   static const String NO_USER_FOUND = 'No users found';
-
 
   // login
 
@@ -45,8 +46,9 @@ class Resources {
   static const String FORGOT_LOGIN = "Forgot Password?";
   static const String PASSWORD_LOGIN = "Password";
   static const String SOCIAL_LOGIN = "Login With Social Account";
-  static const String EMAIL_PASSWORD_IS_INCORRECT_LOGIN = 'The email address or password is incorrect. Please try again.';
-  
+  static const String EMAIL_PASSWORD_IS_INCORRECT_LOGIN =
+      'The email address or password is incorrect. Please try again.';
+
   // sign up
 
   static const String SIGN_UP = "Sign Up";
@@ -102,12 +104,14 @@ class Resources {
 
   // Lyrics
 
-  static const String EMPTY_CHORD_ERROR = "We are not able to retreive any chords. Please try again. ";
+  static const String EMPTY_CHORD_ERROR =
+      "We are not able to retreive any chords. Please try again. ";
   static const String IC_TIME = "assets/ic_time.svg";
   static const String IC_AUDIO = "assets/ic_audio.svg";
   static const String LYRIC_HINT = "Content";
   static const String DELETE = "Delete";
-  static const String DIALOG_CONTENT = "Do you want to save this as a draft on your device?";
+  static const String DIALOG_CONTENT =
+      "Do you want to save this as a draft on your device?";
   static const String LYRIC_TITLE = "Title";
 
   // Posts
@@ -132,9 +136,11 @@ class Resources {
   static const String RECORDING_CANCEL = "Cancel";
   static const String RECORDING_DELETE = "Delete";
   static const String LATEST_RECORD = "Latest Record";
-  static const String SAVED_RECORD = "Saved"; 
+  static const String SAVED_RECORD = "Saved";
   static const String YOU_NOT_SAVED_RECORD = "You haven't saved any audio.";
-  static const String CONFIRM_DELETE_RECORD = "Are you sure you want to permanently delete this audio?";
-  static const String RECORDING_PREFIX_NO_NAME = "Recording ";  
-  static const String RECORDING_DRAFT = "Recordings are only visible to you. Uninstalling Solyric will delete all recordings.";  
+  static const String CONFIRM_DELETE_RECORD =
+      "Are you sure you want to permanently delete this audio?";
+  static const String RECORDING_PREFIX_NO_NAME = "Recording ";
+  static const String RECORDING_DRAFT =
+      "Recordings are only visible to you. Uninstalling Solyric will delete all recordings.";
 }
