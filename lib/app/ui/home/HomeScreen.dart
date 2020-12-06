@@ -53,6 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, index) => screenItems[index],
                   itemCount: screenItems.length,
                   controller: controller,
+                  onIndexChanged: (index) => myNotifier.value = index,
                 )),
               ),
             ),
