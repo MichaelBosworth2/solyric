@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
+
+import 'package:solyric_app/app/ui/splashscreen/SplashScreen.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 
@@ -28,7 +29,7 @@ class SolyricApp extends StatelessWidget {
           primaryColor: Color(0xFF353535),
           accentColor: Colors.purpleAccent,
         ),
-        home: LoginScreen(),
+        home: SplashScreen(),
         onGenerateRoute: (settings) => SolyricRouter.routes(settings),
       ),
     );
