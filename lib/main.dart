@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
+
+import 'package:solyric_app/app/ui/splashscreen/SplashScreen.dart';
+
+import 'package:firebase_core/firebase_core.dart';
 
 import 'app/di/ProviderModule.dart';
 import 'app/utils/Resources.dart';
 import 'app/utils/SolyricRouter.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   Provider.debugCheckInvalidValueType = null;
   runApp(SolyricApp());
 }
@@ -24,9 +29,8 @@ class SolyricApp extends StatelessWidget {
           primaryColor: Color(0xFF353535),
           accentColor: Colors.purpleAccent,
         ),
-        home: LoginScreen(),
-        onGenerateRoute: (settings) =>
-            SolyricRouter.routes(settings),
+        home: SplashScreen(),
+        onGenerateRoute: (settings) => SolyricRouter.routes(settings),
       ),
     );
   }
