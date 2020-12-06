@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
 import 'package:solyric_app/app/utils/Resources.dart';
+import 'package:solyric_app/app/utils/RouteNames.dart';
 
 class OnBoardingLastStep extends StatelessWidget {
   @override
@@ -30,8 +31,8 @@ class OnBoardingLastStep extends StatelessWidget {
               width: MediaQuery.of(context).size.width / 1.3, // match_parent
               child: RaisedButton(
                 color: Colors.transparent,
-                onPressed: () => Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => LoginScreen())),
+                onPressed: () =>
+                    Navigator.pushReplacementNamed(context, RouteNames.HOME),
                 child:
                     const Text('Get Started', style: TextStyle(fontSize: 20)),
                 shape: RoundedRectangleBorder(
