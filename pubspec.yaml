@@ -36,6 +36,7 @@ dev_dependencies:
   vibrate: ^0.0.4
   firebase_auth: ^0.16.0
   cloud_firestore: ^0.13.5
+  firebase_core: ^0.4.4
   google_fonts: ^1.1.0
   permission_handler: ^5.0.0+hotfix.3
   audioplayers: ^0.15.1
