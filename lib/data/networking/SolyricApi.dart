@@ -42,14 +42,6 @@ class SolyricApi {
 
   Future<UserCredential> login(userModel.User user) => auth
       .signInWithEmailAndPassword(email: user.email, password: user.password);
-  // http.post("${_authBase}verifyPassword$_apiKey",
-  //     body: json.encode(
-  //       {
-  //         "email": user.email,
-  //         "password": user.password,
-  //         "returnSecureToken": true,
-  //       },
-  //     ));
 
   Future<DocumentReference> createUsername(String username, String uid) =>
       databaseReference
