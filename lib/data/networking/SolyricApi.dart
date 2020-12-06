@@ -1,4 +1,8 @@
+import 'dart:async';
 import 'dart:convert';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart' as http;
 import 'package:solyric_app/domain/model/User.dart' as userModel;
 import 'dart:async';
@@ -63,5 +67,19 @@ class SolyricApi {
     });
 
     return isExist;
+  }
+
+  Future<String> getProfile() async {
+    FirebaseUser userId = await _auth.currentUser();
+    var user = "";
+    var query = await databaseReference
+        .collection("users")
+        .where("uid", isEqualTo: userId.uid)
+        .getDocuments();
+    query.documents.forEach((element) {
+      user = element.data['username'];
+    });
+
+    return user;
   }
 }
