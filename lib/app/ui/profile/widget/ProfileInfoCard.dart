@@ -14,20 +14,6 @@ class ProfileInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => BaseWidget<ProfileViewModel>(
-        child: Padding(
-          padding: EdgeInsets.only(left: profileContainerMargin * 0.75),
-          child: Column(
-            children: <Widget>[
-              Text(
-                "Amante de la musica y la programacion, explorando el disenio.",
-                maxLines: 3,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.start,
-                style: TextStyle(color: Colors.white70),
-              ),
-            ],
-          ),
-        ),
         builder: (context, model, child) => Container(
           margin: EdgeInsets.only(left: profileContainerMargin),
           color: Theme.of(context).primaryColor,
@@ -47,13 +33,26 @@ class ProfileInfoCard extends StatelessWidget {
                   padding: EdgeInsets.only(
                       left: profileContainerMargin * 0.5, top: 10),
                   child: Text(
-                    model.user,
+                    '${model.user.name} ${model.user.lastname}',
                     textAlign: TextAlign.end,
                     style: TextStyle(fontSize: 40, color: Colors.white70),
                   ),
                 ),
                 UIHelper.verticalSpace(profileContainerSize * 0.10),
-                child,
+                Padding(
+                  padding: EdgeInsets.only(left: profileContainerMargin * 0.75),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        model.user.about,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.start,
+                        style: TextStyle(color: Colors.white70),
+                      ),
+                    ],
+                  ),
+                ),
                 UIHelper.verticalSpace(profileContainerSize * 0.25),
                 Padding(
                   padding: EdgeInsets.only(left: profileContainerMargin * 0.5),

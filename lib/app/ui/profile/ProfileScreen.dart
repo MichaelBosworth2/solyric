@@ -48,33 +48,5 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ));
-
-    return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          Stack(
-            children: <Widget>[
-              ProfileInfoCard(
-                profileContainerSize: deviceSize.size.height * 0.55,
-                profileContainerMargin: deviceSize.size.width * 0.30,
-              ),
-              ProfilePhotoCard(
-                paddingStart: deviceSize.size.width * 0.08,
-                paddingTop: deviceSize.size.height * 0.142,
-              )
-            ],
-          ),
-          ListView.builder(
-              itemCount: 10,
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemBuilder: (ctx, i) => Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: WallCard(),
-                  ))
-        ],
-      ),
-    ));
   }
 }

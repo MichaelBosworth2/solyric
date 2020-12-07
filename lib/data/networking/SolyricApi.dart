@@ -4,9 +4,9 @@ import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart' as http;
+import 'package:solyric_app/domain/model/ProfileUserInfo.dart';
 import 'package:solyric_app/domain/model/User.dart' as userModel;
 import 'dart:async';
-// import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -69,17 +69,21 @@ class SolyricApi {
     return isExist;
   }
 
-  Future<String> getProfile() async {
-    FirebaseUser userId = await _auth.currentUser();
-    var user = "";
+  Future<ProfileUserInfo> getProfile() async {
+    final userId = auth.currentUser.uid;
+    var profileInfo = new ProfileUserInfo();
     var query = await databaseReference
         .collection("users")
-        .where("uid", isEqualTo: userId.uid)
-        .getDocuments();
-    query.documents.forEach((element) {
-      user = element.data['username'];
+        .where("uid", isEqualTo: userId)
+        .get();
+
+    query.docs.forEach((element) {
+      profileInfo.name = element['name'];
+      profileInfo.lastname = element['lastname'];
+      profileInfo.about = element['about'];
+      profileInfo.photo = element['photo'];
     });
 
-    return user;
+    return profileInfo;
   }
 }
