@@ -28,6 +28,7 @@ import 'package:solyric_app/domain/interaction/RecordAudioUseCase.dart';
 import 'package:solyric_app/domain/interaction/ResetPasswordUseCase.dart';
 import 'package:solyric_app/domain/interaction/SignUpUseCase.dart';
 import 'package:solyric_app/domain/repository/AuthRepository.dart';
+import 'package:solyric_app/domain/repository/FeedRepository.dart';
 import 'package:solyric_app/domain/repository/LyricsRepository.dart';
 import 'package:solyric_app/domain/repository/ProfileRepository.dart';
 import 'package:solyric_app/domain/repository/RecordAudioRepository.dart';
@@ -78,7 +79,7 @@ class ProviderModule {
     ProxyProvider<LyricRepository, GetChordItemUseCase>(
       update: (context, repo, _) => GetChordItemUseCase(repo: repo),
     ),
-    ProxyProvider<AuthRepository, GetFeedUseCase>(
+    ProxyProvider<FeedRepository, GetFeedUseCase>(
       update: (context, repo, _) => GetFeedUseCase(repo: repo),
     ),
     ProxyProvider<AuthRepository, GetTutorialDataUseCase>(

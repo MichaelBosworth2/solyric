@@ -16,4 +16,9 @@ class ProfileRepositoryImpl implements ProfileRepository {
   Future<List<UserPosts>> getUserPosts() {
     return _api.getUserPosts();
   }
+
+  @override
+  Future<List<UserPosts>> getAllPost() {
+    return _api.getAllPosts();
+  }
 }
