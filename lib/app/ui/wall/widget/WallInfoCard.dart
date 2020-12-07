@@ -4,9 +4,13 @@ import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
 
 class WallInfoCard extends StatelessWidget {
-  const WallInfoCard(this.deviceWidth);
+  WallInfoCard(
+      {this.deviceWidth, this.title, this.description, this.attachment});
 
   final deviceWidth;
+  final String title;
+  final String description;
+  final String attachment;
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -19,8 +23,8 @@ class WallInfoCard extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Column(
               children: <Widget>[
-                const Text(
-                  "Has World War 3 begun?",
+                Text(
+                  title,
                   style: UIHelper.cardTitle,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -47,10 +51,10 @@ class WallInfoCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: const EdgeInsets.only(left: 30, top: 70),
                   child: Text(
-                    Resources.PLACE_HOLDER_TEXT,
+                    description,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),

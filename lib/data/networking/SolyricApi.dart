@@ -1,14 +1,14 @@
-import 'dart:async';
 import 'dart:convert';
+import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart' as http;
 import 'package:solyric_app/domain/model/ProfileUserInfo.dart';
 import 'package:solyric_app/domain/model/User.dart' as userModel;
-import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:solyric_app/domain/model/UserPosts.dart';
 
 class SolyricApi {
   static const _apiKey = "?key=AIzaSyArNCJvvTGzAW09A4fdh-Snk3WJmeG9JDY";
@@ -69,6 +69,7 @@ class SolyricApi {
     return isExist;
   }
 
+  // USER PROFILE
   Future<ProfileUserInfo> getProfile() async {
     final userId = auth.currentUser.uid;
     var profileInfo = new ProfileUserInfo();
@@ -85,5 +86,29 @@ class SolyricApi {
     });
 
     return profileInfo;
+  }
+
+  // USER FEED
+  Future<List<UserPosts>> getUserPosts() async {
+    final userId = auth.currentUser.uid;
+    List<UserPosts> allUserPosts = new List();
+    UserPosts userPosts =
+        new UserPosts(title: null, attachment: null, description: null);
+
+    final query = await databaseReference
+        .collection("posts")
+        .where("user_uid", isEqualTo: userId)
+        .get();
+
+    query.docs.forEach((element) {
+      userPosts.title = element['title'];
+      userPosts.attachment = element['attachment'];
+      userPosts.description = element['description'];
+      // userPosts.timepost = element['timepost'];
+
+      allUserPosts.add(userPosts);
+    });
+
+    return allUserPosts;
   }
 }

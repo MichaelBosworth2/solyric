@@ -5,6 +5,15 @@ import 'WallInfoCard.dart';
 import 'WallMediaCard.dart';
 
 class WallCard extends StatelessWidget {
+  WallCard(
+      {this.title = "Welcome",
+      this.description = "Description Welcome",
+      this.attachment = Resources.PROFILE_PLACE_HOLDER});
+
+  String title;
+  String description;
+  String attachment;
+
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
@@ -25,7 +34,12 @@ class WallCard extends StatelessWidget {
                               NetworkImage(Resources.PROFILE_PLACE_HOLDER)),
                     ),
                     UIHelper.horizontalSpaceLarge,
-                    WallInfoCard(deviceSize.width)
+                    WallInfoCard(
+                      deviceWidth: deviceSize.width,
+                      attachment: attachment,
+                      description: description,
+                      title: title,
+                    )
                   ],
                 )
               ],

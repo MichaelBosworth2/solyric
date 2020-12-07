@@ -13,6 +13,7 @@ class ProfileScreen extends StatelessWidget {
     return BaseWidget<ProfileViewModel>(
         onModelReady: (controller, model) {
           model.userName();
+          model.getUserPosts();
         },
         builder: (context, model, child) => model.isLoading
             ? Center(
@@ -37,12 +38,16 @@ class ProfileScreen extends StatelessWidget {
                         ],
                       ),
                       ListView.builder(
-                          itemCount: 10,
+                          itemCount: model.userPosts.length,
                           physics: const NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
                           itemBuilder: (ctx, i) => Padding(
                                 padding: const EdgeInsets.only(top: 10),
-                                child: WallCard(),
+                                child: WallCard(
+                                  title: model.userPosts[i].title,
+                                  description: model.userPosts[i].description,
+                                  attachment: model.userPosts[i].attachment,
+                                ),
                               ))
                     ],
                   ),
