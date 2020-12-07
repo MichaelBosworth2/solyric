@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
 import 'package:solyric_app/app/ui/onboarding/widget/OnBoardingFirstStep.dart';
 import 'package:solyric_app/app/ui/onboarding/widget/OnBoardingLastStep.dart';
 import 'package:solyric_app/app/ui/onboarding/widget/OnBoardingStep.dart';
 import 'package:solyric_app/app/ui/onboarding/widget/PageIndicator.dart';
-
 import 'package:solyric_app/app/utils/Resources.dart';
+import 'package:solyric_app/app/utils/RouteNames.dart';
 
 class OnBoadingScreen extends StatefulWidget {
   @override
@@ -102,10 +101,8 @@ class _OnBoadingScreenState extends State<OnBoadingScreen> {
                   children: [
                     _showLogo(),
                     InkWell(
-                      onTap: () => Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LoginScreen())),
+                      onTap: () => Navigator.pushReplacementNamed(
+                          context, RouteNames.HOME),
                       child: _currentPage == 7
                           ? Container()
                           : Text(

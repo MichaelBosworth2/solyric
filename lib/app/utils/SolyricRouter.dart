@@ -3,6 +3,7 @@ import 'package:solyric_app/app/ui/credentials/forgot/ForgotPasswordScreen.dart'
 import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
 import 'package:solyric_app/app/ui/credentials/signup/SignUpScreen.dart';
 import 'package:solyric_app/app/ui/home/HomeScreen.dart';
+import 'package:solyric_app/app/ui/onboarding/OnBoardingScreen.dart';
 import 'package:solyric_app/app/ui/post/NewLyricScreen.dart';
 import 'package:solyric_app/app/ui/post/util/LyricArguments.dart';
 import 'package:solyric_app/app/ui/record/RecordScreen.dart';
@@ -25,7 +26,7 @@ class SolyricRouter {
       case RouteNames.SIGN_UP:
         return MaterialPageRoute(builder: (_) => SignUpScreen());
       case RouteNames.TUTORIAL:
-        return MaterialPageRoute(builder: (_) => TutorialScreen());
+        return MaterialPageRoute(builder: (_) => OnBoadingScreen());
       case RouteNames.FORGOT_PASSWORD:
         return MaterialPageRoute(builder: (_) => ForgotPasswordScreen());
       case RouteNames.NEW_RECORD:
