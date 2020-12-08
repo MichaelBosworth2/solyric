@@ -13,6 +13,7 @@ import 'package:solyric_app/app/ui/wall/viewmodel/WallViewModel.dart';
 import 'package:solyric_app/data/networking/SolyricApi.dart';
 import 'package:solyric_app/data/networking/SolyricDatabaseLocal.dart';
 import 'package:solyric_app/data/repository/AuthRepositoryImpl.dart';
+import 'package:solyric_app/data/repository/FeedRepositoryImpl.dart';
 import 'package:solyric_app/data/repository/LyricRepositoryImpl.dart';
 import 'package:solyric_app/data/repository/ProfileRepositoryImpl.dart';
 import 'package:solyric_app/data/repository/RecordAudioRepositoryImpl.dart';
@@ -60,7 +61,9 @@ class ProviderModule {
     ProxyProvider<SolyricApi, ProfileRepository>(
       update: (context, api, _) => ProfileRepositoryImpl(api: api),
     ),
-
+    ProxyProvider<SolyricApi, FeedRepository>(
+      update: (context, api, _) => FeedRepositoryImpl(api: api),
+    ),
   ];
 
   static List<SingleChildCloneableWidget> useCase = [
@@ -100,7 +103,6 @@ class ProviderModule {
     ProxyProvider<ProfileRepository, GetProfileUseCase>(
       update: (context, repo, _) => GetProfileUseCase(repo: repo),
     ),
-
   ];
 
   static List<SingleChildCloneableWidget> viewModel = [
@@ -122,7 +124,8 @@ class ProviderModule {
       update: (context, lineUseCase, createUseCase, _) => NewLyricViewModel(
           createUseCase: createUseCase, lineUseCase: lineUseCase),
     ),
-    ProxyProvider2<GetChordsUseCase, GetChordHistoryUseCase, ChordListViewModel>(
+    ProxyProvider2<GetChordsUseCase, GetChordHistoryUseCase,
+        ChordListViewModel>(
       update: (context, chordUseCase, historyUseCase, _) => ChordListViewModel(
           chordUseCase: chordUseCase, historyUseCase: historyUseCase),
     ),

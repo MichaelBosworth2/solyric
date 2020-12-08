@@ -8,7 +8,7 @@ class WallCard extends StatelessWidget {
   WallCard(
       {this.title = "Welcome",
       this.description = "Description Welcome",
-      this.attachment = Resources.PROFILE_PLACE_HOLDER});
+      this.attachment = Resources.BACKGROUND_PLACE_HOLDER});
 
   String title;
   String description;
@@ -44,7 +44,9 @@ class WallCard extends StatelessWidget {
                 )
               ],
             ),
-            WallMediaCard(),
+            WallMediaCard(
+              attachment: attachment,
+            ),
           ],
         ));
   }

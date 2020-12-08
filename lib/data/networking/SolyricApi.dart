@@ -90,8 +90,6 @@ class SolyricApi {
   Future<List<UserPosts>> getUserPosts() async {
     final userId = auth.currentUser.uid;
     List<UserPosts> allUserPosts = new List();
-    UserPosts userPosts =
-        new UserPosts(title: null, attachment: null, description: null);
 
     final query = await databaseReference
         .collection("posts")
@@ -99,27 +97,49 @@ class SolyricApi {
         .get();
 
     query.docs.forEach((element) {
-      userPosts.title = element['title'];
-      userPosts.attachment = element['attachment'];
-      userPosts.description = element['description'];
-      allUserPosts.add(userPosts);
+      allUserPosts.add(UserPosts(
+          title: element["title"],
+          attachment: element["attachment"],
+          description: element["description"]));
     });
 
     return allUserPosts;
   }
 
   Future<List<UserPosts>> getAllPosts() async {
-    List<UserPosts> allUserPosts = new List();
-    UserPosts userPosts =
-        new UserPosts(title: null, attachment: null, description: null);
+    List<UserPosts> allUserPosts = new List<UserPosts>();
 
-    final query = await databaseReference.collection("posts").limit(5).get();
+    final query = await databaseReference
+        .collection("posts")
+        .orderBy("timepost")
+        .limit(3)
+        .get();
 
     query.docs.forEach((element) {
-      userPosts.title = element["title"];
-      userPosts.attachment = element["attachment"];
-      userPosts.description = element["description"];
-      allUserPosts.add(userPosts);
+      allUserPosts.add(UserPosts(
+          title: element["title"],
+          attachment: element["attachment"],
+          description: element["description"]));
+    });
+
+    return allUserPosts;
+  }
+
+  Future<List<UserPosts>> getMorePosts(UserPosts last) async {
+    List<UserPosts> allUserPosts = new List<UserPosts>();
+
+    final query = await databaseReference
+        .collection("posts")
+        .orderBy("timepost")
+        .startAfter([last])
+        .limit(3)
+        .get();
+
+    query.docs.forEach((element) {
+      allUserPosts.add(UserPosts(
+          title: element["title"],
+          attachment: element["attachment"],
+          description: element["description"]));
     });
 
     return allUserPosts;
