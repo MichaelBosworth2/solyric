@@ -4,6 +4,8 @@ import 'package:solyric_app/app/utils/Resources.dart';
 import 'package:solyric_app/app/utils/UIHelper.dart';
 
 class WallMediaCard extends StatelessWidget {
+  const WallMediaCard({this.attachment = Resources.BACKGROUND_PLACE_HOLDER});
+  final String attachment;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,7 +21,7 @@ class WallMediaCard extends StatelessWidget {
                         fit: BoxFit.fill,
                         colorFilter:
                             ColorFilter.mode(Colors.black54, BlendMode.darken),
-                        image: NetworkImage(Resources.BACKGROUND_PLACE_HOLDER))),
+                        image: NetworkImage(attachment))),
                 width: 220,
                 height: 150,
                 child: Stack(

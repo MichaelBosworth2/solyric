@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:solyric_app/app/ui/credentials/login/LoginScreen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:solyric_app/app/utils/Resources.dart';
+import 'package:solyric_app/app/utils/RouteNames.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -15,11 +17,17 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     image1 = Image.asset(Resources.BACKGROUND);
     image2 = Image.asset(Resources.IC_LOGO);
-    Future.delayed(
-        Duration(milliseconds: 5000),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => LoginScreen())));
+    isUserSignedIn();
     super.initState();
+  }
+
+  void isUserSignedIn() {
+    FirebaseAuth.instance.authStateChanges().listen((User user) {
+      Future.delayed(Duration(milliseconds: 5000), () {
+        Navigator.pushReplacementNamed(
+            context, user == null ? RouteNames.LOGIN : RouteNames.HOME);
+      });
+    });
   }
 
   @override

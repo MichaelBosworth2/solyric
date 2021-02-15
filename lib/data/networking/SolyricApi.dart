@@ -1,10 +1,12 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'package:solyric_app/domain/model/User.dart' as userModel;
 import 'dart:async';
-// import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:http/http.dart' as http;
+import 'package:solyric_app/domain/model/ProfileUserInfo.dart';
+import 'package:solyric_app/domain/model/User.dart' as userModel;
+import 'package:solyric_app/domain/model/UserPosts.dart';
 
 class SolyricApi {
   static const _apiKey = "?key=AIzaSyArNCJvvTGzAW09A4fdh-Snk3WJmeG9JDY";
@@ -42,14 +44,6 @@ class SolyricApi {
 
   Future<UserCredential> login(userModel.User user) => auth
       .signInWithEmailAndPassword(email: user.email, password: user.password);
-  // http.post("${_authBase}verifyPassword$_apiKey",
-  //     body: json.encode(
-  //       {
-  //         "email": user.email,
-  //         "password": user.password,
-  //         "returnSecureToken": true,
-  //       },
-  //     ));
 
   Future<DocumentReference> createUsername(String username, String uid) =>
       databaseReference
@@ -71,5 +65,83 @@ class SolyricApi {
     });
 
     return isExist;
+  }
+
+  // USER PROFILE
+  Future<ProfileUserInfo> getProfile() async {
+    final userId = auth.currentUser.uid;
+    var profileInfo = new ProfileUserInfo();
+    var query = await databaseReference
+        .collection("users")
+        .where("uid", isEqualTo: userId)
+        .get();
+
+    query.docs.forEach((element) {
+      profileInfo.name = element['name'];
+      profileInfo.lastname = element['lastname'];
+      profileInfo.about = element['about'];
+      profileInfo.photo = element['photo'];
+    });
+
+    return profileInfo;
+  }
+
+  // USER FEED
+  Future<List<UserPosts>> getUserPosts() async {
+    final userId = auth.currentUser.uid;
+    List<UserPosts> allUserPosts = new List();
+
+    final query = await databaseReference
+        .collection("posts")
+        .where("user_uid", isEqualTo: userId)
+        .get();
+
+    query.docs.forEach((element) {
+      allUserPosts.add(UserPosts(
+          title: element["title"],
+          attachment: element["attachment"],
+          description: element["description"]));
+    });
+
+    return allUserPosts;
+  }
+
+  Future<List<UserPosts>> getAllPosts() async {
+    List<UserPosts> allUserPosts = new List<UserPosts>();
+
+    final query = await databaseReference
+        .collection("posts")
+        .orderBy("timepost")
+        .limit(3)
+        .get();
+
+    query.docs.forEach((element) {
+      allUserPosts.add(UserPosts(
+          title: element["title"],
+          attachment: element["attachment"],
+          description: element["description"]));
+    });
+
+    return allUserPosts;
+  }
+
+  Future<List<UserPosts>> getMorePosts(UserPosts last) async {
+    List<UserPosts> allUserPosts = new List<UserPosts>();
+
+    final query = await databaseReference
+        .collection("posts")
+        .orderBy("timepost")
+        .startAfter([last])
+        .limit(3)
+        .get();
+
+    query.docs.forEach((element) {
+      allUserPosts.add(UserPosts(
+          title: element["title"],
+          attachment: element["attachment"],
+          description: element["description"]));
+    });
+
+    return allUserPosts;
   }
 }

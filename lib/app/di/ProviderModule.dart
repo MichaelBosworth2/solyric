@@ -6,18 +6,22 @@ import 'package:solyric_app/app/ui/credentials/signup/viewmodel/SignUpViewModel.
 import 'package:solyric_app/app/ui/post/viewmodel/ChordListViewModel.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/EditLyricViewModel.dart';
 import 'package:solyric_app/app/ui/post/viewmodel/NewLyricViewModel.dart';
+import 'package:solyric_app/app/ui/profile/viewmodel/ProfileViewModel.dart';
 import 'package:solyric_app/app/ui/record/viewmodel/RecordAudioViewModel.dart';
 import 'package:solyric_app/app/ui/tutorial/viewmodel/TutorialViewModel.dart';
 import 'package:solyric_app/app/ui/wall/viewmodel/WallViewModel.dart';
 import 'package:solyric_app/data/networking/SolyricApi.dart';
 import 'package:solyric_app/data/networking/SolyricDatabaseLocal.dart';
 import 'package:solyric_app/data/repository/AuthRepositoryImpl.dart';
+import 'package:solyric_app/data/repository/FeedRepositoryImpl.dart';
 import 'package:solyric_app/data/repository/LyricRepositoryImpl.dart';
+import 'package:solyric_app/data/repository/ProfileRepositoryImpl.dart';
 import 'package:solyric_app/data/repository/RecordAudioRepositoryImpl.dart';
 import 'package:solyric_app/domain/interaction/GetChordHistoryUseCase.dart';
 import 'package:solyric_app/domain/interaction/GetChordItemUseCase.dart';
 import 'package:solyric_app/domain/interaction/GetChordsUseCase.dart';
 import 'package:solyric_app/domain/interaction/GetFeedUseCase.dart';
+import 'package:solyric_app/domain/interaction/GetProfileUseCase.dart';
 import 'package:solyric_app/domain/interaction/GetTutorialDataUseCase.dart';
 import 'package:solyric_app/domain/interaction/LoginUseCase.dart';
 import 'package:solyric_app/domain/interaction/NewLyricUseCase.dart';
@@ -25,7 +29,9 @@ import 'package:solyric_app/domain/interaction/RecordAudioUseCase.dart';
 import 'package:solyric_app/domain/interaction/ResetPasswordUseCase.dart';
 import 'package:solyric_app/domain/interaction/SignUpUseCase.dart';
 import 'package:solyric_app/domain/repository/AuthRepository.dart';
+import 'package:solyric_app/domain/repository/FeedRepository.dart';
 import 'package:solyric_app/domain/repository/LyricsRepository.dart';
+import 'package:solyric_app/domain/repository/ProfileRepository.dart';
 import 'package:solyric_app/domain/repository/RecordAudioRepository.dart';
 
 class ProviderModule {
@@ -51,7 +57,13 @@ class ProviderModule {
     ProxyProvider<SolyricDatabaseLocal, RecordAudioRepository>(
       update: (context, database, _) =>
           RecordAudioRepositoryImpl(database: database),
-    )
+    ),
+    ProxyProvider<SolyricApi, ProfileRepository>(
+      update: (context, api, _) => ProfileRepositoryImpl(api: api),
+    ),
+    ProxyProvider<SolyricApi, FeedRepository>(
+      update: (context, api, _) => FeedRepositoryImpl(api: api),
+    ),
   ];
 
   static List<SingleChildCloneableWidget> useCase = [
@@ -70,7 +82,7 @@ class ProviderModule {
     ProxyProvider<LyricRepository, GetChordItemUseCase>(
       update: (context, repo, _) => GetChordItemUseCase(repo: repo),
     ),
-    ProxyProvider<AuthRepository, GetFeedUseCase>(
+    ProxyProvider<FeedRepository, GetFeedUseCase>(
       update: (context, repo, _) => GetFeedUseCase(repo: repo),
     ),
     ProxyProvider<AuthRepository, GetTutorialDataUseCase>(
@@ -87,6 +99,9 @@ class ProviderModule {
     ),
     ProxyProvider<RecordAudioRepository, RecordAudioUseCase>(
       update: (context, repo, _) => RecordAudioUseCase(repo: repo),
+    ),
+    ProxyProvider<ProfileRepository, GetProfileUseCase>(
+      update: (context, repo, _) => GetProfileUseCase(repo: repo),
     ),
   ];
 
@@ -109,7 +124,8 @@ class ProviderModule {
       update: (context, lineUseCase, createUseCase, _) => NewLyricViewModel(
           createUseCase: createUseCase, lineUseCase: lineUseCase),
     ),
-    ProxyProvider2<GetChordsUseCase, GetChordHistoryUseCase, ChordListViewModel>(
+    ProxyProvider2<GetChordsUseCase, GetChordHistoryUseCase,
+        ChordListViewModel>(
       update: (context, chordUseCase, historyUseCase, _) => ChordListViewModel(
           chordUseCase: chordUseCase, historyUseCase: historyUseCase),
     ),
@@ -121,6 +137,9 @@ class ProviderModule {
     ),
     ProxyProvider<RecordAudioUseCase, RecordAudioViewModel>(
       update: (context, useCase, _) => RecordAudioViewModel(useCase: useCase),
+    ),
+    ProxyProvider<GetProfileUseCase, ProfileViewModel>(
+      update: (context, useCase, _) => ProfileViewModel(useCase: useCase),
     ),
   ];
 }
