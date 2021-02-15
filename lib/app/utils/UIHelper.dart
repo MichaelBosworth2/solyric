@@ -11,8 +11,12 @@ class UIHelper {
   /// @param [BuildContext] host build context
   /// @param [allowBackStack] whether you want to have a default back button
   static AppBar commonAppBar(BuildContext context,
-          {bool backButton = true, String logo = Resources.IC_LOGO}) =>
+          {bool backButton = true,
+          String logo = Resources.IC_LOGO,
+          bool backgroundTransparent = false}) =>
       AppBar(
+          backgroundColor: backgroundTransparent ? Colors.transparent : null,
+          elevation: 0.0,
           automaticallyImplyLeading: backButton,
           centerTitle: true,
           title: actionBarLogo(logo),
@@ -34,9 +38,9 @@ class UIHelper {
               arguments: LyricArguments(editMode: false)),
         ),
         IconButton(
-          icon: SvgPicture.asset(Resources.IC_MIC),
-          onPressed: () => Navigator.pushNamed(context, RouteNames.NEW_RECORD))
-        ,
+            icon: SvgPicture.asset(Resources.IC_MIC),
+            onPressed: () =>
+                Navigator.pushNamed(context, RouteNames.NEW_RECORD)),
         IconButton(
           icon: SvgPicture.asset(Resources.IC_BELL),
           onPressed: () {},

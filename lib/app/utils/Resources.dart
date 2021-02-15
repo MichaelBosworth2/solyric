@@ -2,9 +2,9 @@ class Resources {
   // temporal
 
   static const String BACKGROUND_PLACE_HOLDER =
-      "https://www.dawsons.co.uk/blog/wp-content/uploads/2018/08/man-playing-guitar-whilst-sitting-down.jpg";
+      "https://images.unsplash.com/photo-1606312048149-08e754ca7958?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2434&q=80";
   static const String PROFILE_PLACE_HOLDER =
-      "https://www.jakpost.travel/wimages/large/152-1524309_beautiful-redhead-russian-girl-red-hair.jpg";
+      "https://images.unsplash.com/photo-1606422343904-70c6461f3499?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1955&q=80";
   static const String PLACE_HOLDER_TEXT =
       "I very much support Senator @tedcruz's resolution in support of President @realDonaldTrump's decision to take out Iranian General Soleimani.";
 
@@ -12,11 +12,12 @@ class Resources {
   static const String GUITAR_CHORDS = "assets/guitar/guitar_chords.json";
   static const String PIANO_CHORDS = "assets/piano/piano_chords.json";
   static const String BACKGROUND = "assets/login_background.png";
-  static const String BACKGROUND_GRADIENT = "assets/auth_background_gradient.png";
+  static const String BACKGROUND_GRADIENT =
+      "assets/auth_background_gradient.png";
   static const String IC_LOGO = "assets/solyric_logo.png";
   static const String IC_USER = "assets/ic_user.svg";
   static const String IC_LOCK = "assets/ic_lock.svg";
-  static const String IC_GOOGLE_PLUS = "assets/ic_google_plus.svg";  
+  static const String IC_GOOGLE_PLUS = "assets/ic_google_plus.svg";
   static const String IC_FACEBOOK = "assets/ic_facebook.svg";
   static const String IC_TWITTER = "assets/ic_twitter.svg";
   static const String IC_PIANO = "assets/ic_piano.svg";
@@ -34,9 +35,9 @@ class Resources {
       "Enter your email address, we will send instructions on how to change your password.";
   static const String FORGOT_EMAIL_LABEL = "Email Address";
   static const String SIGN_IN = "SIGN IN";
-  static const String EMAIL_SENT = 'Thanks! Please check your inbox for a link to reset your password';
+  static const String EMAIL_SENT =
+      'Thanks! Please check your inbox for a link to reset your password';
   static const String NO_USER_FOUND = 'No users found';
-
 
   // login
 
@@ -45,8 +46,9 @@ class Resources {
   static const String FORGOT_LOGIN = "Forgot Password?";
   static const String PASSWORD_LOGIN = "Password";
   static const String SOCIAL_LOGIN = "Login With Social Account";
-  static const String EMAIL_PASSWORD_IS_INCORRECT_LOGIN = 'The email address or password is incorrect. Please try again.';
-  
+  static const String EMAIL_PASSWORD_IS_INCORRECT_LOGIN =
+      'The email address or password is incorrect. Please try again.';
+
   // sign up
 
   static const String SIGN_UP = "Sign Up";
@@ -58,17 +60,51 @@ class Resources {
   // tutorial
 
   static const String SKIP = "Skip";
+  // SCREEN A
   static const String BACKGROUND_A = "assets/tutorial1.png";
-  static const String WELCOME_MESSAGE = "Welcome to";
-  static const String INSTRUCTIONS =
+  static const String IMAGE_A = "assets/solyric_logo.png";
+  static const String TITLE_MESSAGE_A = "Welcome to";
+  static const String TEXT_MESSAGE_A =
       "Connect With Your Friends Online. Join the Solyric Community Free! Plan Events. Stay In Touch With Family. Follow Interesting Topics.";
+  // SCREEN B
   static const String BACKGROUND_B = "assets/tutorial2.png";
+  static const String IMAGE_B = "assets/tutorial2-write-the-song.png";
+  static const String TITLE_MESSAGE_B = "Write the song";
+  static const String TEXT_MESSAGE_B =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN C
   static const String BACKGROUND_C = "assets/tutorial3.png";
+  static const String IMAGE_C = "assets/tutorial3-drag-and-drop.png";
+  static const String TITLE_MESSAGE_C = "Drag & Drop";
+  static const String TEXT_MESSAGE_C =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN D
   static const String BACKGROUND_D = "assets/tutorial4.png";
+  static const String IMAGE_D = "assets/tutorial4-record-song.png";
+  static const String TITLE_MESSAGE_D = "Record Song";
+  static const String TEXT_MESSAGE_D =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN E
   static const String BACKGROUND_E = "assets/tutorial5.png";
+  static const String IMAGE_E = "assets/tutorial4-record-song.png";
+  static const String TITLE_MESSAGE_E = "Find Chords";
+  static const String TEXT_MESSAGE_E =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN F
   static const String BACKGROUND_F = "assets/tutorial6.png";
+  static const String IMAGE_F = "assets/tutorial4-record-song.png";
+  static const String TITLE_MESSAGE_F = "Discover and Inspire";
+  static const String TEXT_MESSAGE_F =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN G
   static const String BACKGROUND_G = "assets/tutorial7.png";
+  static const String IMAGE_G = "assets/tutorial7-share-your-song.png";
+  static const String TITLE_MESSAGE_G = "Share your song";
+  static const String TEXT_MESSAGE_G =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt faucibus purus, quis feugiat turpis congue sit amet.";
+  // SCREEN H
   static const String BACKGROUND_H = "assets/tutorial8.png";
+  static const String IMAGE_H = "assets/tutorial8-get-started.png";
 
   // my wall
 
@@ -102,12 +138,14 @@ class Resources {
 
   // Lyrics
 
-  static const String EMPTY_CHORD_ERROR = "We are not able to retreive any chords. Please try again. ";
+  static const String EMPTY_CHORD_ERROR =
+      "We are not able to retreive any chords. Please try again. ";
   static const String IC_TIME = "assets/ic_time.svg";
   static const String IC_AUDIO = "assets/ic_audio.svg";
   static const String LYRIC_HINT = "Content";
   static const String DELETE = "Delete";
-  static const String DIALOG_CONTENT = "Do you want to save this as a draft on your device?";
+  static const String DIALOG_CONTENT =
+      "Do you want to save this as a draft on your device?";
   static const String LYRIC_TITLE = "Title";
 
   // Posts
@@ -132,9 +170,11 @@ class Resources {
   static const String RECORDING_CANCEL = "Cancel";
   static const String RECORDING_DELETE = "Delete";
   static const String LATEST_RECORD = "Latest Record";
-  static const String SAVED_RECORD = "Saved"; 
+  static const String SAVED_RECORD = "Saved";
   static const String YOU_NOT_SAVED_RECORD = "You haven't saved any audio.";
-  static const String CONFIRM_DELETE_RECORD = "Are you sure you want to permanently delete this audio?";
-  static const String RECORDING_PREFIX_NO_NAME = "Recording ";  
-  static const String RECORDING_DRAFT = "Recordings are only visible to you. Uninstalling Solyric will delete all recordings.";  
+  static const String CONFIRM_DELETE_RECORD =
+      "Are you sure you want to permanently delete this audio?";
+  static const String RECORDING_PREFIX_NO_NAME = "Recording ";
+  static const String RECORDING_DRAFT =
+      "Recordings are only visible to you. Uninstalling Solyric will delete all recordings.";
 }
